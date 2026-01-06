@@ -6,30 +6,35 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+header:
+  overlay_image: /images/header_bg.jpg
+  overlay_filter: 0.5
+  caption: "Virtual Verification: CAD to Mesh to Reality"
 ---
+
 **Mühendislik, bir sistemin yalnızca geometrisini değil; fiziksel davranışını da öngörebilme disiplinidir.** Bu yaklaşım, çalışmalarıma yön veren temel ilkedir.
 
 Akademik altyapı ile mühendislik pratiğini bir araya getirerek; analiz, doğrulama ve tasarım süreçlerini bilimsel tutarlılık çerçevesinde ele alıyorum.
 
-## 📐 Analiz Tabanlı Tasarım Felsefesi
+### 📐 Analiz Tabanlı Tasarım Felsefesi
 
 **Modern mühendislik problemleri, sezgisel ya da yalnızca deneysel yöntemlerle sürdürülebilir biçimde çözülemez.**
 
 Bu nedenle tasarım sürecini, **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analiz tabanlı bir çerçevede yürütüyorum. Amaç; sistem davranışını daha tasarım aşamasında tanımlamak, sınır koşullarını doğru şekilde modellemek ve mühendislik kararlarını nicel verilerle temellendirmektir.
 
-## 🧪 Sanal Doğrulama ve Sayısal Yaklaşımlar
+### 🧪 Sanal Doğrulama ve Sayısal Yaklaşımlar
 
 **Teorik mekanik bilgisi, uygun sayısal yöntemlerle birleştirildiğinde güçlü bir mühendislik aracına dönüşür.**
 
 Bu bağlamda çalışmalarımda, fiziksel testlerin yerini tamamen almayı değil; onları destekleyen ve yönlendiren **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alıyorum. Bu yaklaşım; tasarım güvenilirliğini artırırken, maliyet ve zaman açısından da önemli avantajlar sunar.
 
-## 🧬 İleri Malzemeler ve Yapısal Davranış
+### 🧬 İleri Malzemeler ve Yapısal Davranış
 
 **Günümüz mühendislik uygulamalarında, hafiflik ve dayanım gereksinimleri giderek daha belirleyici hâle gelmektedir.**
 
 Bu doğrultuda, özellikle ileri malzemeler ve çok katmanlı yapılar (kompozitler) üzerinden, sistem davranışının daha doğru modellenmesine odaklanıyorum. Yapısal performansın, yalnızca malzeme özellikleriyle değil; geometri, sınır koşulları ve yükleme senaryolarıyla birlikte değerlendirilmesi gerektiğini savunuyorum.
 
-## 🏭 Tasarımdan Üretime Uzanan Perspektif
+### 🏭 Tasarımdan Üretime Uzanan Perspektif
 
 > *"Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretilebilirliği ve uygulanabilirliği ile ölçülür."*
 
