@@ -27,14 +27,14 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Makine Mühendisi | Mekanik Tasarım | AR-GE | Yapısal Analiz"
   location         : "Türkiye"
-  employer         : "Red Brick University"
+  employer         : "Atatürk Üniversitesi"
   uri              : "https://Emir3d.github.io/muhendislik-cv"
   email            : "emir4d25@gmail.com"
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0000-8406-9168"
