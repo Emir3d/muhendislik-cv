@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "Mekanik Tasarım ve Analiz Portfolyosu"
-excerpt: "Emir İnan - Makine Mühendisi Portfolyosu"
+title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış"
+excerpt: "Mekanik tasarım, analiz ve doğrulama odaklı mühendislik çalışmaları"
 author_profile: true
 redirect_from: 
   - /about/
