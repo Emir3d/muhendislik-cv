@@ -68,33 +68,9 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 > <br>— **Isaac Asimov**
 
 <style>
-  /* 1. Avatarı ve Kırık Resim İkonlarını Gizle */
-  .author__avatar {
-    display: none !important;
-  }
-  img[src$="/images/"] {
-    display: none !important;
-  }
-
-  /* 2. Sol Menüyü "Yapışkan" Olmaktan Kurtar (Sabit Dursun) */
-  .sidebar {
-    position: relative !important; /* Peşinden gelmez, yerinde kalır */
-    top: 0 !important;
-    opacity: 1 !important;
-  }
-
-  /* 3. İsmin Üzerindeki Gereksiz Boşluğu Al */
-  .author__content {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  
-  /* İsim fontunu biraz daha karizmatik yapalım */
-  .author__name {
-    margin-top: 10px !important;
-    font-size: 1.6em !important;
-  }
-</style>
-    display: none !important;
-  }
+.author__avatar { display: none !important; }
+img[src$="/images/"] { display: none !important; }
+.sidebar { position: relative !important; top: 0 !important; }
+.author__content { margin-top: 0 !important; padding-top: 0 !important; }
+.author__name { margin-top: 10px !important; font-size: 1.6em !important; }
 </style>
