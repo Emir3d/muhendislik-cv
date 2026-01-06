@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  overlay_image: /images/header_bg.jpg
+  overlay_image: /muhendislik-cv/images/header_bg.png
   overlay_filter: 0.5
   caption: "Virtual Verification: CAD to Mesh to Reality"
 ---
