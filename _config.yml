@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Emir İnan | Mechanical Engineer"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : "Emir İnan"
+description              : "Emir İnan | Mühendislik Projeleri, Akademik Çalışmalar ve Tasarım Portfolyosu."   # Update this with a general description of your site, this is the default if not overridden by a page
 url: "https://Emir3d.github.io"
 baseurl: "/muhendislik-cv"
 repository               : "academicpages/academicpages.github.io"
@@ -23,13 +23,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Emir İnan"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
+  bio              : "Makine Mühendisi | Mekanik Tasarım | AR-GE | Yapısal Analiz''
+  location         : "Türkiye"
   employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  uri              : "https://Emir3d.github.io/muhendislik-cv"
+  email            : "emir4d25@gmail.com"
 
   # Academic websites
   academia         : # URL
@@ -37,11 +37,11 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0009-0000-8406-9168"
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
+  pubmed           : # URL
+  researchgate     : "https://www.researchgate.net/profile/Emir-Inan?ev=hdr_xprf"
   scopus           : # URL
   zotero           : # URL
 
@@ -50,7 +50,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "Emir3d"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -65,7 +65,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "emir-inan-3d"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -78,7 +78,7 @@ author:
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          : # Username
+  youtube          : "UCPEJ9eKb1WITfVTLHQAIVGW"
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
