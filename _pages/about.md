@@ -8,9 +8,13 @@ redirect_from:
   - /about.html
 header:
   overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
-  overlay_filter: 0.5
-  caption: "Virtual Verification: CAD to Mesh to Reality"
+  overlay_filter: 0.7 # KAPTAN DİKKAT: Bunu 0.5'ten 0.7'ye çektim. Yazılar artık cam gibi okunacak.
+  # Caption satırını buradan sildik, aşağıya taşıdık.
 ---
+
+<div style="text-align: center; font-size: 1.2em; font-style: italic; color: #555; margin-bottom: 2em;">
+  "Virtual Verification — From CAD to Physical Reality"
+</div>
 
 **Mühendislik, bir sistemin yalnızca geometrisini değil; fiziksel davranışını da öngörebilme disiplinidir.** Bu yaklaşım, çalışmalarıma yön veren temel ilkedir.
 
