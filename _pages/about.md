@@ -66,3 +66,15 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 > "Science can amuse and fascinate us all, but it is engineering that changes the world."
 > <br>— **Isaac Asimov**
+
+<style>
+  /* Sol Menüdeki Avatar Alanını Gizle */
+  .author__avatar {
+    display: none !important;
+  }
+  
+  /* Eğer başka yerlerde (Header vb.) kırık resim varsa onları da gizle */
+  img[src$="/images/"] {
+    display: none !important;
+  }
+</style>
