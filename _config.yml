@@ -25,10 +25,10 @@ author:
  # avatar           : "profile.png"
   name             : "Emir İnan"
   pronouns         : # example: "she/her"  
-  bio              : "M.Sc. Student in Mechanical Eng.<br>Simulation & Design Engineer"
-  location         : "Türkiye"
+  bio              : "Mechanical Eng.<br>Simulation & Design Engineer"
   employer         : "Atatürk Üniversitesi"
-  uri              : "https://Emir3d.github.io/muhendislik-cv"
+  location         : "Türkiye"
+ # uri              : "https://Emir3d.github.io/muhendislik-cv"
   email            : "emir4d25@gmail.com"
 
   # Academic websites
@@ -56,7 +56,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+ # bluesky          : "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
