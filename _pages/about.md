@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
+  overlay_image: /muhendislik-cv/images/header_bg.png
   overlay_filter: 0.7
 ---
 
