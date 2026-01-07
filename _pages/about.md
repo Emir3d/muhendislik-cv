@@ -4,78 +4,73 @@ title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış"
 author_profile: true
 header:
   overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
-  overlay_filter: 0.65
+  overlay_filter: 0.6
 ---
 
 <style>
 /* ==================================================
-   0) SOL TARAFTAKİ PROFİL RESMİNİ KAPAT
+   0) SOL PROFİL RESMİ VE STICKY KAPAT
 ================================================== */
 .author__avatar {
   display: none !important;
 }
 
+.sidebar {
+  position: static !important;
+}
+
 /* ==================================================
-   1) HERO (SADECE ÜST KISIM)
+   1) HERO – SADECE TEMA BAŞLIĞI
 ================================================== */
 .page__hero--overlay,
-.page__hero--overlay h1,
-.page__hero--overlay p {
+.page__hero--overlay h1 {
   color: #f8fafc !important;
 }
 
-.hero-custom {
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
   max-width: 900px;
 }
 
-.hero-custom h1 {
-  font-size: 2.6rem;
-  font-weight: 600;
-}
-
-.hero-custom p {
-  font-size: 1.15rem;
-  opacity: 0.9;
-}
-
 /* ==================================================
-   2) ANA İÇERİK WRAPPER
+   2) ANA İÇERİK GENİŞLİĞİ
 ================================================== */
-.home-scope {
+.page__content {
   max-width: 920px;
   margin: 0 auto;
 }
 
 /* ==================================================
-   3) LIGHT MODE RENKLER
+   3) LIGHT MODE – ZORLA KOYU GRİ
 ================================================== */
-.home-scope,
-.home-scope p,
-.home-scope li {
-  color: #1f2937 !important; /* koyu gri */
+.page__content,
+.page__content p,
+.page__content li {
+  color: #1f2937 !important;
 }
 
 /* ==================================================
-   4) DARK MODE RENKLER
+   4) DARK MODE – ZORLA AÇIK GRİ
 ================================================== */
 @media (prefers-color-scheme: dark) {
-  .home-scope,
-  .home-scope p,
-  .home-scope li {
-    color: #e5e7eb !important; /* açık gri */
+  .page__content,
+  .page__content p,
+  .page__content li {
+    color: #e5e7eb !important;
   }
 }
 
 /* ==================================================
    5) TİPOGRAFİ
 ================================================== */
-.home-scope p {
-  font-size: 1.03rem;
+.page__content p {
+  font-size: 1.02rem;
   line-height: 1.75;
   margin-bottom: 1.4rem;
 }
 
-.section-title {
+.page__content h2 {
   font-size: 1.45rem;
   font-weight: 600;
   margin-top: 3.5rem;
@@ -94,7 +89,7 @@ header:
 }
 
 /* ==================================================
-   7) ZARİF BÖLÜM AYRACI
+   7) ZARİF AYRAÇ
 ================================================== */
 .section-divider {
   border: none;
@@ -110,14 +105,12 @@ header:
 }
 </style>
 
-<!-- ================= HERO İÇERİĞİ ================= -->
-<div class="hero-custom">
-  <h1>Mühendisliğe Analitik ve Bütüncül Bir Bakış</h1>
-  <p>Analiz, modelleme ve doğrulama temelli mühendislik yaklaşımı</p>
-</div>
+<!-- HERO ALT METNİ -->
+<p class="hero-subtitle">
+  Analiz, modelleme ve doğrulama temelli mühendislik yaklaşımı
+</p>
 
 <!-- ================= ANA İÇERİK ================= -->
-<div class="home-scope">
 
 <p class="manifesto">
 Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir.
@@ -133,7 +126,7 @@ Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; anali
 
 <hr class="section-divider">
 
-<h2 class="section-title">Analiz Tabanlı Mühendislik Yaklaşımı</h2>
+<h2>Analiz Tabanlı Mühendislik Yaklaşımı</h2>
 
 <p>
 Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez.
@@ -149,7 +142,7 @@ Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi
 
 <hr class="section-divider">
 
-<h2 class="section-title">Sanal Doğrulama ve Sayısal Düşünme</h2>
+<h2>Sanal Doğrulama ve Sayısal Düşünme</h2>
 
 <p>
 Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal modeller, tasarım güvenilirliğini artırırken zaman ve maliyet açısından önemli avantajlar sağlar.
@@ -165,7 +158,7 @@ Sayısal analizler, yalnızca sonuç üretmek için değil; sistemi anlamak, var
 
 <hr class="section-divider">
 
-<h2 class="section-title">Tasarım, Davranış ve Üretilebilirlik İlişkisi</h2>
+<h2>Tasarım, Davranış ve Üretilebilirlik İlişkisi</h2>
 
 <p>
 Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
@@ -181,7 +174,7 @@ Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabil
 
 <hr class="section-divider">
 
-<h2 class="section-title">Bu Platformun Amacı</h2>
+<h2>Bu Platformun Amacı</h2>
 
 <p>
 Bu site, bir özgeçmiş arşivi ya da yalnızca kullanılan yazılımların listelendiği bir portfolyo değildir.
@@ -197,7 +190,7 @@ Burada yer alan içerikler; projeler, analizler, teknik değerlendirmeler ve dü
 
 <hr class="section-divider">
 
-<h2 class="section-title">Mühendislik Vizyonu</h2>
+<h2>Mühendislik Vizyonu</h2>
 
 <p>
 Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum.
@@ -206,5 +199,3 @@ Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları b
 <p>
 Bu yaklaşımın, hem akademik çalışmalarda hem de endüstriyel uygulamalarda sürdürülebilir ve güvenilir mühendislik çözümlerinin temelini oluşturduğuna inanıyorum.
 </p>
-
-</div>
