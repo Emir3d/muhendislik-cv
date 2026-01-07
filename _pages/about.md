@@ -1,12 +1,13 @@
 ---
 permalink: /
-title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış" 
+title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış"
 excerpt: "Mekanik tasarım, analiz ve doğrulama odaklı mühendislik çalışmaları"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 header:
+  # KAPTAN: Resim linkini senin site adresine göre sabitledik.
   overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
   overlay_filter: 0.7
 ---
@@ -88,26 +89,64 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 </div>
 
-<div style="text-align: center; margin-top: 3em; margin-bottom: 2em;">
-  <a href="/muhendislik-cv/cv/" class="btn btn--primary btn--large" style="margin-right: 10px;">📄 CV'mi İncele</a>
-  <a href="mailto:seninmailin@example.com" class="btn btn--inverse btn--large">✉️ İletişime Geç</a>
+<div style="text-align: center; margin-top: 4em; margin-bottom: 4em; display: flex; justify-content: center; gap: 20px;">
+  <a href="/muhendislik-cv/cv/" class="btn-elite btn-elite-primary">📄 CV'yi İncele</a>
+  
+  <a href="mailto:emirinan@example.com" class="btn-elite btn-elite-secondary">✉️ İletişim</a>
 </div>
 
+
 <style>
-/* Sol menü ve avatar temizliği */
+/* 1. Sol Menü Temizliği */
 .author__avatar { display: none !important; }
 img[src$="/images/"] { display: none !important; }
 .sidebar { position: relative !important; top: 0 !important; }
 .author__content { margin-top: 0 !important; padding-top: 0 !important; }
 .author__name { margin-top: 10px !important; font-size: 1.6em !important; }
 
-/* İçerik Genişliği (Ferah Görünüm) */
+/* 2. İçerik Genişliği */
 @media (min-width: 64em) {
-  .page__content {
-    width: 75% !important;
-    max-width: 900px !important;
-    margin-right: auto;
-  }
+  .page__content { width: 75% !important; max-width: 900px !important; margin-right: auto; }
   .page { padding-right: 0 !important; }
+}
+
+/* 3. ELİT BUTON TASARIMI (Ghost Buttons) */
+.btn-elite {
+  background: transparent !important; /* Şeffaf */
+  border-radius: 4px !important; /* Hafif yuvarlak */
+  padding: 10px 25px !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  display: inline-block;
+}
+
+/* CV Butonu Özellikleri (Baskın) */
+.btn-elite-primary {
+  border: 1px solid #555 !important; /* Koyu gri çerçeve */
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+
+/* İletişim Butonu Özellikleri (Çekinik) */
+.btn-elite-secondary {
+  border: 1px solid #ccc !important; /* Açık gri çerçeve */
+  color: #777 !important;
+  font-weight: 400 !important;
+}
+
+/* Hover (Üzerine Gelince) Efekti */
+.btn-elite:hover {
+  background-color: rgba(0,0,0,0.05) !important; /* Çok hafif gri arka plan */
+  border-color: #000 !important;
+  color: #000 !important;
+  transform: translateY(-2px); /* Hafif yukarı kalkar */
+}
+
+/* 4. KARANLIK MOD (DARK MODE) AYARLARI */
+/* Site karanlık moda geçerse renkleri otomatik çevirir */
+@media (prefers-color-scheme: dark) {
+  .btn-elite-primary { border-color: #aaa !important; color: #ddd !important; }
+  .btn-elite-secondary { border-color: #666 !important; color: #aaa !important; }
+  .btn-elite:hover { background-color: rgba(255,255,255,0.1) !important; color: #fff !important; border-color: #fff !important; }
 }
 </style>
