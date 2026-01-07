@@ -11,268 +11,203 @@ header:
   overlay_filter: 0.7
 ---
 
+<div class="manifesto-text">
+  "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
+</div>
+
+<p class="intro-paragraph">
+  Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
+</p>
+
+<p class="intro-paragraph">
+  Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
+</p>
+
+<hr class="elegant-divider">
+
+### Analiz Tabanlı Tasarım Metodolojisi
+
+Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
+
+<div class="process-grid-container">
+  
+  <div class="p-card style-1">
+    <div class="p-num">01</div>
+    <div class="p-title">Fiziksel Tanım</div>
+    <div class="p-desc">Problemin sahadaki gerçekliğinin ve sınır şartlarının belirlenmesi.</div>
+  </div>
+
+  <div class="p-card style-2">
+    <div class="p-num">02</div>
+    <div class="p-title">Matematiksel Model</div>
+    <div class="p-desc">Geometrinin temizlenmesi, uygun ağ (mesh) yapısı ve sayısal kurulum.</div>
+  </div>
+
+  <div class="p-card style-3">
+    <div class="p-num">03</div>
+    <div class="p-title">Analiz & Doğrulama</div>
+    <div class="p-desc">Çözümün yakınsaması, mesh bağımsızlığı ve parametrik incelemeler.</div>
+  </div>
+
+  <div class="p-card style-4">
+    <div class="p-num">04</div>
+    <div class="p-title">Mühendislik Yorumu</div>
+    <div class="p-desc">Sonuçların yorumlanması ve üretilebilir tasarım kararlarının alınması.</div>
+  </div>
+
+</div>
+
+<hr class="elegant-divider">
+
+### Sanal Doğrulama ve Sayısal Düşünme
+
+Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal modeller, tasarım güvenilirliğini artırırken zaman ve maliyet açısından önemli avantajlar sağlar.
+
+Bu bağlamda, çalışmalarda **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum. Sayısal analizler, yalnızca sonuç üretmek için değil; sistemi anlamak, varsayımları sorgulamak ve model güvenilirliğini değerlendirmek için bir araç olarak ele alınmaktadır.
+
+### Tasarım, Davranış ve Üretilebilirlik İlişkisi
+
+Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
+
+Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum. Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabilirliğini erken aşamada görmeyi ve olası sorunları öngörmeyi mümkün kılar.
+
+<hr class="elegant-divider">
+
+<h3 style="text-align: center; margin-bottom: 1em;">Mühendislik Vizyonu</h3>
+<div class="manifesto-text" style="font-size: 1.1em; margin-bottom: 2em;">
+  "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
+</div>
+
+<div class="vision-grid">
+  <div class="v-card border-blue">
+    <p class="v-quote">"Engineering is the art of directing the great sources of power in nature for the use and convenience of man."</p>
+    <p class="v-author">— Thomas Tredgold</p>
+  </div>
+  <div class="v-card border-red">
+    <p class="v-quote">"Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."</p>
+    <p class="v-author">— Leonardo da Vinci</p>
+  </div>
+  <div class="v-card border-cyan">
+    <p class="v-quote">"Science can amuse and fascinate us all, but it is engineering that changes the world."</p>
+    <p class="v-author">— Isaac Asimov</p>
+  </div>
+</div>
+
+
 <style>
-/* 1. GLOBAL RESET (Yazı Boyutlarını Eşitleme) */
-.custom-page-wrapper {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px !important; /* Temel yazı boyutu sabitlendi */
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-.custom-page-wrapper h3 {
-  font-size: 1.5em !important;
-  margin-top: 2em !important;
-  margin-bottom: 1em !important;
-  font-weight: 700 !important;
-  color: #222 !important;
-  border-bottom: none !important; /* Temanın çizgisini kaldır */
-}
-
-/* 2. MANİFESTO KUTUSU */
-.manifesto-box {
-  background-color: #f8f9fa;
-  border-left: 4px solid #333;
-  padding: 20px;
-  margin-bottom: 30px;
+/* 1. MANİFESTO VE METİN */
+.manifesto-text {
+  text-align: center;
+  font-size: 1.25em;
   font-style: italic;
-  font-size: 1.1em !important;
-  color: #444 !important;
+  font-family: 'Georgia', serif;
+  color: inherit;
+  opacity: 0.9;
+  margin-bottom: 1.5em;
+}
+.intro-paragraph {
+  font-size: 1.05em;
+  line-height: 1.6;
 }
 
-/* 3. AKIŞ ŞEMASI (PROCESS FLOW) - ZIRHLI TASARIM */
-.process-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 40px 0;
-  justify-content: space-between;
+/* 2. ZARİF AYRAÇ (HR Etiketi ile) */
+hr.elegant-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
+  margin: 3em 0;
 }
 
-.process-card {
-  flex: 1;
-  min-width: 200px;
-  background-color: #ffffff !important; /* ZORLA BEYAZ */
-  border: 1px solid #e0e0e0 !important;
+/* 3. PROCESS GRID (ESNEK KUTU SORUNUNU ÇÖZER) */
+.process-grid-container {
+  display: grid;
+  /* Masaüstünde 4 eşit kolon */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px;
+  margin: 2em 0;
+}
+
+/* KUTU TASARIMI (ZORLA BEYAZ) */
+.p-card {
+  background-color: #ffffff !important; /* Tema ne olursa olsun BEYAZ */
+  padding: 20px;
   border-radius: 8px;
-  padding: 25px;
+  border: 1px solid #e0e0e0;
   position: relative;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: transform 0.2s;
-  /* Yazı rengini zorla siyah yap */
-  color: #222 !important; 
+  color: #333 !important; /* Yazılar SİYAH */
 }
-.process-card:hover {
+.p-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* RENK GEÇİŞİ (SOL KENARLIKLAR - TONAL HARMONY) */
-.step-1 { border-left: 6px solid #0f172a !important; } /* En Koyu Lacivert */
-.step-2 { border-left: 6px solid #1e40af !important; } /* Koyu Mavi */
-.step-3 { border-left: 6px solid #3b82f6 !important; } /* Açık Mavi */
-.step-4 { border-left: 6px solid #60a5fa !important; } /* En Açık Mavi */
+/* RENKLİ ÇİZGİLER (TONAL HARMONY) */
+.style-1 { border-left: 5px solid #0f172a !important; }
+.style-2 { border-left: 5px solid #1e40af !important; }
+.style-3 { border-left: 5px solid #3b82f6 !important; }
+.style-4 { border-left: 5px solid #60a5fa !important; }
 
-/* Kart İçindeki Yazılar */
-.step-num {
-  font-size: 2em !important;
-  font-weight: 900;
-  opacity: 0.15;
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  line-height: 1;
+/* KUTU İÇİ YAZILAR */
+.p-num {
+  font-weight: 900; font-size: 1.5em; opacity: 0.15; position: absolute; top: 10px; right: 15px; color: #000 !important;
 }
-/* Numara renkleri de çizgiyle aynı olsun */
-.step-1 .step-num { color: #0f172a !important; }
-.step-2 .step-num { color: #1e40af !important; }
-.step-3 .step-num { color: #3b82f6 !important; }
-.step-4 .step-num { color: #60a5fa !important; }
-
-.step-title {
-  font-size: 1.1em !important;
-  font-weight: 700 !important;
-  margin-bottom: 10px;
-  display: block;
-  color: #000 !important; /* Başlık simsiyah */
+.p-title {
+  font-weight: 700; font-size: 1em; margin-bottom: 8px; color: #000 !important;
 }
-.step-desc {
-  font-size: 0.95em !important;
-  color: #555 !important; /* Açıklama koyu gri */
-  margin: 0 !important;
+.p-desc {
+  font-size: 0.85em; color: #555 !important; line-height: 1.4;
 }
 
-/* 4. OK İŞARETİ */
-.arrow-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  color: #bbb;
-}
-
-/* 5. ZARİF AYRAÇ */
-.custom-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #ddd !important;
-  margin: 50px 0;
-}
-
-/* 6. VİZYON KARTLARI */
+/* 4. VİZYON KARTLARI */
 .vision-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-.vision-item {
-  flex: 1;
-  min-width: 250px;
-  background: #f9f9f9 !important;
+.v-card {
+  background-color: #f8f9fa !important;
   padding: 20px;
   border-radius: 6px;
   border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-.quote-text { font-style: italic; color: #555 !important; font-size: 0.95em !important; }
-.quote-author { text-align: right; font-weight: bold; font-size: 0.9em !important; margin-top: 10px; color: #333 !important; }
-.vision-blue { border-top: 3px solid #0f172a; }
-.vision-red { border-top: 3px solid #b91c1c; }
-.vision-cyan { border-top: 3px solid #0891b2; }
+.border-blue { border-top: 3px solid #0f172a; }
+.border-red { border-top: 3px solid #b91c1c; }
+.border-cyan { border-top: 3px solid #0891b2; }
 
+.v-quote { font-style: italic; color: #444 !important; font-size: 0.95em; }
+.v-author { text-align: right; font-weight: bold; font-size: 0.9em; margin-top: 10px; color: #222 !important; }
 
-/* =========================================
-   🌙 KARANLIK MOD (DARK MODE) ZORLA DÜZELTME
-   ========================================= */
+/* 5. MOBİL UYUM */
+@media (max-width: 900px) {
+  .process-grid-container {
+    grid-template-columns: 1fr; /* Mobilde tek kolon */
+  }
+}
+
+/* 6. DARK MODE DÜZELTMELERİ */
 @media (prefers-color-scheme: dark) {
-  .custom-page-wrapper { color: #e2e8f0 !important; }
-  .custom-page-wrapper h3 { color: #ffffff !important; }
+  /* Ayraç rengi */
+  hr.elegant-divider { background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(200, 200, 200, 0.5), rgba(0, 0, 0, 0)); }
   
-  /* Manifesto Kutusu */
-  .manifesto-box { background-color: #1e293b !important; border-left-color: #94a3b8 !important; color: #e2e8f0 !important; }
+  /* Manifesto rengi */
+  .manifesto-text { color: #e0e0e0 !important; }
   
-  /* Kartlar SİYAH DEĞİL, KOYU GRİ OLSUN */
-  .process-card { 
+  /* Kutular karanlık modda KOYU olsun ama yazılar okunur olsun */
+  .p-card { 
     background-color: #1e293b !important; 
     border-color: #334155 !important; 
+    color: #f1f5f9 !important;
   }
-  .step-title { color: #f8fafc !important; }
-  .step-desc { color: #cbd5e1 !important; }
+  .p-num { color: #fff !important; opacity: 0.2; }
+  .p-title { color: #fff !important; }
+  .p-desc { color: #cbd5e1 !important; }
   
-  /* Renk geçişlerini koru ama biraz parlat */
-  .step-1 { border-left-color: #60a5fa !important; }
-  .step-2 { border-left-color: #3b82f6 !important; }
-  .step-3 { border-left-color: #2563eb !important; }
-  .step-4 { border-left-color: #1d4ed8 !important; }
-  
-  /* Vizyon Kartları */
-  .vision-item { background-color: #1e293b !important; border-color: #334155 !important; }
-  .quote-text { color: #cbd5e1 !important; }
-  .quote-author { color: #f8fafc !important; }
-  
-  .custom-divider { background-color: #334155 !important; }
-}
-
-/* MOBİL DÜZENLEME */
-@media (max-width: 768px) {
-  .arrow-icon { display: none; }
-  .process-grid { flex-direction: column; }
+  /* Vizyon kartları */
+  .v-card { background-color: #1e293b !important; border-color: #334155 !important; }
+  .v-quote { color: #cbd5e1 !important; }
+  .v-author { color: #fff !important; }
 }
 </style>
-
-<div class="custom-page-wrapper">
-
-  <div class="manifesto-box">
-    "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
-  </div>
-
-  <p>
-    Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
-  </p>
-  <p>
-    Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
-  </p>
-
-  <div class="custom-divider"></div>
-
-  <h3>Analiz Tabanlı Tasarım Metodolojisi</h3>
-
-  <p>
-    Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; <strong>yapısal analiz, sayısal modelleme ve optimizasyon</strong> adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
-  </p>
-
-  <div class="process-grid">
-    
-    <div class="process-card step-1">
-      <div class="step-num">01</div>
-      <span class="step-title">Fiziksel Tanım</span>
-      <p class="step-desc">Problemin sahadaki gerçekliğinin ve sınır şartlarının belirlenmesi.</p>
-    </div>
-
-    <div class="arrow-icon">➝</div>
-
-    <div class="process-card step-2">
-      <div class="step-num">02</div>
-      <span class="step-title">Matematiksel Model</span>
-      <p class="step-desc">Geometrinin temizlenmesi, uygun ağ (mesh) yapısı ve sayısal kurulum.</p>
-    </div>
-
-    <div class="arrow-icon">➝</div>
-
-    <div class="process-card step-3">
-      <div class="step-num">03</div>
-      <span class="step-title">Analiz & Doğrulama</span>
-      <p class="step-desc">Çözümün yakınsaması, mesh bağımsızlığı ve parametrik incelemeler.</p>
-    </div>
-
-    <div class="arrow-icon">➝</div>
-
-    <div class="process-card step-4">
-      <div class="step-num">04</div>
-      <span class="step-title">Mühendislik Yorumu</span>
-      <p class="step-desc">Sonuçların yorumlanması ve üretilebilir tasarım kararlarının alınması.</p>
-    </div>
-
-  </div>
-
-  <div class="custom-divider"></div>
-
-  <h3>Sanal Doğrulama ve Sayısal Düşünme</h3>
-
-  <p>
-    Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal modeller, tasarım güvenilirliğini artırırken zaman ve maliyet açısından önemli avantajlar sağlar.
-  </p>
-  <p>
-    Bu bağlamda, çalışmalarda <strong>Sanal Doğrulama (Virtual Verification)</strong> süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum. Sayısal analizler, yalnızca sonuç üretmek için değil; sistemi anlamak, varsayımları sorgulamak ve model güvenilirliğini değerlendirmek için bir araç olarak ele alınmaktadır.
-  </p>
-
-  <h3>Tasarım, Davranış ve Üretilebilirlik İlişkisi</h3>
-
-  <p>
-    Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
-  </p>
-  <p>
-    Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum. Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabilirliğini erken aşamada görmeyi ve olası sorunları öngörmeyi mümkün kılar.
-  </p>
-
-  <div class="custom-divider"></div>
-
-  <h3 style="text-align: center;">Mühendislik Vizyonu</h3>
-  <p style="text-align: center; margin-bottom: 30px; font-style: italic;">
-    "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
-  </p>
-
-  <div class="vision-grid">
-    <div class="vision-item vision-blue">
-      <p class="quote-text">"Engineering is the art of directing the great sources of power in nature for the use and convenience of man."</p>
-      <p class="quote-author">— Thomas Tredgold</p>
-    </div>
-    <div class="vision-item vision-red">
-      <p class="quote-text">"Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."</p>
-      <p class="quote-author">— Leonardo da Vinci</p>
-    </div>
-    <div class="vision-item vision-cyan">
-      <p class="quote-text">"Science can amuse and fascinate us all, but it is engineering that changes the world."</p>
-      <p class="quote-author">— Isaac Asimov</p>
-    </div>
-  </div>
-
-</div>
