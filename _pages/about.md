@@ -21,7 +21,7 @@ Akademik altyapı ile mühendislik pratiğini bir araya getirerek; analiz, doğr
 
 <div class="enterprise-divider"></div>
 
-### 📐 Analiz Tabanlı Tasarım Metodolojisi
+### Analiz Tabanlı Tasarım Metodolojisi
 
 **Modern mühendislik problemleri, sezgisel ya da yalnızca deneysel yöntemlerle sürdürülebilir biçimde çözülemez.**
 
@@ -73,13 +73,13 @@ Bu sistematik yaklaşım; sistem davranışını daha tasarım aşamasında tan�
 
 <div class="enterprise-divider"></div>
 
-### 🧪 Sanal Doğrulama ve Sayısal Yaklaşımlar
+### Sanal Doğrulama ve Sayısal Yaklaşımlar
 
 **Teorik mekanik bilgisi, uygun sayısal yöntemlerle birleştirildiğinde güçlü bir mühendislik aracına dönüşür.**
 
 Bu bağlamda çalışmalarımda, fiziksel testlerin yerini tamamen almayı değil; onları destekleyen ve yönlendiren **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alıyorum. Bu yaklaşım; tasarım güvenilirliğini artırırken, maliyet ve zaman açısından da önemli avantajlar sunar.
 
-### 🧬 İleri Malzemeler ve Yapısal Davranış
+### İleri Malzemeler ve Yapısal Davranış
 
 **Günümüz mühendislik uygulamalarında, hafiflik ve dayanım gereksinimleri giderek daha belirleyici hâle gelmektedir.**
 
