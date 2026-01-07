@@ -57,7 +57,7 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 <h3 style="text-align: center; margin-top: 3em; margin-bottom: 1.5em; opacity: 0.8;">💡 İlham Veren Mühendislik Vizyonu</h3>
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 3em;">
 
   <div class="vision-card stripe-blue">
     <p class="card-quote">
@@ -82,21 +82,16 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 </div>
 
-<div style="text-align: center; margin-top: 4em; margin-bottom: 4em; display: flex; justify-content: center; gap: 20px;">
-  <a href="/muhendislik-cv/cv/" class="btn-elite btn-primary">📄 CV'yi İncele</a>
-  <a href="mailto:emirhan555inan@gmail.com" class="btn-elite btn-secondary">✉️ İletişime Geç</a>
-</div>
-
-
 <style>
-/* 1. MOTTO AYARI */
+/* 1. MOTTO AYARI (Otomatik Renk) */
 .motto-container {
   text-align: center;
   font-size: 1.25em;
   font-style: italic;
   margin-bottom: 2em;
   font-family: 'Georgia', serif;
-  color: #555; /* Varsayılan Açık Mod Rengi */
+  color: inherit !important; /* KİLİT NOKTA: Rengi sisteme bıraktık */
+  opacity: 0.75; /* Biraz şeffaflık kattık, her renkte güzel durur */
 }
 
 /* 2. SOL MENÜ TEMİZLİĞİ */
@@ -112,21 +107,21 @@ img[src$="/images/"] { display: none !important; }
   .page { padding-right: 0 !important; }
 }
 
-/* 4. VİZYON KARTLARI (YENİ SİSTEM) */
+/* 4. VİZYON KARTLARI */
 .vision-card {
   flex: 1;
   min-width: 250px;
   background: #f8f9fa;
   padding: 25px;
   border-radius: 8px;
-  position: relative; /* Çizgi için referans */
-  overflow: hidden; /* Taşan kenarları keser - SORUNU ÇÖZEN KOD */
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
 .vision-card:hover { transform: translateY(-5px); }
 
-/* Renkli Çizgiler (Pseudo-element: Asla kaymaz, bozulmaz) */
+/* Renkli Çizgiler */
 .vision-card::before {
   content: "";
   position: absolute;
@@ -142,50 +137,20 @@ img[src$="/images/"] { display: none !important; }
 .card-quote { font-style: italic; color: #555; font-size: 0.95em; line-height: 1.6; }
 .card-author { text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 15px; color: #333; }
 
-/* 5. ELİT BUTONLAR */
-.btn-elite {
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 6px;
-  text-decoration: none !important;
-  font-family: sans-serif;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-/* Aydınlık Mod Renkleri */
-.btn-primary { border: 2px solid #333; color: #333 !important; font-weight: 700; }
-.btn-secondary { border: 2px solid #bbb; color: #777 !important; font-weight: 500; }
-.btn-elite:hover { background-color: rgba(0,0,0,0.05); transform: translateY(-2px); }
-
 
 /* =========================================
-   🌙 KARANLIK MOD (DARK MODE) ZIRHLI AYARLAR
+   🌙 KARANLIK MOD (DARK MODE) AYARLARI
    ========================================= */
 @media (prefers-color-scheme: dark) {
-  /* Motto: Beyaz yap */
-  .motto-container { color: #dddddd !important; }
-
   /* Kartlar: Koyu Gri Arka Plan */
   .vision-card {
-    background: #252a34 !important; /* Çok şık bir koyu ton */
+    background: #252a34 !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
-    border: 1px solid #333; /* Hafif çerçeve */
+    border: 1px solid #333;
   }
   .card-quote { color: #cccccc !important; }
   .card-author { color: #ffffff !important; }
-
-  /* Butonlar: Zorla Beyaz Yap */
-  .btn-primary {
-    border-color: #ffffff !important;
-    color: #ffffff !important;
-  }
-  .btn-secondary {
-    border-color: #888888 !important;
-    color: #dddddd !important;
-  }
-  .btn-elite:hover {
-    background-color: rgba(255,255,255,0.1) !important;
-    border-color: #ffffff !important;
-  }
+  
+  /* Motto zaten inherit olduğu için otomatik beyazlaşacak */
 }
 </style>
