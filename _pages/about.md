@@ -15,19 +15,27 @@ header:
   "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
 </div>
 
+<br>
+
 <div class="intro-text">
 Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
 <br><br>
 Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
 </div>
 
+<br>
+
 <div class="enterprise-divider"></div>
+
+<br>
 
 ### Analiz Tabanlı Mühendislik Yaklaşımı
 
 Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
 
 Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
+
+<br>
 
 <div class="process-container">
   
@@ -71,7 +79,11 @@ Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi
 
 </div>
 
+<br>
+
 <div class="enterprise-divider"></div>
+
+<br>
 
 ### Sanal Doğrulama ve Sayısal Düşünme
 
@@ -85,17 +97,15 @@ Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla de�
 
 Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum. Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabilirliğini erken aşamada görmeyi ve olası sorunları öngörmeyi mümkün kılar.
 
-### Bu Platformun Amacı
-
-Bu site, bir özgeçmiş arşivi ya da yalnızca kullanılan yazılımların listelendiği bir portfolyo değildir.
-
-Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendislik problemlerine bakış açısını şeffaf, sistematik ve akademik bir çerçevede paylaşmaktır. Burada yer alan içerikler; projeler, analizler, teknik değerlendirmeler ve düşünsel notlar aracılığıyla, mühendisliğin yalnızca “sonuç” değil, süreç odaklı bir disiplin olduğunu vurgulamayı hedefler.
+<br>
 
 <div class="enterprise-divider"></div>
 
-<h3 style="text-align: center; margin-top: 2em; margin-bottom: 1.5em; opacity: 0.8;">Mühendislik Vizyonu</h3>
+<br>
 
-<div class="manifesto-container" style="margin-bottom: 3em; font-size: 1.1em;">
+<h3 style="text-align: center; margin-top: 1em; margin-bottom: 1.5em; opacity: 0.9;">Mühendislik Vizyonu</h3>
+
+<div class="manifesto-container" style="margin-bottom: 3em; font-size: 1.15em;">
   "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
 </div>
 
@@ -129,18 +139,20 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
 /* 1. GİRİŞ MANİFESTOSU */
 .manifesto-container {
   text-align: center;
-  font-size: 1.25em; /* İdeal okuma boyutu */
+  font-size: 1.3em; /* Daha büyük ve okunaklı */
+  font-weight: 500;
   font-style: italic;
   margin-bottom: 2em;
   font-family: 'Georgia', serif;
   color: inherit !important;
-  opacity: 0.85;
+  opacity: 0.9 !important; /* Daha koyu */
   line-height: 1.6;
 }
 
 .intro-text {
-  font-size: 1.05em; /* Standart metinden çok az büyük */
-  line-height: 1.7;
+  font-size: 1.1em; /* Metin boyutu artırıldı */
+  line-height: 1.8;
+  color: inherit;
 }
 
 /* 2. TEMİZLİK */
@@ -155,7 +167,7 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   .page { padding-right: 0 !important; }
 }
 
-/* 4. PROCESS FLOW */
+/* 4. PROCESS FLOW (AKIŞ ŞEMASI) */
 .process-container {
   display: flex;
   align-items: flex-start;
@@ -166,39 +178,43 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
 .process-step {
   flex: 1;
   background: #ffffff;
-  border: 1px solid #eaeaea;
+  border: 1px solid #ddd; /* Daha belirgin çerçeve */
   border-radius: 8px;
   padding: 20px;
   position: relative;
   transition: transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Daha belirgin gölge */
 }
 .process-step:hover {
   transform: translateY(-3px);
-  border-color: #d0d0d0;
+  border-color: #999;
 }
 .step-1 { border-left: 6px solid #1e3a8a !important; } 
 .step-2 { border-left: 6px solid #2563eb !important; } 
 .step-3 { border-left: 6px solid #3b82f6 !important; } 
 .step-4 { border-left: 6px solid #60a5fa !important; } 
 .step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.step-num { font-family: sans-serif; font-weight: 900; font-size: 1.5em; opacity: 0.15; }
-.step-title { font-weight: 700; font-size: 0.95em; color: #222; line-height: 1.2; }
-.step-desc { font-size: 0.85em; color: #666; line-height: 1.4; }
-.process-arrow { align-self: center; color: #ccc; font-size: 1.2em; font-weight: 300; }
+.step-num { font-family: sans-serif; font-weight: 900; font-size: 1.5em; opacity: 0.2; color: #000; }
+.step-title { font-weight: 700; font-size: 1em; color: #222; line-height: 1.2; }
+.step-desc { font-size: 0.9em; color: #555; line-height: 1.4; }
+.process-arrow { align-self: center; color: #999; font-size: 1.5em; font-weight: bold; }
+
 @media (max-width: 768px) {
   .process-container { flex-direction: column; gap: 15px; }
   .process-step { width: 100%; }
   .process-arrow { display: none; }
 }
 
-/* 5. ZARİF AYRAÇ (GÜÇLENDİRİLMİŞ - 2px KALINLIK) */
+/* 5. ZARİF AYRAÇ (ARTIK KESİN GÖRÜNECEK) */
 .enterprise-divider {
-  height: 2px; /* 1px'den 2px'e çıktı, artık görünür */
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #bbb 50%, rgba(0,0,0,0) 100%); /* #ddd yerine #bbb (daha koyu gri) */
-  margin: 3.5em 0;
-  border: none;
-  opacity: 0.6;
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  /* Koyu gri merkezli degrade - Beyaz ekranda kesin görünür */
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%) !important;
+  margin: 3em 0 !important;
+  border: none !important;
+  opacity: 1 !important; /* Şeffaflık yok */
 }
 
 /* 6. VİZYON KARTLARI */
@@ -210,37 +226,31 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
 .stripe-blue::before { background-color: #2c3e50; }
 .stripe-red::before { background-color: #c0392b; }
 .stripe-cyan::before { background-color: #2980b9; }
-.card-quote { font-style: italic; color: #555; font-size: 0.95em; line-height: 1.6; }
-.card-author { text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 15px; color: #333; }
+.card-quote { font-style: italic; color: #444; font-size: 1em; line-height: 1.6; }
+.card-author { text-align: right; font-weight: bold; font-size: 0.9em; margin-top: 15px; color: #222; }
 
 /* =========================================
-   🌙 KARANLIK MOD (DARK MODE) ÖZEL AYARLAR
+   🌙 KARANLIK MOD (DARK MODE) AYARLARI
    ========================================= */
 @media (prefers-color-scheme: dark) {
-  /* Process Flow */
-  .process-step { background: #252a34 !important; border-color: #444 !important; }
-  .step-title { color: #eee !important; }
-  .step-desc { color: #aaa !important; }
-  .step-num { color: #fff !important; opacity: 0.3 !important; }
+  /* Genel Yazı Rengi */
+  body, p, li { color: #e0e0e0 !important; }
   
-  /* Renk geçişi karanlık modda daha parlak */
-  .step-1 { border-left-color: #3b82f6 !important; }
-  .step-2 { border-left-color: #60a5fa !important; }
-  .step-3 { border-left-color: #93c5fd !important; }
-  .step-4 { border-left-color: #bfdbfe !important; }
-
-  /* Divider: Karanlıkta Parlak Beyaz */
+  /* Process Flow */
+  .process-step { background: #1a1a1a !important; border-color: #444 !important; box-shadow: none !important; }
+  .step-title { color: #fff !important; }
+  .step-desc { color: #ccc !important; }
+  .step-num { color: #fff !important; opacity: 0.3 !important; }
+  .process-arrow { color: #666 !important; }
+  
+  /* Divider: Karanlık modda BEYAZ PARLAK çizgi */
   .enterprise-divider { 
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0) 100%) !important; 
-    opacity: 0.8 !important;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%) !important; 
   }
 
-  /* Manifesto yazısı */
-  .manifesto-container { color: #e0e0e0 !important; opacity: 1 !important; }
-
   /* Vision Cards */
-  .vision-card { background: #252a34 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important; border: 1px solid #333; }
-  .card-quote { color: #cccccc !important; }
-  .card-author { color: #ffffff !important; }
+  .vision-card { background: #1a1a1a !important; box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important; border: 1px solid #444; }
+  .card-quote { color: #ddd !important; }
+  .card-author { color: #fff !important; }
 }
 </style>
