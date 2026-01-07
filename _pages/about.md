@@ -15,27 +15,19 @@ header:
   "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
 </div>
 
-<br>
-
 <div class="intro-text">
 Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
 <br><br>
 Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
 </div>
 
-<br>
-
 <div class="enterprise-divider"></div>
 
-<br>
-
-### Analiz Tabanlı Mühendislik Yaklaşımı
+### Analiz Tabanlı Tasarım Metodolojisi
 
 Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
 
 Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
-
-<br>
 
 <div class="process-container">
   
@@ -79,11 +71,7 @@ Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi
 
 </div>
 
-<br>
-
 <div class="enterprise-divider"></div>
-
-<br>
 
 ### Sanal Doğrulama ve Sayısal Düşünme
 
@@ -97,13 +85,9 @@ Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla de�
 
 Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum. Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabilirliğini erken aşamada görmeyi ve olası sorunları öngörmeyi mümkün kılar.
 
-<br>
-
 <div class="enterprise-divider"></div>
 
-<br>
-
-<h3 style="text-align: center; margin-top: 1em; margin-bottom: 1.5em; opacity: 0.9;">Mühendislik Vizyonu</h3>
+<h3 style="text-align: center; margin-top: 1.5em; margin-bottom: 2em; opacity: 1; color: #444;">Mühendislik Vizyonu</h3>
 
 <div class="manifesto-container" style="margin-bottom: 3em; font-size: 1.15em;">
   "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
@@ -139,35 +123,36 @@ Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk a
 /* 1. GİRİŞ MANİFESTOSU */
 .manifesto-container {
   text-align: center;
-  font-size: 1.3em; /* Daha büyük ve okunaklı */
+  font-size: 1.35em;
   font-weight: 500;
   font-style: italic;
   margin-bottom: 2em;
   font-family: 'Georgia', serif;
-  color: inherit !important;
-  opacity: 0.9 !important; /* Daha koyu */
-  line-height: 1.6;
+  color: #333 !important;
+  line-height: 1.5;
+  padding: 0 10px;
 }
 
 .intro-text {
-  font-size: 1.1em; /* Metin boyutu artırıldı */
+  font-size: 1.1em; /* Okunaklı Profesyonel Boyut */
   line-height: 1.8;
-  color: inherit;
+  color: #444 !important;
+  text-align: justify;
 }
 
-/* 2. TEMİZLİK */
+/* 2. TEMİZLİK KODLARI */
 .author__avatar, img[src$="/images/"] { display: none !important; }
 .sidebar { position: relative !important; top: 0 !important; }
 .author__content { margin-top: 0 !important; padding-top: 0 !important; }
 .author__name { margin-top: 10px !important; font-size: 1.6em !important; }
 
-/* 3. GENİŞLİK */
+/* 3. GENİŞLİK AYARI */
 @media (min-width: 64em) {
   .page__content { width: 75% !important; max-width: 900px !important; margin-right: auto; }
   .page { padding-right: 0 !important; }
 }
 
-/* 4. PROCESS FLOW (AKIŞ ŞEMASI) */
+/* 4. PROCESS FLOW (RENK UYUMLU & ZARİF KUTULAR) */
 .process-container {
   display: flex;
   align-items: flex-start;
@@ -175,82 +160,109 @@ Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk a
   gap: 15px;
   margin: 3em 0;
 }
+
 .process-step {
   flex: 1;
-  background: #ffffff;
-  border: 1px solid #ddd; /* Daha belirgin çerçeve */
+  /* Aydınlık Modda Hafif Buz Mavisi Arka Plan */
+  background-color: #f7f9fc !important; 
+  border: 1px solid #e1e8ed !important;
   border-radius: 8px;
-  padding: 20px;
+  padding: 22px;
   position: relative;
-  transition: transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Daha belirgin gölge */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  color: #222 !important;
 }
+
 .process-step:hover {
-  transform: translateY(-3px);
-  border-color: #999;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  background-color: #fff !important; /* Üzerine gelince beyazlaşır ve parlar */
 }
-.step-1 { border-left: 6px solid #1e3a8a !important; } 
-.step-2 { border-left: 6px solid #2563eb !important; } 
-.step-3 { border-left: 6px solid #3b82f6 !important; } 
-.step-4 { border-left: 6px solid #60a5fa !important; } 
-.step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.step-num { font-family: sans-serif; font-weight: 900; font-size: 1.5em; opacity: 0.2; color: #000; }
-.step-title { font-weight: 700; font-size: 1em; color: #222; line-height: 1.2; }
-.step-desc { font-size: 0.9em; color: #555; line-height: 1.4; }
-.process-arrow { align-self: center; color: #999; font-size: 1.5em; font-weight: bold; }
+
+/* TONAL GEÇİŞLER (Sol Çizgiler & Numaralar) */
+.step-1 { border-left: 5px solid #1e3a8a !important; } /* Koyu Lacivert */
+.step-1 .step-num { color: #1e3a8a !important; opacity: 0.15; }
+
+.step-2 { border-left: 5px solid #2563eb !important; } /* Orta Mavi */
+.step-2 .step-num { color: #2563eb !important; opacity: 0.15; }
+
+.step-3 { border-left: 5px solid #3b82f6 !important; } /* Açık Mavi */
+.step-3 .step-num { color: #3b82f6 !important; opacity: 0.15; }
+
+.step-4 { border-left: 5px solid #60a5fa !important; } /* Gökyüzü */
+.step-4 .step-num { color: #60a5fa !important; opacity: 0.15; }
+
+.step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.step-num { font-family: sans-serif; font-weight: 900; font-size: 1.8em; line-height: 1; }
+.step-title { font-weight: 700; font-size: 1.05em; color: #222 !important; line-height: 1.2; }
+.step-desc { font-size: 0.95em; color: #555 !important; line-height: 1.5; }
+
+.process-arrow { align-self: center; color: #b0b0b0; font-size: 1.5em; font-weight: 300; }
 
 @media (max-width: 768px) {
-  .process-container { flex-direction: column; gap: 15px; }
+  .process-container { flex-direction: column; gap: 20px; }
   .process-step { width: 100%; }
   .process-arrow { display: none; }
 }
 
-/* 5. ZARİF AYRAÇ (ARTIK KESİN GÖRÜNECEK) */
+/* 5. ZARİF AYRAÇ */
 .enterprise-divider {
-  display: block !important;
+  display: block;
   width: 100% !important;
-  height: 2px !important;
-  /* Koyu gri merkezli degrade - Beyaz ekranda kesin görünür */
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%) !important;
-  margin: 3em 0 !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, #d1d5db, transparent) !important; /* Ortada belirgin, kenarda silik */
+  margin: 3.5em 0 !important;
   border: none !important;
-  opacity: 1 !important; /* Şeffaflık yok */
 }
 
 /* 6. VİZYON KARTLARI */
 .vision-card {
-  flex: 1; min-width: 250px; background: #f8f9fa; padding: 25px; border-radius: 8px; position: relative; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s ease;
+  flex: 1; min-width: 250px; 
+  background-color: #f8f9fa !important; 
+  padding: 25px; border-radius: 8px; position: relative; overflow: hidden; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s ease;
+  border: 1px solid #e9ecef;
 }
 .vision-card:hover { transform: translateY(-5px); }
 .vision-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
 .stripe-blue::before { background-color: #2c3e50; }
 .stripe-red::before { background-color: #c0392b; }
 .stripe-cyan::before { background-color: #2980b9; }
-.card-quote { font-style: italic; color: #444; font-size: 1em; line-height: 1.6; }
-.card-author { text-align: right; font-weight: bold; font-size: 0.9em; margin-top: 15px; color: #222; }
+.card-quote { font-style: italic; color: #444 !important; font-size: 1em; line-height: 1.6; }
+.card-author { text-align: right; font-weight: bold; font-size: 0.9em; margin-top: 15px; color: #222 !important; }
 
 /* =========================================
-   🌙 KARANLIK MOD (DARK MODE) AYARLARI
+   🌙 KARANLIK MOD (DARK MODE) PROFESYONEL
    ========================================= */
 @media (prefers-color-scheme: dark) {
-  /* Genel Yazı Rengi */
-  body, p, li { color: #e0e0e0 !important; }
+  /* Genel Yazılar */
+  .manifesto-container { color: #e0e0e0 !important; }
+  .intro-text { color: #d1d5db !important; }
+  h3 { color: #ffffff !important; opacity: 0.95 !important; }
+  p { color: #d1d5db !important; }
+
+  /* Process Flow - Koyu ve Şık */
+  .process-step { 
+    background-color: #1f2937 !important; /* Modern Koyu Gri */
+    border-color: #374151 !important; 
+    color: #f3f4f6 !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  .process-step:hover { background-color: #263042 !important; } /* Hoverda biraz açılır */
+
+  .step-title { color: #f9fafb !important; }
+  .step-desc { color: #9ca3af !important; } /* Açık Gri Açıklama */
+  .process-arrow { color: #4b5563 !important; }
   
-  /* Process Flow */
-  .process-step { background: #1a1a1a !important; border-color: #444 !important; box-shadow: none !important; }
-  .step-title { color: #fff !important; }
-  .step-desc { color: #ccc !important; }
-  .step-num { color: #fff !important; opacity: 0.3 !important; }
-  .process-arrow { color: #666 !important; }
-  
-  /* Divider: Karanlık modda BEYAZ PARLAK çizgi */
+  /* Divider */
   .enterprise-divider { 
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%) !important; 
+    background: linear-gradient(90deg, transparent, #4b5563, transparent) !important;
   }
 
   /* Vision Cards */
-  .vision-card { background: #1a1a1a !important; box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important; border: 1px solid #444; }
-  .card-quote { color: #ddd !important; }
-  .card-author { color: #fff !important; }
+  .vision-card { background-color: #1f2937 !important; border-color: #374151; box-shadow: none; }
+  .card-quote { color: #d1d5db !important; }
+  .card-author { color: #f3f4f6 !important; }
 }
 </style>
