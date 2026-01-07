@@ -15,9 +15,11 @@ header:
   "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
 </div>
 
-Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; **analiz, modelleme, doğrulama ve üretilebilirlik** ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
-
+<div class="intro-text">
+Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
+<br><br>
 Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
+</div>
 
 <div class="enterprise-divider"></div>
 
@@ -93,7 +95,7 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
 
 <h3 style="text-align: center; margin-top: 2em; margin-bottom: 1.5em; opacity: 0.8;">Mühendislik Vizyonu</h3>
 
-<div class="manifesto-container" style="margin-bottom: 3em;">
+<div class="manifesto-container" style="margin-bottom: 3em; font-size: 1.1em;">
   "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
 </div>
 
@@ -127,13 +129,18 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
 /* 1. GİRİŞ MANİFESTOSU */
 .manifesto-container {
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.25em; /* İdeal okuma boyutu */
   font-style: italic;
   margin-bottom: 2em;
   font-family: 'Georgia', serif;
   color: inherit !important;
-  opacity: 0.8;
+  opacity: 0.85;
   line-height: 1.6;
+}
+
+.intro-text {
+  font-size: 1.05em; /* Standart metinden çok az büyük */
+  line-height: 1.7;
 }
 
 /* 2. TEMİZLİK */
@@ -148,7 +155,7 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   .page { padding-right: 0 !important; }
 }
 
-/* 4. PROCESS FLOW (AKIŞ ŞEMASI) */
+/* 4. PROCESS FLOW */
 .process-container {
   display: flex;
   align-items: flex-start;
@@ -170,7 +177,6 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   transform: translateY(-3px);
   border-color: #d0d0d0;
 }
-/* TONAL RENK GEÇİŞİ */
 .step-1 { border-left: 6px solid #1e3a8a !important; } 
 .step-2 { border-left: 6px solid #2563eb !important; } 
 .step-3 { border-left: 6px solid #3b82f6 !important; } 
@@ -186,12 +192,13 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   .process-arrow { display: none; }
 }
 
-/* 5. ZARİF AYRAÇ (LIGHT MODE) */
+/* 5. ZARİF AYRAÇ (GÜÇLENDİRİLMİŞ - 2px KALINLIK) */
 .enterprise-divider {
-  height: 1px;
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #ddd 50%, rgba(0,0,0,0) 100%);
-  margin: 3em 0;
+  height: 2px; /* 1px'den 2px'e çıktı, artık görünür */
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #bbb 50%, rgba(0,0,0,0) 100%); /* #ddd yerine #bbb (daha koyu gri) */
+  margin: 3.5em 0;
   border: none;
+  opacity: 0.6;
 }
 
 /* 6. VİZYON KARTLARI */
@@ -216,18 +223,19 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   .step-desc { color: #aaa !important; }
   .step-num { color: #fff !important; opacity: 0.3 !important; }
   
-  /* Renk geçişi karanlık modda daha parlak (NEON ETKİSİ) */
+  /* Renk geçişi karanlık modda daha parlak */
   .step-1 { border-left-color: #3b82f6 !important; }
   .step-2 { border-left-color: #60a5fa !important; }
   .step-3 { border-left-color: #93c5fd !important; }
   .step-4 { border-left-color: #bfdbfe !important; }
 
-  /* DÜZELTİLDİ: Divider artık karanlık modda BEYAZ PARLAK bir ışık olacak */
+  /* Divider: Karanlıkta Parlak Beyaz */
   .enterprise-divider { 
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%) !important; 
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0) 100%) !important; 
+    opacity: 0.8 !important;
   }
 
-  /* DÜZELTİLDİ: Manifesto yazısı daha parlak */
+  /* Manifesto yazısı */
   .manifesto-container { color: #e0e0e0 !important; opacity: 1 !important; }
 
   /* Vision Cards */
