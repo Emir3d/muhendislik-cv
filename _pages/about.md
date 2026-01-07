@@ -1,264 +1,210 @@
 ---
 permalink: /
 title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış"
-excerpt: "Analiz, modelleme ve doğrulama odaklı mühendislik yaklaşımı"
 author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
 header:
   overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
-  overlay_filter: 0.7
+  overlay_filter: 0.65
 ---
 
 <style>
-/* --------------------------------------------------
-   1) SOL MENÜDEKİ KIRIK AVATAR GİZLE
--------------------------------------------------- */
+/* ==================================================
+   0) SOL TARAFTAKİ PROFİL RESMİNİ KAPAT
+================================================== */
 .author__avatar {
   display: none !important;
 }
 
-/* --------------------------------------------------
-   2) SIDEBAR STICKY (PROFESYONEL DAVRANIŞ)
--------------------------------------------------- */
-.sidebar {
-  position: sticky;
-  top: 90px;
+/* ==================================================
+   1) HERO (SADECE ÜST KISIM)
+================================================== */
+.page__hero--overlay,
+.page__hero--overlay h1,
+.page__hero--overlay p {
+  color: #f8fafc !important;
 }
 
-/* --------------------------------------------------
-   3) RENK DEĞİŞKENLERİ (LIGHT MODE)
--------------------------------------------------- */
-:root {
-  --text-main: #1f2937;
-  --text-sub: #4b5563;
-  --bg-card: #ffffff;
-  --border-soft: #e5e7eb;
-  --divider: #d1d5db;
+.hero-custom {
+  max-width: 900px;
 }
 
-/* --------------------------------------------------
-   4) RENK DEĞİŞKENLERİ (DARK MODE)
--------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-main: #e5e7eb;
-    --text-sub: #cbd5e1;
-    --bg-card: #0f172a;
-    --border-soft: #334155;
-    --divider: #475569;
-  }
+.hero-custom h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
 }
 
-/* --------------------------------------------------
-   5) SADECE ANA İÇERİK TİPOGRAFİ
--------------------------------------------------- */
-.page__content p,
-.page__content li {
-  color: var(--text-main);
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.2em;
-}
-
-.page__content h2 {
-  font-size: 1.6rem;
-  margin-top: 3em;
-  margin-bottom: 0.8em;
-  color: var(--text-main);
-}
-
-.page__content h3 {
-  font-size: 1.3rem;
-  margin-top: 2.5em;
-  margin-bottom: 0.8em;
-  color: var(--text-main);
-}
-
-/* --------------------------------------------------
-   6) MANIFESTO METNİ
--------------------------------------------------- */
-.manifesto-text {
-  text-align: center;
-  font-size: 1.2em;
-  font-style: italic;
-  font-family: Georgia, serif;
-  margin: 2.5em auto;
-  max-width: 700px;
-  color: var(--text-main);
+.hero-custom p {
+  font-size: 1.15rem;
   opacity: 0.9;
 }
 
-/* --------------------------------------------------
+/* ==================================================
+   2) ANA İÇERİK WRAPPER
+================================================== */
+.home-scope {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* ==================================================
+   3) LIGHT MODE RENKLER
+================================================== */
+.home-scope,
+.home-scope p,
+.home-scope li {
+  color: #1f2937 !important; /* koyu gri */
+}
+
+/* ==================================================
+   4) DARK MODE RENKLER
+================================================== */
+@media (prefers-color-scheme: dark) {
+  .home-scope,
+  .home-scope p,
+  .home-scope li {
+    color: #e5e7eb !important; /* açık gri */
+  }
+}
+
+/* ==================================================
+   5) TİPOGRAFİ
+================================================== */
+.home-scope p {
+  font-size: 1.03rem;
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+}
+
+.section-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ==================================================
+   6) MANİFESTO
+================================================== */
+.manifesto {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* ==================================================
    7) ZARİF BÖLÜM AYRACI
--------------------------------------------------- */
-hr.elegant-divider {
+================================================== */
+.section-divider {
   border: none;
   height: 1px;
-  width: 60%;
-  margin: 4em auto;
+  width: 65%;
+  margin: 4rem auto;
   background: linear-gradient(
     to right,
     transparent,
-    var(--divider),
+    rgba(120,120,120,0.45),
     transparent
   );
 }
-
-/* --------------------------------------------------
-   8) SÜREÇ KUTULARI (PROCESS GRID)
--------------------------------------------------- */
-.process-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin: 3em 0;
-}
-
-.p-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
-.p-card:hover {
-  transform: translateY(-4px);
-}
-
-/* SOL ŞERİTLER */
-.style-1 { border-left: 4px solid #0f172a; }
-.style-2 { border-left: 4px solid #1e3a8a; }
-.style-3 { border-left: 4px solid #2563eb; }
-.style-4 { border-left: 4px solid #60a5fa; }
-
-/* KUTU METİNLERİ */
-.p-num {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.4em;
-  font-weight: 800;
-  opacity: 0.12;
-  color: var(--text-main);
-}
-
-.p-title {
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text-main);
-}
-
-.p-desc {
-  font-size: 0.9em;
-  color: var(--text-sub);
-  line-height: 1.5;
-}
-
-/* --------------------------------------------------
-   9) VİZYON / ALINTI KARTLARI
--------------------------------------------------- */
-.vision-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.v-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: 6px;
-  padding: 20px;
-}
-
-.border-blue { border-top: 3px solid #0f172a; }
-.border-red { border-top: 3px solid #991b1b; }
-.border-cyan { border-top: 3px solid #0891b2; }
-
-.v-quote {
-  font-style: italic;
-  font-size: 0.95em;
-  color: var(--text-sub);
-}
-
-.v-author {
-  margin-top: 10px;
-  text-align: right;
-  font-weight: 600;
-  font-size: 0.9em;
-  color: var(--text-main);
-}
-
-/* --------------------------------------------------
-   10) MOBİL UYUM
--------------------------------------------------- */
-@media (max-width: 900px) {
-  .process-grid-container {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
 
-<div class="manifesto-text">
-“Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir.”
+<!-- ================= HERO İÇERİĞİ ================= -->
+<div class="hero-custom">
+  <h1>Mühendisliğe Analitik ve Bütüncül Bir Bakış</h1>
+  <p>Analiz, modelleme ve doğrulama temelli mühendislik yaklaşımı</p>
 </div>
 
-<p>
-Bu platformda mühendisliği; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
+<!-- ================= ANA İÇERİK ================= -->
+<div class="home-scope">
+
+<p class="manifesto">
+Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir.
 </p>
 
 <p>
-Amaç, mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
+Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; analiz, modelleme, doğrulama ve üretilebilirlik ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
 </p>
 
-<hr class="elegant-divider">
+<p>
+Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
+</p>
 
-<h2>Analiz Tabanlı Tasarım Metodolojisi</h2>
+<hr class="section-divider">
 
-<div class="process-grid-container">
-  <div class="p-card style-1">
-    <div class="p-num">01</div>
-    <div class="p-title">Fiziksel Tanım</div>
-    <div class="p-desc">Problemin gerçek davranışının ve sınır şartlarının belirlenmesi.</div>
-  </div>
+<h2 class="section-title">Analiz Tabanlı Mühendislik Yaklaşımı</h2>
 
-  <div class="p-card style-2">
-    <div class="p-num">02</div>
-    <div class="p-title">Sayısal Model</div>
-    <div class="p-desc">Geometri, ağ yapısı ve çözüm parametrelerinin kurulması.</div>
-  </div>
+<p>
+Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez.
+</p>
 
-  <div class="p-card style-3">
-    <div class="p-num">03</div>
-    <div class="p-title">Analiz & Doğrulama</div>
-    <div class="p-desc">Yakınsama, parametrik inceleme ve model güvenilirliği.</div>
-  </div>
+<p>
+Bu nedenle tasarım süreçlerini; yapısal analiz, sayısal modelleme ve optimizasyon adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
+</p>
 
-  <div class="p-card style-4">
-    <div class="p-num">04</div>
-    <div class="p-title">Mühendislik Yorumu</div>
-    <div class="p-desc">Sonuçların değerlendirilmesi ve uygulanabilir kararlar.</div>
-  </div>
-</div>
+<p>
+Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
+</p>
 
-<hr class="elegant-divider">
+<hr class="section-divider">
 
-<h3 style="text-align:center;">Mühendislik Vizyonu</h3>
+<h2 class="section-title">Sanal Doğrulama ve Sayısal Düşünme</h2>
 
-<div class="vision-grid">
-  <div class="v-card border-blue">
-    <p class="v-quote">“Engineering is the art of directing the great sources of power in nature.”</p>
-    <p class="v-author">— Thomas Tredgold</p>
-  </div>
-  <div class="v-card border-red">
-    <p class="v-quote">“Mechanics is the paradise of the mathematical sciences.”</p>
-    <p class="v-author">— Leonardo da Vinci</p>
-  </div>
-  <div class="v-card border-cyan">
-    <p class="v-quote">“It is engineering that changes the world.”</p>
-    <p class="v-author">— Isaac Asimov</p>
-  </div>
+<p>
+Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal modeller, tasarım güvenilirliğini artırırken zaman ve maliyet açısından önemli avantajlar sağlar.
+</p>
+
+<p>
+Bu bağlamda, çalışmalarda <strong>Sanal Doğrulama (Virtual Verification)</strong> süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum.
+</p>
+
+<p>
+Sayısal analizler, yalnızca sonuç üretmek için değil; sistemi anlamak, varsayımları sorgulamak ve model güvenilirliğini değerlendirmek için bir araç olarak ele alınmaktadır.
+</p>
+
+<hr class="section-divider">
+
+<h2 class="section-title">Tasarım, Davranış ve Üretilebilirlik İlişkisi</h2>
+
+<p>
+Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
+</p>
+
+<p>
+Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum.
+</p>
+
+<p>
+Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabilirliğini erken aşamada görmeyi ve olası sorunları öngörmeyi mümkün kılar.
+</p>
+
+<hr class="section-divider">
+
+<h2 class="section-title">Bu Platformun Amacı</h2>
+
+<p>
+Bu site, bir özgeçmiş arşivi ya da yalnızca kullanılan yazılımların listelendiği bir portfolyo değildir.
+</p>
+
+<p>
+Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendislik problemlerine bakış açısını şeffaf, sistematik ve akademik bir çerçevede paylaşmaktır.
+</p>
+
+<p>
+Burada yer alan içerikler; projeler, analizler, teknik değerlendirmeler ve düşünsel notlar aracılığıyla, mühendisliğin yalnızca “sonuç” değil, süreç odaklı bir disiplin olduğunu vurgulamayı hedefler.
+</p>
+
+<hr class="section-divider">
+
+<h2 class="section-title">Mühendislik Vizyonu</h2>
+
+<p>
+Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum.
+</p>
+
+<p>
+Bu yaklaşımın, hem akademik çalışmalarda hem de endüstriyel uygulamalarda sürdürülebilir ve güvenilir mühendislik çözümlerinin temelini oluşturduğuna inanıyorum.
+</p>
+
 </div>
