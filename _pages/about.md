@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış"
+title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış" 
 excerpt: "Mekanik tasarım, analiz ve doğrulama odaklı mühendislik çalışmaları"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 header:
-  overlay_image: /muhendislik-cv/images/header_bg.png
+  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
   overlay_filter: 0.7
 ---
 
@@ -55,35 +55,59 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 ---
 
-### İlham Veren Mühendislik Vizyonu
+<h3 style="text-align: center; margin-top: 3em; margin-bottom: 1.5em;">💡 İlham Veren Mühendislik Vizyonu</h3>
 
-> "Engineering is the art of directing the great sources of power in nature for the use and convenience of man."
-> <br>— **Thomas Tredgold** *(Civil Engineer)*
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
-> "The engineer has been, and is, a maker of history."
-> <br>— **James Kip Finch** *(Engineer & Author)*
+  <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #2c3e50; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <p style="font-style: italic; font-size: 0.95em; color: #555;">
+      "Engineering is the art of directing the great sources of power in nature for the use and convenience of man."
+    </p>
+    <p style="text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 10px; color: #333;">
+      — Thomas Tredgold
+    </p>
+  </div>
 
-> "Science can amuse and fascinate us all, but it is engineering that changes the world."
-> <br>— **Isaac Asimov**
+  <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #c0392b; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <p style="font-style: italic; font-size: 0.95em; color: #555;">
+      "Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."
+    </p>
+    <p style="text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 10px; color: #333;">
+      — Leonardo da Vinci
+    </p>
+  </div>
+
+  <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #2980b9; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <p style="font-style: italic; font-size: 0.95em; color: #555;">
+      "Science can amuse and fascinate us all, but it is engineering that changes the world."
+    </p>
+    <p style="text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 10px; color: #333;">
+      — Isaac Asimov
+    </p>
+  </div>
+
+</div>
+
+<div style="text-align: center; margin-top: 3em; margin-bottom: 2em;">
+  <a href="/muhendislik-cv/cv/" class="btn btn--primary btn--large" style="margin-right: 10px;">📄 CV'mi İncele</a>
+  <a href="mailto:seninmailin@example.com" class="btn btn--inverse btn--large">✉️ İletişime Geç</a>
+</div>
 
 <style>
-/* 1. Sol Menü Temizliği ve Sabitleme */
+/* Sol menü ve avatar temizliği */
 .author__avatar { display: none !important; }
 img[src$="/images/"] { display: none !important; }
 .sidebar { position: relative !important; top: 0 !important; }
 .author__content { margin-top: 0 !important; padding-top: 0 !important; }
 .author__name { margin-top: 10px !important; font-size: 1.6em !important; }
 
-/* 2. GENİŞLİK AYARI (Nefes Aldırma) */
-/* Masaüstü ekranlarda (geniş ekran) içerik alanını büyütür */
+/* İçerik Genişliği (Ferah Görünüm) */
 @media (min-width: 64em) {
   .page__content {
-    width: 75% !important; /* Genişlik yüzdesini artırdık */
-    max-width: 900px !important; /* Maksimum limiti 900px'e çektik */
+    width: 75% !important;
+    max-width: 900px !important;
     margin-right: auto;
   }
-  .page {
-    padding-right: 0 !important;
-  }
+  .page { padding-right: 0 !important; }
 }
 </style>
