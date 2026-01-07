@@ -7,25 +7,25 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
+  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.jpg
   overlay_filter: 0.7
 ---
 
-<div class="motto-container">
-  "Virtual Verification — From CAD to Physical Reality"
+<div class="manifesto-container">
+  "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
 </div>
 
-**Mühendislik, bir sistemin yalnızca geometrisini değil; fiziksel davranışını da öngörebilme disiplinidir.** Bu yaklaşım, çalışmalarıma yön veren temel ilkedir.
+Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; **analiz, modelleme, doğrulama ve üretilebilirlik** ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
 
-Akademik altyapı ile mühendislik pratiğini bir araya getirerek; analiz, doğrulama ve tasarım süreçlerini bilimsel tutarlılık çerçevesinde ele alıyorum.
+Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
 
 <div class="enterprise-divider"></div>
 
-### Analiz Tabanlı Tasarım Metodolojisi
+### Analiz Tabanlı Mühendislik Yaklaşımı
 
-**Modern mühendislik problemleri, sezgisel ya da yalnızca deneysel yöntemlerle sürdürülebilir biçimde çözülemez.**
+Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
 
-Tasarım sürecini, "yazılım operatörlüğü"nden öte, fiziksel gerçekliğe dayanan 4 adımlı sistematik bir doğrulama döngüsü üzerine kuruyorum:
+Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
 
 <div class="process-container">
   
@@ -69,25 +69,33 @@ Tasarım sürecini, "yazılım operatörlüğü"nden öte, fiziksel gerçekliğe
 
 </div>
 
-Bu sistematik yaklaşım; sistem davranışını daha tasarım aşamasında tanımlamak ve mühendislik kararlarını nicel verilerle temellendirmek içindir.
+<div class="enterprise-divider"></div>
+
+### Sanal Doğrulama ve Sayısal Düşünme
+
+Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal modeller, tasarım güvenilirliğini artırırken zaman ve maliyet açısından önemli avantajlar sağlar.
+
+Bu bağlamda, çalışmalarda **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum. Sayısal analizler, yalnızca sonuç üretmek için değil; sistemi anlamak, varsayımları sorgulamak ve model güvenilirliğini değerlendirmek için bir araç olarak ele alınmaktadır.
+
+### Tasarım, Davranış ve Üretilebilirlik İlişkisi
+
+Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
+
+Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum. Bu perspektif, tasarım kararlarının gerçek dünya koşullarında uygulanabilirliğini erken aşamada görmeyi ve olası sorunları öngörmeyi mümkün kılar.
+
+### Bu Platformun Amacı
+
+Bu site, bir özgeçmiş arşivi ya da yalnızca kullanılan yazılımların listelendiği bir portfolyo değildir.
+
+Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendislik problemlerine bakış açısını şeffaf, sistematik ve akademik bir çerçevede paylaşmaktır. Burada yer alan içerikler; projeler, analizler, teknik değerlendirmeler ve düşünsel notlar aracılığıyla, mühendisliğin yalnızca “sonuç” değil, süreç odaklı bir disiplin olduğunu vurgulamayı hedefler.
 
 <div class="enterprise-divider"></div>
 
-### Sanal Doğrulama ve Sayısal Yaklaşımlar
+<h3 style="text-align: center; margin-top: 2em; margin-bottom: 1.5em; opacity: 0.8;">Mühendislik Vizyonu</h3>
 
-**Teorik mekanik bilgisi, uygun sayısal yöntemlerle birleştirildiğinde güçlü bir mühendislik aracına dönüşür.**
-
-Bu bağlamda çalışmalarımda, fiziksel testlerin yerini tamamen almayı değil; onları destekleyen ve yönlendiren **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alıyorum. Bu yaklaşım; tasarım güvenilirliğini artırırken, maliyet ve zaman açısından da önemli avantajlar sunar.
-
-### İleri Malzemeler ve Yapısal Davranış
-
-**Günümüz mühendislik uygulamalarında, hafiflik ve dayanım gereksinimleri giderek daha belirleyici hâle gelmektedir.**
-
-Bu doğrultuda, özellikle ileri malzemeler ve çok katmanlı yapılar (kompozitler) üzerinden, sistem davranışının daha doğru modellenmesine odaklanıyorum. Yapısal performansın, yalnızca malzeme özellikleriyle değil; geometri, sınır koşulları ve yükleme senaryolarıyla birlikte değerlendirilmesi gerektiğini savunuyorum.
-
-<div class="enterprise-divider"></div>
-
-<h3 style="text-align: center; margin-top: 2em; margin-bottom: 1.5em; opacity: 0.8;">💡 İlham Veren Mühendislik Vizyonu</h3>
+<div style="text-align: center; margin-bottom: 3em; color: #666; font-style: italic;">
+  "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
+</div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 3em;">
 
@@ -114,107 +122,89 @@ Bu doğrultuda, özellikle ileri malzemeler ve çok katmanlı yapılar (kompozit
 
 </div>
 
+
 <style>
-/* 1. TEMEL AYARLAR & MOTTO */
-.motto-container {
-  text-align: center; font-size: 1.25em; font-style: italic; margin-bottom: 2em; font-family: 'Georgia', serif; color: inherit !important; opacity: 0.75;
+/* 1. GİRİŞ MANİFESTOSU */
+.manifesto-container {
+  text-align: center;
+  font-size: 1.25em;
+  font-style: italic;
+  margin-bottom: 2em;
+  font-family: 'Georgia', serif;
+  color: inherit !important;
+  opacity: 0.8;
+  line-height: 1.6;
 }
+
+/* 2. TEMİZLİK (Avatar ve Resim Hataları Gizleme) */
 .author__avatar, img[src$="/images/"] { display: none !important; }
 .sidebar { position: relative !important; top: 0 !important; }
 .author__content { margin-top: 0 !important; padding-top: 0 !important; }
 .author__name { margin-top: 10px !important; font-size: 1.6em !important; }
+
+/* 3. GENİŞLİK AYARI */
 @media (min-width: 64em) {
   .page__content { width: 75% !important; max-width: 900px !important; margin-right: auto; }
   .page { padding-right: 0 !important; }
 }
 
-/* 2. ENTERPRISE PROCESS FLOW (MÜHENDİSLİK AKIŞI) */
+/* 4. PROCESS FLOW (RENK GEÇİŞİ DÜZELTİLDİ) */
 .process-container {
   display: flex;
-  align-items: flex-start; /* Kartları üstten hizalar */
+  align-items: flex-start;
   justify-content: space-between;
   gap: 15px;
-  margin: 2.5em 0;
+  margin: 3em 0;
 }
 
 .process-step {
   flex: 1;
-  background: #ffffff; /* Apple White */
-  border: 1px solid #eaeaea; /* Enterprise Border */
-  border-radius: 8px; /* Hafif yuvarlak köşe */
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
   padding: 20px;
   position: relative;
   transition: transform 0.2s ease;
-  /* Gölge yok veya çok çok hafif */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
 .process-step:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: #d0d0d0;
 }
 
-/* TONAL RENK GEÇİŞLERİ (SOL ÇİZGİLER) */
-.step-1 { border-left: 4px solid #2f4f6f; } /* En Koyu */
-.step-2 { border-left: 4px solid #3f6f8f; }
-.step-3 { border-left: 4px solid #4f8faf; }
-.step-4 { border-left: 4px solid #6faecf; } /* En Açık */
+/* TONAL RENK GEÇİŞİ (SOL KENAR ÇİZGİSİ) - ÖNCELİKLİ (!important) */
+/* Adım 1: Koyu Lacivert */
+.step-1 { border-left: 6px solid #1e3a8a !important; } 
+/* Adım 2: Orta Mavi */
+.step-2 { border-left: 6px solid #2563eb !important; } 
+/* Adım 3: Açık Mavi */
+.step-3 { border-left: 6px solid #3b82f6 !important; } 
+/* Adım 4: En Açık Mavi */
+.step-4 { border-left: 6px solid #60a5fa !important; } 
 
-.step-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
+.step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.step-num { font-family: sans-serif; font-weight: 900; font-size: 1.5em; opacity: 0.15; }
+.step-title { font-weight: 700; font-size: 0.95em; color: #222; line-height: 1.2; }
+.step-desc { font-size: 0.85em; color: #666; line-height: 1.4; }
+.process-arrow { align-self: center; color: #ccc; font-size: 1.2em; font-weight: 300; }
 
-.step-num {
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 1.2em;
-  opacity: 0.2; /* Numarayı silik yap, içeriği öne çıkar */
-}
-/* Numara renkleri de karta uysun */
-.step-1 .step-num { color: #2f4f6f; opacity: 0.4; }
-.step-2 .step-num { color: #3f6f8f; opacity: 0.4; }
-.step-3 .step-num { color: #4f8faf; opacity: 0.4; }
-.step-4 .step-num { color: #6faecf; opacity: 0.4; }
-
-.step-title {
-  font-weight: 700;
-  font-size: 0.95em;
-  color: #222;
-  line-height: 1.2;
-}
-
-.step-desc {
-  font-size: 0.85em;
-  color: #666;
-  line-height: 1.4;
-}
-
-.process-arrow {
-  align-self: center;
-  color: #ccc;
-  font-size: 1.2em;
-  font-weight: 300;
-}
-
-/* MOBİL DAVRANIŞ (Alt alta dizilme) */
+/* MOBİL GÖRÜNÜM */
 @media (max-width: 768px) {
   .process-container { flex-direction: column; gap: 15px; }
-  .process-step { width: 100%; border-left-width: 5px; } /* Mobilde sol çizgiyi belirginleştir */
-  .process-arrow { display: none; } /* Mobilde okları gizle */
+  .process-step { width: 100%; }
+  .process-arrow { display: none; }
 }
 
-/* 3. ENTERPRISE DIVIDER (Zarif Ayraç) */
+/* 5. ZARİF AYRAÇ */
 .enterprise-divider {
   height: 1px;
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #eaeaea 50%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #ddd 50%, rgba(0,0,0,0) 100%);
   margin: 3em 0;
   border: none;
 }
 
-/* 4. VİZYON KARTLARI (SABİT) */
+/* 6. VİZYON KARTLARI */
 .vision-card {
   flex: 1; min-width: 250px; background: #f8f9fa; padding: 25px; border-radius: 8px; position: relative; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s ease;
 }
@@ -226,15 +216,22 @@ Bu doğrultuda, özellikle ileri malzemeler ve çok katmanlı yapılar (kompozit
 .card-quote { font-style: italic; color: #555; font-size: 0.95em; line-height: 1.6; }
 .card-author { text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 15px; color: #333; }
 
-/* 5. KARANLIK MOD (DARK MODE) AYARLARI */
+/* =========================================
+   🌙 KARANLIK MOD (DARK MODE) ÖZEL AYARLAR
+   ========================================= */
 @media (prefers-color-scheme: dark) {
   /* Process Flow */
   .process-step { background: #252a34 !important; border-color: #444 !important; }
   .step-title { color: #eee !important; }
   .step-desc { color: #aaa !important; }
-  /* Numaralar karanlıkta beyazımsı olsun */
   .step-num { color: #fff !important; opacity: 0.3 !important; }
   
+  /* Renk geçişi karanlık modda daha parlak olsun */
+  .step-1 { border-left-color: #3b82f6 !important; }
+  .step-2 { border-left-color: #60a5fa !important; }
+  .step-3 { border-left-color: #93c5fd !important; }
+  .step-4 { border-left-color: #bfdbfe !important; }
+
   /* Divider */
   .enterprise-divider { background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #444 50%, rgba(0,0,0,0) 100%) !important; }
 
