@@ -9,7 +9,22 @@ header:
 
 <style>
 /* ==================================================
-   0) SOL PROFİL RESMİ VE STICKY KAPAT
+   0) TEMA RENK DEĞİŞKENLERİNİ EZ (KRİTİK)
+================================================== */
+:root {
+  --mm-text-color: #1f2937;        /* AÇIK MOD ANA METİN */
+  --mm-muted-text-color: #4b5563; /* AÇIK MOD İKİNCİL */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mm-text-color: #e5e7eb;        /* DARK MODE ANA */
+    --mm-muted-text-color: #9ca3af; /* DARK MODE İKİNCİL */
+  }
+}
+
+/* ==================================================
+   1) SOL PROFİL VE STICKY SIDEBAR KAPAT
 ================================================== */
 .author__avatar {
   display: none !important;
@@ -20,7 +35,7 @@ header:
 }
 
 /* ==================================================
-   1) HERO – SADECE TEMA BAŞLIĞI
+   2) HERO (SADECE BAŞLIK VE ALT METİN)
 ================================================== */
 .page__hero--overlay,
 .page__hero--overlay h1 {
@@ -31,10 +46,11 @@ header:
   font-size: 1.1rem;
   opacity: 0.9;
   max-width: 900px;
+  color: #f1f5f9 !important;
 }
 
 /* ==================================================
-   2) ANA İÇERİK GENİŞLİĞİ
+   3) ANA İÇERİK GENİŞLİĞİ
 ================================================== */
 .page__content {
   max-width: 920px;
@@ -42,27 +58,7 @@ header:
 }
 
 /* ==================================================
-   3) LIGHT MODE – ZORLA KOYU GRİ
-================================================== */
-.page__content,
-.page__content p,
-.page__content li {
-  color: #1f2937 !important;
-}
-
-/* ==================================================
-   4) DARK MODE – ZORLA AÇIK GRİ
-================================================== */
-@media (prefers-color-scheme: dark) {
-  .page__content,
-  .page__content p,
-  .page__content li {
-    color: #e5e7eb !important;
-  }
-}
-
-/* ==================================================
-   5) TİPOGRAFİ
+   4) TİPOGRAFİ
 ================================================== */
 .page__content p {
   font-size: 1.02rem;
@@ -78,7 +74,7 @@ header:
 }
 
 /* ==================================================
-   6) MANİFESTO
+   5) MANİFESTO
 ================================================== */
 .manifesto {
   font-family: Georgia, serif;
@@ -89,7 +85,7 @@ header:
 }
 
 /* ==================================================
-   7) ZARİF AYRAÇ
+   6) ZARİF BÖLÜM AYRAÇ
 ================================================== */
 .section-divider {
   border: none;
@@ -105,7 +101,7 @@ header:
 }
 </style>
 
-<!-- HERO ALT METNİ -->
+<!-- ================= HERO ALT METNİ ================= -->
 <p class="hero-subtitle">
   Analiz, modelleme ve doğrulama temelli mühendislik yaklaşımı
 </p>
