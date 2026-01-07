@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "Mühendisliğe Analitik ve Bütüncül Bir Bakış"
-excerpt: "Mekanik tasarım, analiz ve doğrulama odaklı mühendislik çalışmaları"
+title: "Mekanik Tasarım ve Analiz Portfolyosu"
+excerpt: "Emir İnan - Makine Mühendisi Portfolyosu"
 author_profile: true
 redirect_from: 
   - /about/
@@ -56,33 +56,33 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 ---
 
-<h3 style="text-align: center; margin-top: 3em; margin-bottom: 1.5em;">💡 İlham Veren Mühendislik Vizyonu</h3>
+<h3 style="text-align: center; margin-top: 3em; margin-bottom: 1.5em; opacity: 0.8;">💡 İlham Veren Mühendislik Vizyonu</h3>
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
-  <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #2c3e50; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <p style="font-style: italic; font-size: 0.95em; color: #555;">
+  <div class="vision-card" style="border-left-color: #2c3e50;">
+    <p class="card-quote">
       "Engineering is the art of directing the great sources of power in nature for the use and convenience of man."
     </p>
-    <p style="text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 10px; color: #333;">
+    <p class="card-author">
       — Thomas Tredgold
     </p>
   </div>
 
-  <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #c0392b; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <p style="font-style: italic; font-size: 0.95em; color: #555;">
+  <div class="vision-card" style="border-left-color: #c0392b;">
+    <p class="card-quote">
       "Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."
     </p>
-    <p style="text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 10px; color: #333;">
+    <p class="card-author">
       — Leonardo da Vinci
     </p>
   </div>
 
-  <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #2980b9; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <p style="font-style: italic; font-size: 0.95em; color: #555;">
+  <div class="vision-card" style="border-left-color: #2980b9;">
+    <p class="card-quote">
       "Science can amuse and fascinate us all, but it is engineering that changes the world."
     </p>
-    <p style="text-align: right; font-weight: bold; font-size: 0.85em; margin-top: 10px; color: #333;">
+    <p class="card-author">
       — Isaac Asimov
     </p>
   </div>
@@ -91,7 +91,6 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 
 <div style="text-align: center; margin-top: 4em; margin-bottom: 4em; display: flex; justify-content: center; gap: 20px;">
   <a href="/muhendislik-cv/cv/" class="btn-elite btn-elite-primary">📄 CV'yi İncele</a>
-  
   <a href="mailto:emirhan555inan@gmail.com" class="btn-elite btn-elite-secondary">✉️ İletişim</a>
 </div>
 
@@ -110,43 +109,87 @@ img[src$="/images/"] { display: none !important; }
   .page { padding-right: 0 !important; }
 }
 
-/* 3. ELİT BUTON TASARIMI (Ghost Buttons) */
+/* 3. VİZYON KARTLARI STİLİ (Aydınlık Mod) */
+.vision-card {
+  flex: 1;
+  min-width: 250px;
+  background: #f8f9fa; /* Aydınlık mod arka planı */
+  padding: 25px; /* Biraz daha geniş iç boşluk */
+  border-radius: 12px; /* Daha yumuşak köşeler */
+  border-left-width: 5px;
+  border-left-style: solid;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Daha modern, yumuşak gölge */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vision-card:hover {
+  transform: translateY(-5px); /* Üzerine gelince hafifçe yukarı kalkar */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Gölge belirginleşir */
+}
+.card-quote {
+  font-style: italic;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+.card-author {
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* 4. ELİT BUTON STİLİ (Aydınlık Mod) */
 .btn-elite {
-  background: transparent !important; /* Şeffaf */
-  border-radius: 4px !important; /* Hafif yuvarlak */
-  padding: 10px 25px !important;
+  background: transparent !important;
+  border-radius: 6px !important; /* Biraz daha yuvarlak */
+  padding: 12px 30px !important; /* Daha geniş, ferah butonlar */
   text-decoration: none !important;
   transition: all 0.3s ease !important;
   display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Daha modern font */
 }
-
-/* CV Butonu Özellikleri (Baskın) */
 .btn-elite-primary {
-  border: 1px solid #555 !important; /* Koyu gri çerçeve */
+  border: 2px solid #333 !important; /* Biraz daha kalın çerçeve */
   color: #333 !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
-
-/* İletişim Butonu Özellikleri (Çekinik) */
 .btn-elite-secondary {
-  border: 1px solid #ccc !important; /* Açık gri çerçeve */
+  border: 2px solid #ccc !important;
   color: #777 !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
-
-/* Hover (Üzerine Gelince) Efekti */
 .btn-elite:hover {
-  background-color: rgba(0,0,0,0.05) !important; /* Çok hafif gri arka plan */
-  border-color: #000 !important;
-  color: #000 !important;
-  transform: translateY(-2px); /* Hafif yukarı kalkar */
+  background-color: rgba(0,0,0,0.05) !important;
+  transform: translateY(-2px);
 }
 
-/* 4. KARANLIK MOD (DARK MODE) AYARLARI */
-/* Site karanlık moda geçerse renkleri otomatik çevirir */
+/* 5. KARANLIK MOD (DARK MODE) AYARLARI (Burada büyü başlıyor!) */
 @media (prefers-color-scheme: dark) {
-  .btn-elite-primary { border-color: #aaa !important; color: #ddd !important; }
-  .btn-elite-secondary { border-color: #666 !important; color: #aaa !important; }
-  .btn-elite:hover { background-color: rgba(255,255,255,0.1) !important; color: #fff !important; border-color: #fff !important; }
+  /* Kartlar */
+  .vision-card {
+    background: #1e1e1e !important; /* Koyu arka plan */
+    box-shadow: 0 4px 12px rgba(255,255,255,0.05) !important; /* Beyazımsı, hafif gölge */
+  }
+  .vision-card:hover {
+    box-shadow: 0 8px 20px rgba(255,255,255,0.1) !important;
+  }
+  .card-quote { color: #ddd !important; } /* Yazı rengi açık gri */
+  .card-author { color: #fff !important; } /* İsim rengi beyaz */
+
+  /* Butonlar */
+  .btn-elite-primary {
+    border-color: #eee !important; /* Neredeyse beyaz çerçeve */
+    color: #eee !important;
+  }
+  .btn-elite-secondary {
+    border-color: #777 !important;
+    color: #aaa !important;
+  }
+  .btn-elite:hover {
+    background-color: rgba(255,255,255,0.1) !important; /* Hafif beyaz parlama */
+    border-color: #fff !important;
+    color: #fff !important;
+  }
 }
 </style>
