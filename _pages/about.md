@@ -11,7 +11,7 @@ header:
   overlay_filter: 0.7
 ---
 
-<div style="text-align: center; font-size: 1.25em; font-style: italic; color: #555; margin-bottom: 2em; font-family: 'Georgia', serif;">
+<div style="text-align: center; font-size: 1.25em; font-style: italic; opacity: 0.7; margin-bottom: 2em; font-family: 'Georgia', serif;">
   "Virtual Verification — From CAD to Physical Reality"
 </div>
 
