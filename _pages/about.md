@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.jpg
+  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
   overlay_filter: 0.7
 ---
 
@@ -93,7 +93,7 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
 
 <h3 style="text-align: center; margin-top: 2em; margin-bottom: 1.5em; opacity: 0.8;">Mühendislik Vizyonu</h3>
 
-<div style="text-align: center; margin-bottom: 3em; color: #666; font-style: italic;">
+<div class="manifesto-container" style="margin-bottom: 3em;">
   "Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum."
 </div>
 
@@ -136,19 +136,19 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   line-height: 1.6;
 }
 
-/* 2. TEMİZLİK (Avatar ve Resim Hataları Gizleme) */
+/* 2. TEMİZLİK */
 .author__avatar, img[src$="/images/"] { display: none !important; }
 .sidebar { position: relative !important; top: 0 !important; }
 .author__content { margin-top: 0 !important; padding-top: 0 !important; }
 .author__name { margin-top: 10px !important; font-size: 1.6em !important; }
 
-/* 3. GENİŞLİK AYARI */
+/* 3. GENİŞLİK */
 @media (min-width: 64em) {
   .page__content { width: 75% !important; max-width: 900px !important; margin-right: auto; }
   .page { padding-right: 0 !important; }
 }
 
-/* 4. PROCESS FLOW (RENK GEÇİŞİ DÜZELTİLDİ) */
+/* 4. PROCESS FLOW (AKIŞ ŞEMASI) */
 .process-container {
   display: flex;
   align-items: flex-start;
@@ -156,7 +156,6 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   gap: 15px;
   margin: 3em 0;
 }
-
 .process-step {
   flex: 1;
   background: #ffffff;
@@ -167,36 +166,27 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   transition: transform 0.2s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
-
 .process-step:hover {
   transform: translateY(-3px);
   border-color: #d0d0d0;
 }
-
-/* TONAL RENK GEÇİŞİ (SOL KENAR ÇİZGİSİ) - ÖNCELİKLİ (!important) */
-/* Adım 1: Koyu Lacivert */
+/* TONAL RENK GEÇİŞİ */
 .step-1 { border-left: 6px solid #1e3a8a !important; } 
-/* Adım 2: Orta Mavi */
 .step-2 { border-left: 6px solid #2563eb !important; } 
-/* Adım 3: Açık Mavi */
 .step-3 { border-left: 6px solid #3b82f6 !important; } 
-/* Adım 4: En Açık Mavi */
 .step-4 { border-left: 6px solid #60a5fa !important; } 
-
 .step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .step-num { font-family: sans-serif; font-weight: 900; font-size: 1.5em; opacity: 0.15; }
 .step-title { font-weight: 700; font-size: 0.95em; color: #222; line-height: 1.2; }
 .step-desc { font-size: 0.85em; color: #666; line-height: 1.4; }
 .process-arrow { align-self: center; color: #ccc; font-size: 1.2em; font-weight: 300; }
-
-/* MOBİL GÖRÜNÜM */
 @media (max-width: 768px) {
   .process-container { flex-direction: column; gap: 15px; }
   .process-step { width: 100%; }
   .process-arrow { display: none; }
 }
 
-/* 5. ZARİF AYRAÇ */
+/* 5. ZARİF AYRAÇ (LIGHT MODE) */
 .enterprise-divider {
   height: 1px;
   background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #ddd 50%, rgba(0,0,0,0) 100%);
@@ -226,14 +216,19 @@ Amaç; yürütülen çalışmaları, geliştirilen yaklaşımları ve mühendisl
   .step-desc { color: #aaa !important; }
   .step-num { color: #fff !important; opacity: 0.3 !important; }
   
-  /* Renk geçişi karanlık modda daha parlak olsun */
+  /* Renk geçişi karanlık modda daha parlak (NEON ETKİSİ) */
   .step-1 { border-left-color: #3b82f6 !important; }
   .step-2 { border-left-color: #60a5fa !important; }
   .step-3 { border-left-color: #93c5fd !important; }
   .step-4 { border-left-color: #bfdbfe !important; }
 
-  /* Divider */
-  .enterprise-divider { background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #444 50%, rgba(0,0,0,0) 100%) !important; }
+  /* DÜZELTİLDİ: Divider artık karanlık modda BEYAZ PARLAK bir ışık olacak */
+  .enterprise-divider { 
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 100%) !important; 
+  }
+
+  /* DÜZELTİLDİ: Manifesto yazısı daha parlak */
+  .manifesto-container { color: #e0e0e0 !important; opacity: 1 !important; }
 
   /* Vision Cards */
   .vision-card { background: #252a34 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important; border: 1px solid #333; }
