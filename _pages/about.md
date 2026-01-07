@@ -11,15 +11,149 @@ header:
   overlay_filter: 0.7
 ---
 
+<style>
+/* 1. SOL MENÜDEKİ KIRIK RESMİ YOK ET */
+.author__avatar {
+  display: none !important;
+}
+
+/* 2. SAYFA YAPISINI BOZAN ETKENLERİ SIFIRLA */
+/* Bu kod, içeriğin sidebar ile uyumlu durmasını sağlar */
+.page__content {
+  width: 100% !important;
+  margin-right: 0 !important;
+}
+
+/* 3. AKILLI RENK YÖNETİMİ (LIGHT MODE - VARSAYILAN) */
+:root {
+  --text-color: #333333;
+  --bg-card: #ffffff;
+  --border-color: #e0e0e0;
+  --desc-color: #555555;
+  --divider-color: #cccccc;
+}
+
+/* 4. AKILLI RENK YÖNETİMİ (DARK MODE - OTOMATİK) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #e0e0e0;      /* Yazılar açık gri */
+    --bg-card: #1e293b;         /* Kartlar koyu gri */
+    --border-color: #334155;    /* Çerçeveler silik */
+    --desc-color: #cbd5e1;      /* Açıklamalar beyazımsı */
+    --divider-color: #444444;   /* Ayraçlar koyu */
+  }
+}
+
+/* GENEL YAZI STİLLERİ (Değişkenlere Bağlı) */
+body, p, li {
+  color: var(--text-color) !important;
+}
+
+.manifesto-text {
+  text-align: center;
+  font-size: 1.25em;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  margin-bottom: 1.5em;
+  color: var(--text-color) !important;
+  opacity: 0.9;
+}
+
+/* PROCESS GRID (SÜREÇ KUTULARI) */
+.process-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px;
+  margin: 2em 0;
+}
+
+.p-card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-color) !important;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.p-card:hover {
+  transform: translateY(-5px);
+}
+
+/* RENKLİ ÇİZGİLER (SABİT) */
+.style-1 { border-left: 5px solid #0f172a !important; }
+.style-2 { border-left: 5px solid #1e40af !important; }
+.style-3 { border-left: 5px solid #3b82f6 !important; }
+.style-4 { border-left: 5px solid #60a5fa !important; }
+
+/* KUTU İÇİ YAZILAR */
+.p-num {
+  font-weight: 900; 
+  font-size: 1.5em; 
+  opacity: 0.2; 
+  position: absolute; 
+  top: 10px; 
+  right: 15px; 
+  color: var(--text-color) !important;
+}
+.p-title {
+  font-weight: 700; 
+  font-size: 1em; 
+  margin-bottom: 8px; 
+  color: var(--text-color) !important;
+}
+.p-desc {
+  font-size: 0.85em; 
+  color: var(--desc-color) !important; 
+  line-height: 1.4;
+}
+
+/* ZARİF AYRAÇ */
+hr.elegant-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--divider-color);
+  margin: 3em 0;
+}
+
+/* VİZYON KARTLARI */
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.v-card {
+  background-color: var(--bg-card) !important;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.border-blue { border-top: 3px solid #0f172a; }
+.border-red { border-top: 3px solid #b91c1c; }
+.border-cyan { border-top: 3px solid #0891b2; }
+
+.v-quote { font-style: italic; font-size: 0.95em; color: var(--desc-color) !important; }
+.v-author { text-align: right; font-weight: bold; font-size: 0.9em; margin-top: 10px; color: var(--text-color) !important; }
+
+/* MOBİL UYUM */
+@media (max-width: 900px) {
+  .process-grid-container {
+    grid-template-columns: 1fr; 
+  }
+}
+</style>
+
 <div class="manifesto-text">
   "Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir."
 </div>
 
-<p class="intro-paragraph">
+<p>
   Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; <strong>analiz, modelleme, doğrulama ve üretilebilirlik</strong> ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
 </p>
 
-<p class="intro-paragraph">
+<p>
   Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
 </p>
 
@@ -92,122 +226,3 @@ Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk a
     <p class="v-author">— Isaac Asimov</p>
   </div>
 </div>
-
-
-<style>
-/* 1. MANİFESTO VE METİN */
-.manifesto-text {
-  text-align: center;
-  font-size: 1.25em;
-  font-style: italic;
-  font-family: 'Georgia', serif;
-  color: inherit;
-  opacity: 0.9;
-  margin-bottom: 1.5em;
-}
-.intro-paragraph {
-  font-size: 1.05em;
-  line-height: 1.6;
-}
-
-/* 2. ZARİF AYRAÇ (HR Etiketi ile) */
-hr.elegant-divider {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.75), rgba(0, 0, 0, 0));
-  margin: 3em 0;
-}
-
-/* 3. PROCESS GRID (ESNEK KUTU SORUNUNU ÇÖZER) */
-.process-grid-container {
-  display: grid;
-  /* Masaüstünde 4 eşit kolon */
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 15px;
-  margin: 2em 0;
-}
-
-/* KUTU TASARIMI (ZORLA BEYAZ) */
-.p-card {
-  background-color: #ffffff !important; /* Tema ne olursa olsun BEYAZ */
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  position: relative;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-  color: #333 !important; /* Yazılar SİYAH */
-}
-.p-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-/* RENKLİ ÇİZGİLER (TONAL HARMONY) */
-.style-1 { border-left: 5px solid #0f172a !important; }
-.style-2 { border-left: 5px solid #1e40af !important; }
-.style-3 { border-left: 5px solid #3b82f6 !important; }
-.style-4 { border-left: 5px solid #60a5fa !important; }
-
-/* KUTU İÇİ YAZILAR */
-.p-num {
-  font-weight: 900; font-size: 1.5em; opacity: 0.15; position: absolute; top: 10px; right: 15px; color: #000 !important;
-}
-.p-title {
-  font-weight: 700; font-size: 1em; margin-bottom: 8px; color: #000 !important;
-}
-.p-desc {
-  font-size: 0.85em; color: #555 !important; line-height: 1.4;
-}
-
-/* 4. VİZYON KARTLARI */
-.vision-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.v-card {
-  background-color: #f8f9fa !important;
-  padding: 20px;
-  border-radius: 6px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.border-blue { border-top: 3px solid #0f172a; }
-.border-red { border-top: 3px solid #b91c1c; }
-.border-cyan { border-top: 3px solid #0891b2; }
-
-.v-quote { font-style: italic; color: #444 !important; font-size: 0.95em; }
-.v-author { text-align: right; font-weight: bold; font-size: 0.9em; margin-top: 10px; color: #222 !important; }
-
-/* 5. MOBİL UYUM */
-@media (max-width: 900px) {
-  .process-grid-container {
-    grid-template-columns: 1fr; /* Mobilde tek kolon */
-  }
-}
-
-/* 6. DARK MODE DÜZELTMELERİ */
-@media (prefers-color-scheme: dark) {
-  /* Ayraç rengi */
-  hr.elegant-divider { background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(200, 200, 200, 0.5), rgba(0, 0, 0, 0)); }
-  
-  /* Manifesto rengi */
-  .manifesto-text { color: #e0e0e0 !important; }
-  
-  /* Kutular karanlık modda KOYU olsun ama yazılar okunur olsun */
-  .p-card { 
-    background-color: #1e293b !important; 
-    border-color: #334155 !important; 
-    color: #f1f5f9 !important;
-  }
-  .p-num { color: #fff !important; opacity: 0.2; }
-  .p-title { color: #fff !important; }
-  .p-desc { color: #cbd5e1 !important; }
-  
-  /* Vizyon kartları */
-  .v-card { background-color: #1e293b !important; border-color: #334155 !important; }
-  .v-quote { color: #cbd5e1 !important; }
-  .v-author { color: #fff !important; }
-}
-</style>
