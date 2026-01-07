@@ -92,7 +92,7 @@ Bu platform; mühendislik yaklaşımımı, düşünsel çerçevemi ve yürüttü
 <div style="text-align: center; margin-top: 4em; margin-bottom: 4em; display: flex; justify-content: center; gap: 20px;">
   <a href="/muhendislik-cv/cv/" class="btn-elite btn-elite-primary">📄 CV'yi İncele</a>
   
-  <a href="mailto:emirinan@example.com" class="btn-elite btn-elite-secondary">✉️ İletişim</a>
+  <a href="mailto:emirhan555inan@gmail.com" class="btn-elite btn-elite-secondary">✉️ İletişim</a>
 </div>
 
 
