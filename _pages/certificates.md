@@ -6,98 +6,64 @@ author_profile: true
 ---
 
 <style>
-/* 1. SOL MENÜ GİZLEME */
+/* 1. SOL MENÜYÜ GİZLE */
 .author__avatar { display: none !important; }
 
-/* 2. GENEL YAZI RENGİ & TİPOGRAFİ */
-body, .page__content {
-  color: #222 !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-/* 3. PROFESYONEL BAŞLIK TASARIMI (Mühendislik Stili) */
+/* 2. PROFESYONEL BAŞLIK TASARIMI (Engineering Style) */
+/* İkon yerine Sol Şerit kullanımı */
 h3.cert-category {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.15rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  text-transform: uppercase; /* Ciddiyet için hepsi büyük harf */
   letter-spacing: 0.5px;
-  color: #111 !important;
   
-  /* Modern Dokunuş: Sol Çizgi ve Arka Plan */
-  background: #f9fafb; /* Çok açık gri zemin */
-  border-left: 5px solid #2563eb; /* Mavi "Engineering" çizgisi */
-  padding: 12px 15px; /* İç boşluk */
-  border-radius: 0 4px 4px 0; /* Sağ köşeleri hafif yuvarla */
+  /* Sol tarafa mavi teknik çizgi */
+  border-left: 5px solid #2563eb; 
+  padding-left: 15px; /* Çizgi ile yazı arası boşluk */
+  
+  /* Altına ince çizgi */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: 10px;
+  
+  /* Temanın rengini kullansın, biz zorlamıyoruz */
+  color: inherit; 
 }
 
-/* 4. TEMİZ LİSTE TASARIMI */
+/* 3. LİSTE YAPISI */
 .cert-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #e5e7eb; /* Listenin tepesine ince çizgi */
+  gap: 0;
 }
 
 .cert-item {
   display: flex;
   flex-direction: column;
-  padding: 14px 10px; /* Kenarlardan biraz boşluk bırak */
-  border-bottom: 1px solid #e5e7eb;
-  transition: background-color 0.2s ease;
+  padding: 12px 5px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1); /* Çok silik ayraç */
 }
-
-/* Üzerine gelince hafif vurgu */
-.cert-item:hover {
-  background-color: rgba(37, 99, 235, 0.03); /* Çok silik mavi */
-}
-
 .cert-item:last-child { border-bottom: none; }
 
-/* Sertifika Adı */
+/* Sertifika İsmi */
 .cert-name {
   font-size: 1rem;
   font-weight: 600;
-  color: #000 !important;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
+  display: block;
 }
 
-/* Kurum Adı */
+/* Kurum İsmi */
 .cert-issuer {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #666 !important;
-  display: flex;
-  align-items: center;
+  font-size: 0.9rem;
+  opacity: 0.8; /* Rengi değiştirmek yerine opaklığı kıstık (Temaya uyar) */
+  font-weight: 400;
 }
 
-/* Kurum adının önüne minik gri nokta */
-.cert-issuer::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background-color: #9ca3af;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-/* 5. KOYU MOD AYARLARI */
-@media (prefers-color-scheme: dark) {
-  body, .page__content { color: #e5e7eb !important; }
-  
-  h3.cert-category { 
-    background: #1f2937; /* Koyu gri zemin */
-    color: #fff !important; 
-    border-left-color: #60a5fa; /* Daha açık mavi */
-  }
-  
-  .cert-list, .cert-item { border-color: #374151; }
-  .cert-item:hover { background-color: rgba(255,255,255,0.03); }
-  
-  .cert-name { color: #f3f4f6 !important; }
-  .cert-issuer { color: #9ca3af !important; }
-  .cert-issuer::before { background-color: #6b7280; }
+/* KÜÇÜK HOVER EFEKTİ (Mouse ile üzerine gelince) */
+.cert-item:hover {
+  background-color: rgba(128, 128, 128, 0.05); /* Çok hafif grileşir */
+  border-radius: 4px;
 }
 </style>
 
