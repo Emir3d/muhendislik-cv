@@ -5,6 +5,9 @@ main:
   
   - title: "Portfolyo"
     url: /portfolio/
+
+    - title: "Sertifikalar"
+    url: /certificates/
   
   - title: "Engineering Notes"
     url: /engineering-notes/
