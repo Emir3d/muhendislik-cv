@@ -9,8 +9,7 @@ author_profile: true
 /* 1. SOL MENÜYÜ GİZLE */
 .author__avatar { display: none !important; }
 
-/* 2. PROFESYONEL BAŞLIK TASARIMI (Engineering Style) */
-/* İkon yerine Sol Şerit kullanımı */
+/* 2. PROFESYONEL BAŞLIK TASARIMI (GÖRÜNÜR ARKA PLAN) */
 h3.cert-category {
   margin-top: 2.5rem;
   margin-bottom: 1.2rem;
@@ -18,15 +17,18 @@ h3.cert-category {
   font-weight: 700;
   letter-spacing: 0.5px;
   
+  /* 🎨 AYARLANAN RENK: Slate-100 (Hafif Mavimsi Gri) */
+  /* Ne beyaz kadar silik, ne de koyu gri kadar sert */
+  background: #f1f5f9; 
+  
   /* Sol tarafa mavi teknik çizgi */
   border-left: 5px solid #2563eb; 
-  padding-left: 15px; /* Çizgi ile yazı arası boşluk */
+  padding: 10px 15px; /* İç boşluğu biraz artırdım, ferah dursun */
+  border-radius: 0 6px 6px 0; /* Sağ kenarları yuvarladık */
   
   /* Altına ince çizgi */
-  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
   
-  /* Temanın rengini kullansın, biz zorlamıyoruz */
   color: inherit; 
 }
 
@@ -35,13 +37,15 @@ h3.cert-category {
   display: flex;
   flex-direction: column;
   gap: 0;
+  margin-bottom: 2rem; /* Gruplar arası mesafe */
 }
 
 .cert-item {
   display: flex;
   flex-direction: column;
-  padding: 12px 5px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.1); /* Çok silik ayraç */
+  padding: 12px 10px; /* Kenar boşluğu */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  transition: all 0.2s ease;
 }
 .cert-item:last-child { border-bottom: none; }
 
@@ -56,14 +60,26 @@ h3.cert-category {
 /* Kurum İsmi */
 .cert-issuer {
   font-size: 0.9rem;
-  opacity: 0.8; /* Rengi değiştirmek yerine opaklığı kıstık (Temaya uyar) */
+  opacity: 0.8;
   font-weight: 400;
 }
 
-/* KÜÇÜK HOVER EFEKTİ (Mouse ile üzerine gelince) */
+/* KÜÇÜK HOVER EFEKTİ */
 .cert-item:hover {
-  background-color: rgba(128, 128, 128, 0.05); /* Çok hafif grileşir */
+  background-color: #f8fafc; /* Üzerine gelince çok hafif renk değişimi */
+  padding-left: 15px; /* Hafif sağa kayma efekti */
   border-radius: 4px;
+}
+
+/* 4. KOYU MOD AYARLARI */
+@media (prefers-color-scheme: dark) {
+  h3.cert-category {
+    background: #1e293b; /* Koyu modda Slate-800 */
+    border-bottom: none;
+    color: #f3f4f6;
+  }
+  .cert-item { border-bottom-color: rgba(255,255,255,0.1); }
+  .cert-item:hover { background-color: #334155; }
 }
 </style>
 
