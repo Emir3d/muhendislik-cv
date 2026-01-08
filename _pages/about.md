@@ -5,40 +5,48 @@ excerpt: "Analiz, modelleme ve doğrulama temelli mühendislik yaklaşımı"
 author_profile: false
 header:
   overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
-  overlay_filter: 0.65
+  overlay_filter: 0.6
 ---
 
 <style>
 /* ======================================================
-   RENK SİSTEMİ — AÇIK / KOYU MOD UYUMLU
+   GLOBAL ARKA PLAN — AÇIK / KOYU MOD
    ====================================================== */
 :root {
-  --text-main: #1f2937;
-  --text-soft: #4b5563;
-  --border-soft: #d1d5db;
-  --bg-soft: #ffffff;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #111827;
+  --text-soft: #374151;
+  --border-main: #d1d5db;
+  --accent: #334155;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --bg-main: #020617;
+    --bg-card: #020617;
     --text-main: #e5e7eb;
     --text-soft: #cbd5e1;
-    --border-soft: #334155;
-    --bg-soft: #020617;
+    --border-main: #334155;
+    --accent: #64748b;
   }
 }
 
+/* SAYFA ZEMİNİ */
+body,
+.initial-content,
+.page__content {
+  background-color: var(--bg-main) !important;
+}
+
 /* ======================================================
-   TEMANIN BEYAZ YAZI DAYATMASINI KIR
+   YAZI RENKLERİNİ ZORLA
    ====================================================== */
 .page__content,
 .page__content * {
   color: var(--text-main) !important;
 }
 
-/* ======================================================
-   TİPOGRAFİ (AKADEMİK + OKUNAKLI)
-   ====================================================== */
 .page__content p {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -46,18 +54,8 @@ header:
   max-width: 760px;
 }
 
-.page__content h2 {
-  font-size: 1.65rem;
-  margin-top: 3.5rem;
-}
-
-.page__content h3 {
-  font-size: 1.35rem;
-  margin-top: 2.5rem;
-}
-
 /* ======================================================
-   HERO YAZILARI (SADE VE NET)
+   HERO
    ====================================================== */
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead {
@@ -65,7 +63,7 @@ header:
 }
 
 /* ======================================================
-   MANİFESTO BLOĞU
+   MANİFESTO
    ====================================================== */
 .manifesto {
   text-align: center;
@@ -73,11 +71,11 @@ header:
   font-style: italic;
   max-width: 760px;
   margin: 3rem auto;
-  opacity: 0.9;
+  color: var(--text-soft);
 }
 
 /* ======================================================
-   ZARİF AYRAÇ
+   AYRAÇ
    ====================================================== */
 .section-divider {
   border: none;
@@ -85,14 +83,14 @@ header:
   background: linear-gradient(
     to right,
     transparent,
-    var(--border-soft),
+    var(--border-main),
     transparent
   );
   margin: 4rem 0;
 }
 
 /* ======================================================
-   SÜREÇ AKIŞI — PROFESYONEL GÖRSEL
+   SÜREÇ AKIŞI — RENK UYUMLU
    ====================================================== */
 .process-flow {
   display: grid;
@@ -105,24 +103,27 @@ header:
 .flow-step {
   padding: 0.9rem 1rem;
   text-align: center;
-  border: 1px solid var(--border-soft);
-  border-radius: 8px;
-  background: transparent;
+  border: 1px solid var(--border-main);
+  border-radius: 10px;
+  background-color: var(--bg-card);
   font-size: 0.9rem;
-  transition: transform 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .flow-step:hover {
   transform: translateY(-3px);
+  border-color: var(--accent);
 }
 
+/* VURGU KUTUSU — AYNI PALET */
 .flow-step.final {
-  border-color: #2563eb;
+  border-width: 2px;
+  border-color: var(--accent);
   font-weight: 600;
 }
 
 /* ======================================================
-   ÜNLÜ SÖZLER — AKADEMİK TON
+   ÜNLÜ SÖZLER
    ====================================================== */
 .quotes {
   max-width: 760px;
@@ -130,7 +131,7 @@ header:
 }
 
 .quotes blockquote {
-  border-left: 3px solid var(--border-soft);
+  border-left: 3px solid var(--border-main);
   padding-left: 1.2rem;
   margin: 2rem 0;
   font-size: 0.95rem;
@@ -146,18 +147,14 @@ header:
 </style>
 
 <div class="manifesto">
-“Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir.”
+“Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme disiplinidir.”
 </div>
 
-Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; **analiz, modelleme, doğrulama ve üretilebilirlik** ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
-
-Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
+Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; analiz, modelleme, doğrulama ve üretilebilirlik ekseninde ele alan bütüncül bir yaklaşım sunuyorum.
 
 <hr class="section-divider">
 
 ## Analiz Tabanlı Mühendislik Yaklaşımı
-
-Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
 
 <div class="process-flow">
   <div class="flow-step">Problem Tanımı</div>
@@ -167,39 +164,14 @@ Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyut
   <div class="flow-step final">Mühendislik Kararı</div>
 </div>
 
-Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
-
-<hr class="section-divider">
-
-## Sanal Doğrulama ve Sayısal Düşünme
-
-Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal modeller, tasarım güvenilirliğini artırırken zaman ve maliyet açısından önemli avantajlar sağlar.
-
-Bu bağlamda, **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum.
-
-<hr class="section-divider">
-
-## Tasarım, Davranış ve Üretilebilirlik İlişkisi
-
-Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
-
-Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum.
-
 <hr class="section-divider">
 
 ## Mühendislik Vizyonu
-
-Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum.
 
 <div class="quotes">
   <blockquote>
     “All models are wrong, but some are useful.”
     <span>— George E. P. Box</span>
-  </blockquote>
-
-  <blockquote>
-    “Engineering is the art of directing the great sources of power in nature for the use and convenience of man.”
-    <span>— Thomas Tredgold</span>
   </blockquote>
 
   <blockquote>
