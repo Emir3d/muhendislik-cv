@@ -6,6 +6,11 @@ author_profile: true
 ---
 
 <style>
+/* 1. SOL MENÜDEKİ KIRIK RESMİ GİZLEME */
+.author__avatar {
+  display: none !important;
+}
+
 /* ==========================================
    BÖLÜM 1: ANALİZ KARTLARI (Teknik Detay)
    ========================================== */
@@ -124,9 +129,9 @@ h2.gallery-title {
     <h3 class="card-title">Tabakalı ve Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
     <div class="card-desc">
       <ul>
-        [cite_start]<li>Euler-Timoshenko teorilerinin karşılaştırılması[cite: 5].</li>
+        <li>Euler-Timoshenko teorilerinin karşılaştırılması.</li>
         <li>Analitik modelleme, sonlu elemanlar analizi (FEM) ve sayısal çözümler.</li>
-        [cite_start]<li><strong>Ansys ACP</strong> modülü ile detaylı katman analizi[cite: 5].</li>
+        <li><strong>Ansys ACP</strong> modülü ile detaylı katman analizi.</li>
       </ul>
     </div>
   </div>
@@ -136,9 +141,9 @@ h2.gallery-title {
     <h3 class="card-title">MATLAB ile Mohr Çemberi Analiz Aracı</h3>
     <div class="card-desc">
       <ul>
-        [cite_start]<li>Mukavemet hesaplamaları için Mohr çemberini otomatik çizen grafiksel arayüz (GUI)[cite: 57, 63].</li>
-        [cite_start]<li>Asal gerilmelerin (Sigma max/min) ve maksimum kayma gerilmelerinin hesaplanması[cite: 100, 101].</li>
-        [cite_start]<li>Kullanıcı dostu arayüz ile veri girişi ve görselleştirme[cite: 92].</li>
+        <li>Mukavemet hesaplamaları için Mohr çemberini otomatik çizen grafiksel arayüz (GUI).</li>
+        <li>Asal gerilmelerin (Sigma max/min) ve maksimum kayma gerilmelerinin hesaplanması.</li>
+        <li>Kullanıcı dostu arayüz ile veri girişi ve görselleştirme.</li>
       </ul>
     </div>
   </div>
@@ -148,9 +153,9 @@ h2.gallery-title {
     <h3 class="card-title">Asansör Tasarımı (VİSA SÖR)</h3>
     <div class="card-desc">
       <ul>
-        [cite_start]<li>Dubleks ve tripleks yapılar için özel asansör sistem tasarımı[cite: 5].</li>
-        [cite_start]<li><strong>Takım Lideri</strong> olarak proje yönetimi[cite: 5].</li>
-        [cite_start]<li>Mekanik boyutlandırma, güvenlik hesapları ve sistem optimizasyonu[cite: 5].</li>
+        <li>Dubleks ve tripleks yapılar için özel asansör sistem tasarımı.</li>
+        <li><strong>Takım Lideri</strong> olarak proje yönetimi.</li>
+        <li>Mekanik boyutlandırma, güvenlik hesapları ve sistem optimizasyonu.</li>
       </ul>
     </div>
   </div>
@@ -160,9 +165,9 @@ h2.gallery-title {
     <h3 class="card-title">Francis Tipi Türbin Tasarımı</h3>
     <div class="card-desc">
       <ul>
-        [cite_start]<li>Keban Barajı verilerine uygun Francis tipi hidroelektrik türbin tasarımı[cite: 5].</li>
-        [cite_start]<li>Türbin geometrisinin belirlenmesi ve hidrodinamik boyutlandırma hesapları[cite: 5].</li>
-        [cite_start]<li>Enerji dönüşüm prensipleri ve verimlilik analizi[cite: 5].</li>
+        <li>Keban Barajı verilerine uygun Francis tipi hidroelektrik türbin tasarımı.</li>
+        <li>Türbin geometrisinin belirlenmesi ve hidrodinamik boyutlandırma hesapları.</li>
+        <li>Enerji dönüşüm prensipleri ve verimlilik analizi.</li>
       </ul>
     </div>
   </div>
@@ -172,9 +177,9 @@ h2.gallery-title {
     <h3 class="card-title">CFD Teknik Kitap Çevirisi Projesi</h3>
     <div class="card-desc">
       <ul>
-        [cite_start]<li>Danışman: Dr. Nuray Kayakol (CFDEXPLAINED)[cite: 5].</li>
-        [cite_start]<li>Vanalarda iki fazlı akış ve kavitasyon üzerine teknik doküman çevirisi[cite: 5].</li>
-        [cite_start]<li>Teknik terminoloji ve akademik yazım diline hakimiyet[cite: 5].</li>
+        <li>Danışman: Dr. Nuray Kayakol (CFDEXPLAINED).</li>
+        <li>Vanalarda iki fazlı akış ve kavitasyon üzerine teknik doküman çevirisi.</li>
+        <li>Teknik terminoloji ve akademik yazım diline hakimiyet.</li>
       </ul>
     </div>
   </div>
@@ -184,9 +189,9 @@ h2.gallery-title {
     <h3 class="card-title">Gönüllü Müsilaj Projesi</h3>
     <div class="card-desc">
       <ul>
-        [cite_start]<li>Müsilaj oluşumunun nedenleri ve çözüm yöntemleri üzerine araştırma[cite: 5].</li>
-        [cite_start]<li>Akışkanlar mekaniği temelli yaklaşımlarla problem analizi[cite: 5].</li>
-        [cite_start]<li>Çevresel mühendislik problemlerine disiplinlerarası bakış[cite: 5].</li>
+        <li>Müsilaj oluşumunun nedenleri ve çözüm yöntemleri üzerine araştırma.</li>
+        <li>Akışkanlar mekaniği temelli yaklaşımlarla problem analizi.</li>
+        <li>Çevresel mühendislik problemlerine disiplinlerarası bakış.</li>
       </ul>
     </div>
   </div>
@@ -200,11 +205,11 @@ h2.gallery-title {
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Konsept Uçak" onerror="this.src='https://via.placeholder.com/400x300?text=Ucak+Resmi';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Konsept Uçak" onerror="this.src='https://via.placeholder.com/400x300?text=Resim+Yukle';">
     </div>
     <div class="gallery-content">
       <div class="g-title">Konsept Uçak Tasarımı</div>
-      [cite_start]<div class="g-desc">Autodesk Inventor ile modellenen özgün uçak konsepti ve render çalışması[cite: 55].</div>
+      <div class="g-desc">Autodesk Inventor ile modellenen özgün uçak konsepti ve render çalışması.</div>
     </div>
   </div>
 
@@ -214,7 +219,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Turbo-Jet Motoru</div>
-      [cite_start]<div class="g-desc">SolidWorks ile detaylı modelleme ve yüksek çözünürlüklü render çalışması[cite: 104].</div>
+      <div class="g-desc">SolidWorks ile detaylı modelleme ve yüksek çözünürlüklü render çalışması.</div>
     </div>
   </div>
 
@@ -224,7 +229,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Alpagu-X İHA Tasarımı</div>
-      [cite_start]<div class="g-desc">Autodesk Inventor kullanılarak özgün konsept tasarım ve görselleştirme[cite: 51].</div>
+      <div class="g-desc">Autodesk Inventor kullanılarak özgün konsept tasarım ve görselleştirme.</div>
     </div>
   </div>
 
@@ -234,7 +239,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Şahi Top Modellemesi</div>
-      [cite_start]<div class="g-desc">Tarihi savunma sisteminin Inventor ortamında 3D modellenmesi[cite: 48].</div>
+      <div class="g-desc">Tarihi savunma sisteminin Inventor ortamında 3D modellenmesi.</div>
     </div>
   </div>
 
@@ -244,7 +249,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Witcher-3 Kılıç Replikası</div>
-      [cite_start]<div class="g-desc">Oyun içi modelin referans alınarak CAD ortamına aktarılması ve renderı[cite: 108].</div>
+      <div class="g-desc">Oyun içi modelin referans alınarak CAD ortamına aktarılması ve renderı.</div>
     </div>
   </div>
 
@@ -254,7 +259,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Manifold Mesh Çalışması</div>
-      [cite_start]<div class="g-desc">ANSYS ortamında karmaşık geometri için ağ (mesh) yapısının oluşturulması[cite: 115].</div>
+      <div class="g-desc">ANSYS ortamında karmaşık geometri için ağ (mesh) yapısının oluşturulması.</div>
     </div>
   </div>
 
