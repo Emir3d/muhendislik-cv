@@ -205,7 +205,27 @@ h2.gallery-title {
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Konsept Uçak" onerror="this.src='https://via.placeholder.com/400x300?text=Resim+Yukle';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16 Tasarımı" onerror="this.src='https://via.placeholder.com/400x300?text=M16+Resmi';">
+    </div>
+    <div class="gallery-content">
+      <div class="g-title">M16 Piyade Tüfeği</div>
+      <div class="g-desc">Autodesk Inventor Pro ile detaylı parça ve montaj modellemesi, ardından yüksek kaliteli render çalışması</div>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman Logo" onerror="this.src='https://via.placeholder.com/400x300?text=Superman+Resmi';">
+    </div>
+    <div class="gallery-content">
+      <div class="g-title">3D Superman Logosu</div>
+      <div class="g-desc">3DS MAX ortamında poligon modelleme teknikleri kullanılarak oluşturulan ikonik logo tasarımı</div>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Konsept Uçak" onerror="this.src='https://via.placeholder.com/400x300?text=Ucak+Resmi';">
     </div>
     <div class="gallery-content">
       <div class="g-title">Konsept Uçak Tasarımı</div>
