@@ -6,10 +6,15 @@ author_profile: true
 ---
 
 <style>
-/* 1. SOL MENÜYÜ GİZLE */
+/* 1. SOL MENÜ GİZLEME */
 .author__avatar { display: none !important; }
 
-/* 2. PROFESYONEL BAŞLIK TASARIMI (GÖRÜNÜR ARKA PLAN) */
+/* 2. ANA AYARLAR */
+body, .page__content {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 3. BAŞLIK TASARIMI (Senin Beğendiğin Hafif Renkli Stil) */
 h3.cert-category {
   margin-top: 2.5rem;
   margin-bottom: 1.2rem;
@@ -17,69 +22,84 @@ h3.cert-category {
   font-weight: 700;
   letter-spacing: 0.5px;
   
-  /* 🎨 AYARLANAN RENK: Slate-100 (Hafif Mavimsi Gri) */
-  /* Ne beyaz kadar silik, ne de koyu gri kadar sert */
+  /* Arka plan: Slate-100 (Çok açık gri-mavi) */
   background: #f1f5f9; 
   
-  /* Sol tarafa mavi teknik çizgi */
+  /* Sol Çizgi */
   border-left: 5px solid #2563eb; 
-  padding: 10px 15px; /* İç boşluğu biraz artırdım, ferah dursun */
-  border-radius: 0 6px 6px 0; /* Sağ kenarları yuvarladık */
+  padding: 10px 15px;
+  border-radius: 0 6px 6px 0;
   
-  /* Altına ince çizgi */
+  /* Alt çizgi */
   border-bottom: 1px solid rgba(128, 128, 128, 0.1);
   
+  /* Yazı Rengi: Temadan miras alsın (Siyah/Beyaz) */
   color: inherit; 
 }
 
-/* 3. LİSTE YAPISI */
+/* 4. LİSTE YAPISI */
 .cert-list {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-bottom: 2rem; /* Gruplar arası mesafe */
+  margin-bottom: 2rem;
 }
 
 .cert-item {
   display: flex;
   flex-direction: column;
-  padding: 12px 10px; /* Kenar boşluğu */
+  padding: 12px 10px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.1);
-  transition: all 0.2s ease;
+  /* Animasyon ayarı */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 3px solid transparent; /* Gizli sol çizgi */
 }
 .cert-item:last-child { border-bottom: none; }
 
-/* Sertifika İsmi */
+/* Sertifika Adı */
 .cert-name {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 3px;
   display: block;
+  transition: color 0.2s ease;
 }
 
-/* Kurum İsmi */
+/* Kurum Adı */
 .cert-issuer {
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.85; /* Hafif transparanlık yeterli */
   font-weight: 400;
 }
 
-/* KÜÇÜK HOVER EFEKTİ */
+/* 🔥 DÜZELTİLEN KISIM: HOVER EFEKTİ 🔥 */
+/* Arka plan rengini DEĞİŞTİRMİYORUZ. Sadece kayma ve çizgi. */
 .cert-item:hover {
-  background-color: #f8fafc; /* Üzerine gelince çok hafif renk değişimi */
-  padding-left: 15px; /* Hafif sağa kayma efekti */
-  border-radius: 4px;
+  background-color: transparent !important; /* Arka plan değişmesin */
+  padding-left: 18px; /* Sağa kaydır */
+  border-left-color: #2563eb; /* Sol tarafta mavi çizgi çıkar */
 }
 
-/* 4. KOYU MOD AYARLARI */
+/* Hover olunca başlık mavi olsun */
+.cert-item:hover .cert-name {
+  color: #2563eb !important; 
+}
+
+/* 5. KOYU MOD UYUMLULUĞU */
 @media (prefers-color-scheme: dark) {
   h3.cert-category {
-    background: #1e293b; /* Koyu modda Slate-800 */
-    border-bottom: none;
+    background: #1e293b; /* Koyu modda başlık zemini */
     color: #f3f4f6;
+    border-bottom: none;
   }
   .cert-item { border-bottom-color: rgba(255,255,255,0.1); }
-  .cert-item:hover { background-color: #334155; }
+  
+  /* Koyu modda yazı renklerini garantiye al */
+  .cert-name { color: #e2e8f0; }
+  .cert-issuer { color: #94a3b8; }
+  
+  /* Hover durumunda başlık açık mavi olsun */
+  .cert-item:hover .cert-name { color: #60a5fa !important; }
 }
 </style>
 
