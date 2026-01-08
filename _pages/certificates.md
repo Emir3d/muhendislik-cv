@@ -1,7 +1,7 @@
 ---
 permalink: /certificates/
 title: "Sertifikalar & Eğitimler"
-excerpt: "Mesleki yetkinlik belgeleri, teknik eğitimler ve kurslar."
+excerpt: "Mesleki yetkinlik belgeleri, teknik eğitimler ve kurslar"
 author_profile: true
 ---
 
