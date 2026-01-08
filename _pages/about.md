@@ -9,162 +9,69 @@ header:
 ---
 
 <style>
-/* ======================================================
-   1. YAZI RENGİ GARANTİSİ (SORUN ÇÖZÜCÜ)
-   ====================================================== */
-/* Varsayılan (Aydınlık Mod) - Yazılar kesinlikle KOYU olsun */
-body, .page__content, p, li, .manifesto, .quote-text {
-  color: #222222 !important; /* Koyu Gri/Siyah */
-}
+/* SADECE DÜZEN (LAYOUT) AYARLARI 
+   Renk kodlarına dokunmuyoruz, site kendi halletsin.
+*/
 
-h1, h2, h3, h4, h5, h6, .flow-step {
-  color: #000000 !important; /* Başlıklar Simsiyah */
-}
-
-/* Hero Başlığı (Resim üzerindeki yazı) hep beyaz kalsın */
-.page__hero--overlay .page__title,
-.page__hero--overlay .page__lead {
-  color: #ffffff !important;
-}
-
-/* ======================================================
-   2. KOYU MOD (DARK MODE) AYARLARI
-   ====================================================== */
-@media (prefers-color-scheme: dark) {
-  /* Karanlık mod algılanırsa yazıları beyaza çevir */
-  body, .page__content, p, li, .manifesto, .quote-text {
-    color: #e5e7eb !important; /* Açık Gri */
-  }
-  h1, h2, h3, h4, h5, h6, .flow-step {
-    color: #ffffff !important; /* Başlıklar Beyaz */
-  }
-}
-
-/* ======================================================
-   3. TİPOGRAFİ & DÜZEN
-   ====================================================== */
-.page__content p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 760px;
-}
-
-.page__content h2 { font-size: 1.65rem; margin-top: 3.5rem; }
-.page__content h3 { font-size: 1.35rem; margin-top: 2.5rem; }
-
-/* Manifesto Bloğu */
+/* Manifesto Yazısı */
 .manifesto {
   text-align: center;
   font-size: 1.2rem;
   font-style: italic;
-  max-width: 760px;
-  margin: 3rem auto;
-  opacity: 0.9;
+  margin: 2rem 0;
+  opacity: 0.85;
 }
 
-/* Zarif Ayraç */
-.section-divider {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #ccc, transparent);
-  margin: 4rem 0;
-  opacity: 0.7;
-}
-@media (prefers-color-scheme: dark) {
-  .section-divider { background: linear-gradient(to right, transparent, #555, transparent); }
+/* Süreç Kutuları (Yan Yana Dizme) */
+.process-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 2rem 0;
 }
 
-/* ======================================================
-   4. SÜREÇ AKIŞI — RENK UYUMLU KUTULAR
-   ====================================================== */
-.process-flow {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.2rem;
-  max-width: 900px;
-  margin: 3rem auto;
-}
-
-.flow-step {
-  padding: 1.2rem 1rem;
-  text-align: center;
-  background-color: #f9fafb; /* Aydınlık arka plan */
-  border: 1px solid #e5e7eb;
-  border-left-width: 5px;
+.process-box {
+  flex: 1;
+  min-width: 200px;
+  padding: 1.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.3); /* Şeffaf gri çerçeve (Her modda görünür) */
   border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  /* Arka plan ve yazı rengi vermiyoruz, tema karar versin */
 }
 
-.flow-step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
+/* Sol taraftaki renkli çizgiler (Bunlar sabit kalabilir) */
+.step-1 { border-left: 5px solid #0f172a; }
+.step-2 { border-left: 5px solid #1e40af; }
+.step-3 { border-left: 5px solid #3b82f6; }
+.step-4 { border-left: 5px solid #60a5fa; }
 
-/* Renk Geçişi (Tonal Harmony) */
-.step-1 { border-left-color: #0f172a; } /* En Koyu */
-.step-2 { border-left-color: #1e40af; }
-.step-3 { border-left-color: #3b82f6; }
-.step-4 { border-left-color: #60a5fa; }
-.step-final { border-left-color: #2563eb; }
-
-/* Kutuların Koyu Modu */
-@media (prefers-color-scheme: dark) {
-  .flow-step {
-    background-color: #1f2937; /* Koyu arka plan */
-    border-color: #374151;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  }
-  /* Renkleri karanlıkta parlat */
-  .step-1 { border-left-color: #1e40af; }
-  .step-2 { border-left-color: #3b82f6; }
-  .step-3 { border-left-color: #60a5fa; }
-  .step-4 { border-left-color: #93c5fd; }
-  .step-final { border-left-color: #3b82f6; }
-}
-
-/* ======================================================
-   5. ÜNLÜ SÖZLER (Quotes)
-   ====================================================== */
-.quotes {
-  max-width: 760px;
-  margin: 3rem auto 0;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.quote-box {
-    background: #f9fafb;
-    border-left: 4px solid #ccc;
-    padding: 1.5rem;
-    border-radius: 0 8px 8px 0;
-}
-
-.quote-text {
-  font-style: italic;
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-}
-
-.quote-author {
-  display: block;
-  text-align: right;
-  font-size: 0.9rem;
+.step-title {
   font-weight: bold;
-  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-/* Koyu Mod için Sözler */
-@media (prefers-color-scheme: dark) {
-  .quote-box { background: #1f2937; border-left-color: #555; }
+/* Ayraç (Standart HR etiketi ama biraz boşluklu) */
+hr.spacer {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
 }
 
-/* Renkli vurgular */
-.q-blue { border-left-color: #1e40af !important; }
-.q-red { border-left-color: #c0392b !important; }
-.q-cyan { border-left-color: #0891b2 !important; }
+/* Alıntılar */
+.quote-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.quote-item {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem;
+  border-left: 4px solid rgba(128, 128, 128, 0.3);
+  background: rgba(128, 128, 128, 0.05); /* Çok hafif bir ton */
+}
 </style>
 
 <div class="manifesto">
@@ -175,23 +82,37 @@ Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; **ana
 
 Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
 
-<hr class="section-divider">
+<hr class="spacer">
 
 ## Analiz Tabanlı Mühendislik Yaklaşımı
 
 Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyutlu tasarım anlayışıyla sürdürülebilir biçimde çözülemez. Bu nedenle tasarım süreçlerini; **yapısal analiz, sayısal modelleme ve optimizasyon** adımlarıyla desteklenen analitik bir çerçevede ele alıyorum.
 
-<div class="process-flow">
-  <div class="flow-step step-1">Problem Tanımı</div>
-  <div class="flow-step step-2">Matematiksel Model</div>
-  <div class="flow-step step-3">Sayısal Analiz</div>
-  <div class="flow-step step-4">Doğrulama</div>
-  <div class="flow-step step-final">Mühendislik Kararı</div>
+<div class="process-wrapper">
+  <div class="process-box step-1">
+    <span class="step-title">1. Problem Tanımı</span>
+    Problemin sahadaki gerçekliğinin ve sınır şartlarının belirlenmesi.
+  </div>
+  
+  <div class="process-box step-2">
+    <span class="step-title">2. Matematiksel Model</span>
+    Geometrinin temizlenmesi, uygun ağ (mesh) yapısı ve sayısal kurulum.
+  </div>
+  
+  <div class="process-box step-3">
+    <span class="step-title">3. Analiz & Doğrulama</span>
+    Çözümün yakınsaması, mesh bağımsızlığı ve parametrik incelemeler.
+  </div>
+  
+  <div class="process-box step-4">
+    <span class="step-title">4. Mühendislik Yorumu</span>
+    Sonuçların yorumlanması ve üretilebilir tasarım kararlarının alınması.
+  </div>
 </div>
 
 Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
 
-<hr class="section-divider">
+<hr class="spacer">
 
 ## Sanal Doğrulama ve Sayısal Düşünme
 
@@ -199,33 +120,31 @@ Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal m
 
 Bu bağlamda, **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum.
 
-<hr class="section-divider">
+<hr class="spacer">
 
 ## Tasarım, Davranış ve Üretilebilirlik İlişkisi
 
-Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir.
+Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir. Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum.
 
-Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum.
-
-<hr class="section-divider">
+<hr class="spacer">
 
 ## Mühendislik Vizyonu
 
 Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum.
 
-<div class="quotes">
-  <div class="quote-box q-blue">
-    <div class="quote-text">“Engineering is the art of directing the great sources of power in nature for the use and convenience of man.”</div>
-    <span class="quote-author">— Thomas Tredgold</span>
+<div class="quote-grid">
+  <div class="quote-item">
+    <i>“Engineering is the art of directing the great sources of power in nature for the use and convenience of man.”</i>
+    <br><b>— Thomas Tredgold</b>
   </div>
 
-  <div class="quote-box q-red">
-    <div class="quote-text">“Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."</div>
-    <span class="quote-author">— Leonardo da Vinci</span>
+  <div class="quote-item">
+    <i>“Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."</i>
+    <br><b>— Leonardo da Vinci</b>
   </div>
 
-  <div class="quote-box q-cyan">
-    <div class="quote-text">“Science can amuse and fascinate us all, but it is engineering that changes the world.”</div>
-    <span class="quote-author">— Isaac Asimov</span>
+  <div class="quote-item">
+    <i>“Science can amuse and fascinate us all, but it is engineering that changes the world.”</i>
+    <br><b>— Isaac Asimov</b>
   </div>
 </div>
