@@ -1,136 +1,154 @@
 ---
-permalink: /portfolio/
-title: "Portfolyo & Projeler"
-excerpt: "Mühendislik analizleri, simülasyonlar ve tasarım çalışmaları."
-author_profile: true
+permalink: /projects/
+title: "Engineering Projects"
+excerpt: "Analysis-driven mechanical engineering portfolio"
+author_profile: false
 ---
 
 <style>
-/* ==========================================
-   PORTFOLYO KART TASARIMI
-   ========================================== */
+:root {
+  --text-main: #1f2933;
+  --text-sub: #4b5563;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+}
 
-.projects-grid {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-main: #e5e7eb;
+    --text-sub: #9ca3af;
+    --card-bg: #0f172a;
+    --border: #1e293b;
+    --accent: #60a5fa;
+  }
+}
+
+body {
+  color: var(--text-main);
+}
+
+.portfolio-intro {
+  max-width: 820px;
+  margin-bottom: 3em;
+}
+
+.portfolio-intro h1 {
+  font-size: 2.1em;
+  margin-bottom: 0.4em;
+}
+
+.portfolio-intro p {
+  font-size: 1.05em;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
 .project-card {
-  background-color: #ffffff;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  border-radius: 8px;
-  padding: 25px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-/* Kartın soluna renkli çizgi */
-.project-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 5px;
-  background-color: #2563eb; /* Varsayılan Mavi */
-}
-
-/* Hover Efekti */
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-.card-category {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #666;
-  margin-bottom: 10px;
-  display: block;
+.project-title {
+  font-size: 1.15em;
   font-weight: 700;
+  margin-bottom: 0.3em;
 }
 
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #111; /* Başlık Rengi */
+.project-meta {
+  font-size: 0.85em;
+  color: var(--accent);
+  margin-bottom: 0.8em;
 }
 
-.card-desc {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.project-desc {
+  font-size: 0.95em;
+  color: var(--text-sub);
+  line-height: 1.5;
+  margin-bottom: 1em;
 }
 
-.card-link {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #2563eb;
-  text-decoration: none;
-  display: inline-block;
-}
-.card-link:hover {
-  text-decoration: underline;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-/* Kart Tipleri (Renk Kodları) */
-.type-analysis::before { background-color: #2563eb; } /* Mavi: Analiz */
-.type-software::before { background-color: #059669; } /* Yeşil: Yazılım/Kod */
-.type-design::before { background-color: #d97706; }   /* Turuncu: Tasarım */
-
-/* KOYU MOD AYARLARI */
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    background-color: #1f2937;
-    border-color: #374151;
-  }
-  .card-title { color: #f3f4f6; }
-  .card-desc { color: #d1d5db; }
-  .card-category { color: #9ca3af; }
-  .card-link { color: #60a5fa; }
+.project-tag {
+  font-size: 0.75em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(37,99,235,0.1);
+  color: var(--accent);
+  border: 1px solid rgba(37,99,235,0.25);
 }
 </style>
 
-Mühendislik problemlerine getirdiğim sayısal ve tasarımsal çözümlerden seçkiler.
+<div class="portfolio-intro">
+  <h1>Engineering Projects</h1>
+  <p>
+    Bu sayfa, yürütülen mühendislik çalışmalarını yalnızca sonuç odaklı değil;
+    <strong>problem tanımı, analiz yaklaşımı ve mühendislik yorumu</strong>
+    çerçevesinde sunmak amacıyla hazırlanmıştır.
+  </p>
+</div>
 
-<div class="projects-grid">
+<div class="project-grid">
 
-  <div class="project-card type-analysis">
-    <span class="card-category">Yapısal Analiz / ANSYS</span>
-    <h3 class="card-title">Hibrit Kompozit Plakların Burkulma Analizi</h3>
-    <p class="card-desc">
-      Karbon ve Aramid fiberlerin farklı dizilim açılarının (stacking sequence) kritik burkulma yüküne etkisinin ANSYS ACP modülü ile incelenmesi ve deneysel verilerle doğrulanması.
-    </p>
+  <div class="project-card">
+    <div class="project-title">Buckling Analysis of Composite Plates</div>
+    <div class="project-meta">Structural Analysis · FEM · Theory</div>
+    <div class="project-desc">
+      Tabakalı kompozit plakaların burkulma davranışının
+      Euler–Timoshenko–HSDT teorileri ve sonlu elemanlar yöntemi ile karşılaştırmalı analizi.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">ANSYS</span>
+      <span class="project-tag">Composite Mechanics</span>
+      <span class="project-tag">Buckling</span>
+    </div>
   </div>
 
-  <div class="project-card type-software">
-    <span class="card-category">MATLAB / GUI</span>
-    <h3 class="card-title">Kompozit Laminasyon Hesaplayıcı</h3>
-    <p class="card-desc">
-      Klasik Laminasyon Teorisi (CLT) kullanılarak, farklı katman özelliklerine sahip kompozit yapıların gerilme-şekil değiştirme matrislerini hesaplayan, kullanıcı dostu bir arayüz tasarımı.
-    </p>
+  <div class="project-card">
+    <div class="project-title">Shell Element Selection Study</div>
+    <div class="project-meta">Modeling · Verification</div>
+    <div class="project-desc">
+      İnce cidarlı yapıların analizinde kullanılan kabuk elemanlarının
+      yakınsama, doğruluk ve hesaplama maliyeti açısından değerlendirilmesi.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">Shell281</span>
+      <span class="project-tag">Mesh Independence</span>
+      <span class="project-tag">Verification</span>
+    </div>
   </div>
 
-  <div class="project-card type-design">
-    <span class="card-category">Mekanik Tasarım</span>
-    <h3 class="card-title">Endüstriyel Robot Kolu Mekanizması</h3>
-    <p class="card-desc">
-      6 eksenli bir robot kolunun kinematik analizlerinin yapılması, SolidWorks ortamında modellenmesi ve kritik parçaların mukavemet analizlerinin gerçekleştirilmesi.
-    </p>
-  </div>
-
-  <div class="project-card type-analysis">
-    <span class="card-category">Akademik Yayın</span>
-    <h3 class="card-title">Nanokompozitlerin Otomotiv Uygulamaları</h3>
-    <p class="card-desc">
-      Otomotiv endüstrisinde ağırlık azaltma ve dayanım artırma amacıyla kullanılan nanokompozit malzemeler üzerine kapsamlı bir literatür taraması ve gelecek projeksiyonu.
-    </p>
+  <div class="project-card">
+    <div class="project-title">CFD-Based Flow Optimization</div>
+    <div class="project-meta">Fluid Dynamics · Simulation</div>
+    <div class="project-desc">
+      İç akış geometrilerinde basınç kaybının azaltılması amacıyla
+      sayısal akış analizi ve parametrik optimizasyon çalışmaları.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">ANSYS Fluent</span>
+      <span class="project-tag">CFD</span>
+      <span class="project-tag">Optimization</span>
+    </div>
   </div>
 
 </div>
