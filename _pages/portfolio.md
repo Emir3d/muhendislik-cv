@@ -209,7 +209,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Konsept Uçak Tasarımı</div>
-      <div class="g-desc">Autodesk Inventor ile modellenen özgün uçak konsepti ve render çalışması.</div>
+      <div class="g-desc">Autodesk Inventor ile modellenen özgün uçak konsepti ve render çalışması</div>
     </div>
   </div>
 
@@ -219,7 +219,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Turbo-Jet Motoru</div>
-      <div class="g-desc">SolidWorks ile detaylı modelleme ve yüksek çözünürlüklü render çalışması.</div>
+      <div class="g-desc">SolidWorks ile detaylı modelleme ve yüksek çözünürlüklü render çalışması</div>
     </div>
   </div>
 
@@ -229,7 +229,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Alpagu-X İHA Tasarımı</div>
-      <div class="g-desc">Autodesk Inventor kullanılarak özgün konsept tasarım ve görselleştirme.</div>
+      <div class="g-desc">Autodesk Inventor kullanılarak özgün konsept tasarım ve görselleştirme</div>
     </div>
   </div>
 
@@ -239,7 +239,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Şahi Top Modellemesi</div>
-      <div class="g-desc">Tarihi savunma sisteminin Inventor ortamında 3D modellenmesi.</div>
+      <div class="g-desc">Tarihi savunma sisteminin Inventor ortamında 3D modellenmesi</div>
     </div>
   </div>
 
@@ -249,7 +249,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Witcher-3 Kılıç Replikası</div>
-      <div class="g-desc">Oyun içi modelin referans alınarak CAD ortamına aktarılması ve renderı.</div>
+      <div class="g-desc">Oyun içi modelin referans alınarak CAD ortamına aktarılması ve render çalışması</div>
     </div>
   </div>
 
@@ -259,7 +259,7 @@ h2.gallery-title {
     </div>
     <div class="gallery-content">
       <div class="g-title">Manifold Mesh Çalışması</div>
-      <div class="g-desc">ANSYS ortamında karmaşık geometri için ağ (mesh) yapısının oluşturulması.</div>
+      <div class="g-desc">ANSYS ortamında karmaşık geometri için ağ (mesh) yapısının oluşturulması</div>
     </div>
   </div>
 
