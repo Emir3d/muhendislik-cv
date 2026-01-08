@@ -223,7 +223,7 @@ h2.section-title {
       <span class="card-category">Teknik Çeviri</span>
       <h3 class="card-title">CFD & Kavitasyon Teknik Çeviri</h3>
       <div class="card-desc">
-        Danışman: Dr. Nuray Kayakol. Vanalarda iki fazlı akış ve kavitasyon üzerine teknik literatür çevirisi.
+         Vanalarda iki fazlı akış ve kavitasyon üzerine teknik literatür çevirisi.
       </div>
     </div>
     <div class="card-footer">
