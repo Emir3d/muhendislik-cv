@@ -9,60 +9,85 @@ header:
 ---
 
 <style>
-/* SADECE DÜZEN (LAYOUT) VE BOYUT AYARLARI 
-   Renk kodlarına (metin/arka plan) dokunmuyoruz, site kendi halletsin.
+/* ================================================================
+   MODERN & TEKNİK TASARIM (MINIMALIST ENGINEERING STYLE)
+   ================================================================
 */
 
-/* Manifesto Yazısı */
+/* 1. MANİFESTO VE GİRİŞ METNİ */
 .manifesto {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: 300; /* Daha ince, zarif font */
   font-style: italic;
   margin: 2rem 0;
-  opacity: 0.9; /* Biraz daha belirgin */
+  opacity: 0.9;
+  line-height: 1.6;
 }
 
-/* Süreç Kutuları (Yan Yana Dizme) */
+/* 2. MODERN ARA ÇİZGİ (HAYALET ÇİZGİ) 
+   Ortası hafif gri, kenarları yok olan modern ayraç
+*/
+hr.modern-split {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  margin: 4rem 0;
+}
+
+/* 3. BAŞLIK TASARIMI (Technical Header) 
+   Altına ince boydan boya çizgi + Sol tarafta renkli vurgu
+*/
+h2 {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2); /* Boydan boya ince çizgi */
+  margin-top: 3rem;
+  font-weight: 600;
+}
+/* Başlığın altındaki kısa renkli çizgi (Modern Dokunuş) */
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* Çizginin tam üstüne oturur */
+  left: 0;
+  width: 60px; /* Kısa çizgi */
+  height: 3px;
+  background-color: #2563eb; /* Mavi vurgu */
+}
+
+/* 4. SÜREÇ KUTULARI (COMPACT GRID) */
 .process-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin: 2rem 0;
+  gap: 20px;
+  margin: 2.5rem 0;
 }
 
 .process-box {
   flex: 1;
-  min-width: 200px;
-  /* DÜZELTME 1: Padding azaltıldı, kutular daha kibar */
-  padding: 1.2rem; 
-  border: 1px solid rgba(128, 128, 128, 0.3);
-  border-radius: 8px;
-  font-size: 0.95rem; /* Kutu içi yazı bir tık küçüldü */
+  min-width: 220px;
+  padding: 1.2rem; /* Daha kompakt */
+  border: 1px solid rgba(128, 128, 128, 0.2); /* Çok ince çerçeve */
+  border-radius: 6px;
+  background: rgba(128, 128, 128, 0.02); /* Çok hafif zemin */
 }
 
-/* Sol taraftaki renkli çizgiler */
-.step-1 { border-left: 5px solid #0f172a; }
-.step-2 { border-left: 5px solid #1e40af; }
-.step-3 { border-left: 5px solid #3b82f6; }
-.step-4 { border-left: 5px solid #60a5fa; }
+/* Sol taraftaki renkli çizgiler (Düz ve Net) */
+.step-1 { border-left: 4px solid #0f172a; }
+.step-2 { border-left: 4px solid #1e40af; }
+.step-3 { border-left: 4px solid #3b82f6; }
+.step-4 { border-left: 4px solid #60a5fa; }
 
 .step-title {
-  font-weight: bold;
-  /* DÜZELTME 2: Başlık boyutu uyum için ayarlandı */
-  font-size: 1.05rem; 
-  margin-bottom: 0.5rem;
   display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: inherit; /* Temanın rengine uy */
 }
 
-/* Ayraç (Daha Belirgin) */
-hr.spacer {
-  margin: 3rem 0;
-  border: 0;
-  /* DÜZELTME 3: Opaklık 0.2'den 0.5'e çıkarıldı (Karanlıkta görünür) */
-  border-top: 1px solid rgba(128, 128, 128, 0.5); 
-}
-
-/* Alıntılar */
+/* 5. VİZYON KARTLARI (GRID) */
 .quote-grid {
   display: flex;
   flex-wrap: wrap;
@@ -71,10 +96,26 @@ hr.spacer {
 .quote-item {
   flex: 1;
   min-width: 250px;
-  padding: 1rem;
-  border-left: 4px solid rgba(128, 128, 128, 0.4); /* Çerçeve biraz daha belirgin */
-  background: rgba(128, 128, 128, 0.08); /* Arka plan biraz daha belirgin */
-  font-size: 0.95rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  border-left-width: 4px; /* Sadece sol çizgi kalın */
+  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.04);
+}
+.q-blue { border-left-color: #1e40af; }
+.q-red { border-left-color: #c0392b; }
+.q-cyan { border-left-color: #0891b2; }
+
+/* DARK MODE AYARLARI (OTOMATİK GEÇİŞ)
+   Karanlık modda çizgileri beyaza çevirir
+*/
+@media (prefers-color-scheme: dark) {
+  hr.modern-split {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0));
+  }
+  h2 { border-bottom-color: rgba(255, 255, 255, 0.2); }
+  .process-box { border-color: rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02); }
+  .quote-item { border-color: rgba(255, 255, 255, 0.1); border-left-width: 4px; background: rgba(255, 255, 255, 0.02); }
 }
 </style>
 
@@ -86,7 +127,7 @@ Bu platformda, mühendisliği geometri odaklı bir faaliyet olarak değil; **ana
 
 Çalışmalarımda temel amaç; mühendislik problemlerini sezgisel çözümlerden bağımsız olarak, fiziksel prensiplere dayalı ve sayısal olarak doğrulanabilir yöntemlerle değerlendirmektir.
 
-<hr class="spacer">
+<hr class="modern-split">
 
 ## Analiz Tabanlı Mühendislik Yaklaşımı
 
@@ -116,7 +157,7 @@ Modern mühendislik problemleri, yalnızca deneysel yöntemlerle ya da tek boyut
 
 Bu yaklaşım, sistem davranışını daha tasarım aşamasında öngörebilmeyi, kritik sınır koşullarını doğru şekilde tanımlamayı ve mühendislik kararlarını nicel verilere dayandırmayı mümkün kılar.
 
-<hr class="spacer">
+<hr class="modern-split">
 
 ## Sanal Doğrulama ve Sayısal Düşünme
 
@@ -124,31 +165,31 @@ Fiziksel testler mühendislikte vazgeçilmezdir; ancak doğru kurulan sayısal m
 
 Bu bağlamda, **Sanal Doğrulama (Virtual Verification)** süreçlerini merkeze alarak, tasarımın fiziksel davranışla tutarlı olmasını hedefliyorum.
 
-<hr class="spacer">
+<hr class="modern-split">
 
 ## Tasarım, Davranış ve Üretilebilirlik İlişkisi
 
 Bir mühendislik çözümünün başarısı, yalnızca teorik doğruluğuyla değil; üretim süreçleriyle olan uyumuyla da belirlenir. Bu nedenle tasarım, analiz ve üretim arasındaki ilişkiyi birbirinden kopuk adımlar olarak değil, tek bir mühendislik sürecinin parçaları olarak değerlendiriyorum.
 
-<hr class="spacer">
+<hr class="modern-split">
 
 ## Mühendislik Vizyonu
 
 Mühendisliği; fiziksel gerçekliği anlamaya çalışan, sayısal araçları bilinçli kullanan ve her çözümü sorgulanabilir kılan bir düşünce disiplini olarak görüyorum.
 
 <div class="quote-grid">
-  <div class="quote-item">
+  <div class="quote-item q-blue">
     <i>“Engineering is the art of directing the great sources of power in nature for the use and convenience of man.”</i>
-    <br><b>— Thomas Tredgold</b>
+    <br><br><b>— Thomas Tredgold</b>
   </div>
 
-  <div class="quote-item">
+  <div class="quote-item q-red">
     <i>“Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."</i>
-    <br><b>— Leonardo da Vinci</b>
+    <br><br><b>— Leonardo da Vinci</b>
   </div>
 
-  <div class="quote-item">
+  <div class="quote-item q-cyan">
     <i>“Science can amuse and fascinate us all, but it is engineering that changes the world.”</i>
-    <br><b>— Isaac Asimov</b>
+    <br><br><b>— Isaac Asimov</b>
   </div>
 </div>
