@@ -9,8 +9,8 @@ header:
 ---
 
 <style>
-/* SADECE DÜZEN (LAYOUT) AYARLARI 
-   Renk kodlarına dokunmuyoruz, site kendi halletsin.
+/* SADECE DÜZEN (LAYOUT) VE BOYUT AYARLARI 
+   Renk kodlarına (metin/arka plan) dokunmuyoruz, site kendi halletsin.
 */
 
 /* Manifesto Yazısı */
@@ -19,7 +19,7 @@ header:
   font-size: 1.2rem;
   font-style: italic;
   margin: 2rem 0;
-  opacity: 0.85;
+  opacity: 0.9; /* Biraz daha belirgin */
 }
 
 /* Süreç Kutuları (Yan Yana Dizme) */
@@ -33,13 +33,14 @@ header:
 .process-box {
   flex: 1;
   min-width: 200px;
-  padding: 1.5rem;
-  border: 1px solid rgba(128, 128, 128, 0.3); /* Şeffaf gri çerçeve (Her modda görünür) */
+  /* DÜZELTME 1: Padding azaltıldı, kutular daha kibar */
+  padding: 1.2rem; 
+  border: 1px solid rgba(128, 128, 128, 0.3);
   border-radius: 8px;
-  /* Arka plan ve yazı rengi vermiyoruz, tema karar versin */
+  font-size: 0.95rem; /* Kutu içi yazı bir tık küçüldü */
 }
 
-/* Sol taraftaki renkli çizgiler (Bunlar sabit kalabilir) */
+/* Sol taraftaki renkli çizgiler */
 .step-1 { border-left: 5px solid #0f172a; }
 .step-2 { border-left: 5px solid #1e40af; }
 .step-3 { border-left: 5px solid #3b82f6; }
@@ -47,16 +48,18 @@ header:
 
 .step-title {
   font-weight: bold;
-  font-size: 1.1rem;
+  /* DÜZELTME 2: Başlık boyutu uyum için ayarlandı */
+  font-size: 1.05rem; 
   margin-bottom: 0.5rem;
   display: block;
 }
 
-/* Ayraç (Standart HR etiketi ama biraz boşluklu) */
+/* Ayraç (Daha Belirgin) */
 hr.spacer {
   margin: 3rem 0;
   border: 0;
-  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  /* DÜZELTME 3: Opaklık 0.2'den 0.5'e çıkarıldı (Karanlıkta görünür) */
+  border-top: 1px solid rgba(128, 128, 128, 0.5); 
 }
 
 /* Alıntılar */
@@ -69,8 +72,9 @@ hr.spacer {
   flex: 1;
   min-width: 250px;
   padding: 1rem;
-  border-left: 4px solid rgba(128, 128, 128, 0.3);
-  background: rgba(128, 128, 128, 0.05); /* Çok hafif bir ton */
+  border-left: 4px solid rgba(128, 128, 128, 0.4); /* Çerçeve biraz daha belirgin */
+  background: rgba(128, 128, 128, 0.08); /* Arka plan biraz daha belirgin */
+  font-size: 0.95rem;
 }
 </style>
 
