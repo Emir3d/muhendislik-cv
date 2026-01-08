@@ -359,8 +359,8 @@ h2.section-title {
       <div class="card-desc">Karmaşık geometriler için CFD'ye uygun ağ yapısı.</div>
     </div>
     <div class="card-footer">
-      <span class="tech-tag tag-ansys">ANSYS Meshing</span>
-      <span class="tech-tag">CFD</span>
+      <span class="tech-tag tag-ansys">Solidworks</span>
+      <span class="tech-tag">Photoshop</span>
     </div>
   </div>
 
