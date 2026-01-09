@@ -6,158 +6,282 @@ author_profile: true
 ---
 
 <style>
-/* 1. SOL MENÜ GİZLEME */
-.author__avatar { display: none !important; }
+/* 1. TEMEL AYARLAR & GİZLEMELER */
+.author__avatar { display: none !important; } /* Sol menü resmi gizle */
+
+:root {
+  --hud-primary: #0ea5e9; /* Elektrik Mavisi - Ana Vurgu Rengi */
+  --hud-dark: #0f172a;    /* Çok Koyu Lacivert (Arka Plan) */
+  --hud-card: #1e293b;    /* Kart Rengi (Koyu Mod) */
+  --hud-text: #e2e8f0;    /* Açık Yazı Rengi */
+  --hud-muted: #94a3b8;   /* Sönük Yazı Rengi */
+  --hud-font-tech: "SF Mono", "Roboto Mono", Menlo, monospace; /* Teknik Font */
+}
 
 /* ==========================================
-   GENEL KART AYARLARI
+   YENİ NESİL BAŞLIKLAR (Tech Headers)
    ========================================== */
-.projects-grid, .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-.project-card, .gallery-item {
-  background-color: #ffffff;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-  display: flex;
-  flex-direction: column; /* İçeriği dikey diz */
-}
-
-.project-card:hover, .gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-/* KART İÇERİĞİ */
-.card-body {
-  padding: 25px;
-  flex-grow: 1; /* Alanı doldur */
-}
-
-.card-category {
-  font-size: 0.75rem;
+h2.section-title {
+  font-family: var(--hud-font-tech);
   text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 4rem 0 2rem 0;
+  padding-bottom: 15px;
+  position: relative;
+  color: #111; /* Açık mod rengi */
+  display: flex;
+  align-items: center;
+}
+
+/* Başlık Altındaki Teknik Çizgi */
+h2.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--hud-primary), transparent); /* Maveden şeffafa geçiş */
+}
+
+/* Başlık Önündeki Yanıp Sönen İmleç Efekti */
+h2.section-title::before {
+  content: "▐";
+  margin-right: 10px;
+  color: var(--hud-primary);
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+
+/* ==========================================
+   BÖLÜM 1: ANALİZ KARTLARI (Data Modules)
+   ========================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 5rem;
+}
+
+.project-card {
+  background-color: #fff; /* Açık mod zemin */
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid var(--hud-primary); /* Üstte mavi şerit */
+  border-radius: 4px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Efekti: Kart yukarı kalkar ve gölge maviye döner */
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 25px -5px rgba(14, 165, 233, 0.15), 0 0 0 1px var(--hud-primary);
+}
+
+/* Kartın içindeki teknik detaylar */
+.card-category {
+  font-family: var(--hud-font-tech);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--hud-primary);
   letter-spacing: 1px;
-  color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: block;
   font-weight: 700;
 }
 
 .card-title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  color: #111;
-  line-height: 1.4;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
 .card-desc {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
   line-height: 1.6;
+  color: #555;
 }
-.card-desc ul { padding-left: 15px; margin-bottom: 0; }
-.card-desc li { margin-bottom: 5px; }
+.card-desc ul { padding-left: 18px; margin-bottom: 15px; }
+.card-desc li { margin-bottom: 8px; position: relative; list-style: none; }
+/* Liste maddelerinin başına teknik ok işareti koyalım */
+.card-desc li::before {
+  content: "►";
+  font-size: 0.7rem;
+  color: var(--hud-primary);
+  position: absolute;
+  left: -18px;
+  top: 4px;
+}
 
 /* ==========================================
-   🚀 YAZILIM ROZETLERİ (BADGES)
+   YENİ NESİL ROZETLER (Tech Badges v2)
    ========================================== */
 .card-footer {
-  padding: 15px 25px;
-  background-color: #f9fafb;
-  border-top: 1px solid rgba(128,128,128,0.1);
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(128,128,128,0.3); /* Kesik çizgili ayraç */
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .tech-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 12px;
-  color: #333;
-  background-color: #e5e7eb; /* Varsayılan Gri */
+  font-family: var(--hud-font-tech);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: #475569;
+  border-radius: 2px; /* Daha köşeli, teknik görünüm */
+  letter-spacing: 0.5px;
 }
 
-/* Özel Renkler */
-.tag-ansys { background-color: #fef08a; color: #854d0e; } /* Sarı */
-.tag-matlab { background-color: #dbeafe; color: #1e40af; } /* Mavi */
-.tag-solid { background-color: #fee2e2; color: #991b1b; } /* Kırmızı */
-.tag-inventor { background-color: #d1fae5; color: #065f46; } /* Yeşil */
-.tag-3ds { background-color: #f3e8ff; color: #6b21a8; } /* Mor */
+/* Önemli yazılımlar için özel vurgu */
+.tag-ansys, .tag-matlab, .tag-solid, .tag-inventor {
+  border-color: var(--hud-primary);
+  color: var(--hud-dark);
+  background-color: rgba(14, 165, 233, 0.05); /* Çok hafif mavi zemin */
+}
+
 
 /* ==========================================
-   GÖRSEL GALERİ AYARLARI
+   BÖLÜM 2: GALERİ (CAD Viewport Style)
    ========================================== */
-h2.section-title {
-  border-bottom: 1px solid rgba(128,128,128,0.2);
-  padding-bottom: 10px;
-  margin: 3rem 0 1.5rem 0;
-  font-weight: 700;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 4rem;
+}
+
+.gallery-item {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+/* Hover Efekti: Çerçeve mavi yanar */
+.gallery-item:hover {
+  border-color: var(--hud-primary);
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
 }
 
 .gallery-img-box {
-  width: 100%;
-  height: 200px;
-  background-color: #f3f4f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 220px;
+  background-color: #f1f5f9;
   overflow: hidden;
-  border-bottom: 1px solid rgba(128,128,128,0.1);
+  position: relative;
+  /* CAD ekranı gibi köşe çizgileri ekleyelim */
 }
+
+/* CAD Köşe Efektleri */
+.gallery-img-box::after {
+  content: "";
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  border: 1px solid rgba(14, 165, 233, 0.3); /* İnce mavi iç çerçeve */
+  pointer-events: none;
+  z-index: 2;
+}
+
 .gallery-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.gallery-item:hover .gallery-img-box img {
-  transform: scale(1.1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(30%); /* Varsayılan olarak biraz teknik/soluk dursun */
 }
 
-/* KOYU MOD */
+.gallery-item:hover .gallery-img-box img {
+  transform: scale(1.1);
+  filter: grayscale(0%); /* Üzerine gelince renkler canlansın */
+}
+
+/* Galeri Metin Alanı */
+.gallery-info {
+  padding: 20px;
+  border-top: 2px solid var(--hud-primary); /* Resimle metni ayıran kalın çizgi */
+  background: #fff;
+}
+
+.gallery-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.gallery-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ==========================================
+   🌙 KOYU MOD (DARK MODE) - GERÇEK HUD DENEYİMİ
+   ========================================== */
 @media (prefers-color-scheme: dark) {
-  .project-card, .gallery-item { background-color: #1f2937; border-color: #374151; }
-  .card-title { color: #f3f4f6; }
-  .card-desc { color: #d1d5db; }
-  .card-category { color: #9ca3af; }
-  .card-footer { background-color: #111827; border-color: #374151; }
-  .tech-tag { background-color: #374151; color: #e5e7eb; }
-  /* Koyu modda rozetler biraz daha pastel olsun */
-  .tag-ansys { background-color: #422006; color: #fde047; }
-  .tag-matlab { background-color: #172554; color: #93c5fd; }
-  .tag-solid { background-color: #450a0a; color: #fca5a5; }
-  .tag-inventor { background-color: #064e3b; color: #6ee7b7; }
-  .tag-3ds { background-color: #3b0764; color: #d8b4fe; }
+  /* Başlıklar */
+  h2.section-title { color: var(--hud-text); }
+  
+  /* Analiz Kartları */
+  .project-card {
+    background-color: var(--hud-card);
+    border-color: #334155;
+  }
+  .project-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(14, 165, 233, 0.1), 0 0 0 1px var(--hud-primary);
+  }
+  .card-title { color: var(--hud-text); }
+  .card-desc { color: var(--hud-muted); }
+  .card-footer { border-top-color: rgba(255,255,255,0.1); }
+  
+  /* Rozetler (Koyu Mod) */
+  .tech-tag {
+    background-color: #334155;
+    border-color: #475569;
+    color: var(--hud-muted);
+  }
+  .tag-ansys, .tag-matlab, .tag-solid, .tag-inventor {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--hud-primary);
+  }
+
+  /* Galeri (Koyu Mod) */
+  .gallery-item {
+    background-color: var(--hud-card);
+    border-color: #334155;
+  }
+  .gallery-item:hover { border-color: var(--hud-primary); }
+  .gallery-info { background-color: var(--hud-card); }
+  .gallery-info h3 { color: var(--hud-text); }
+  .gallery-info p { color: var(--hud-muted); }
+  .gallery-img-box { background-color: #000; }
 }
 </style>
 
-<h2 class="section-title">Mühendislik Analizleri & Ar-Ge</h2>
+<h2 class="section-title">Mühendislik Analizleri & Ar-Ge Verileri</h2>
 
 <div class="projects-grid">
 
   <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Akademik Araştırma</span>
-      <h3 class="card-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
-      <div class="card-desc">
-        <ul>
-          <li>Euler-Timoshenko teorilerinin kıyaslanması.</li>
-          <li>Farklı fiber dizilim açılarının (stacking) kritik burkulma yüküne etkisi.</li>
-          <li>FEM analizi ve analitik doğrulama.</li>
-        </ul>
-      </div>
+    <span class="card-category">Akademik Araştırma / FEA</span>
+    <h3 class="card-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
+    <div class="card-desc">
+      <ul>
+        <li>Euler-Timoshenko teorilerinin kıyaslanmalı analizi.</li>
+        <li>Fiber dizilim açılarının (stacking sequence) kritik burkulma yüküne etkisi.</li>
+        <li>Sonlu Elemanlar Yöntemi (FEM) ile analitik doğrulama.</li>
+      </ul>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-ansys">ANSYS ACP</span>
@@ -167,32 +291,28 @@ h2.section-title {
   </div>
 
   <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Yazılım Geliştirme</span>
-      <h3 class="card-title">Mohr Çemberi Analiz Aracı</h3>
-      <div class="card-desc">
-        <ul>
-          <li>Mukavemet hesapları için otomatik Mohr çemberi çizen GUI tasarımı.</li>
-          <li>Asal gerilmeler ve maksimum kayma gerilmesi hesabı.</li>
-        </ul>
-      </div>
+    <span class="card-category">Yazılım Geliştirme / GUI</span>
+    <h3 class="card-title">Mohr Çemberi Hesaplama Aracı</h3>
+    <div class="card-desc">
+      <ul>
+        <li>Mukavemet hesapları için interaktif Mohr çemberi çizen arayüz tasarımı.</li>
+        <li>Asal gerilmeler (σ1, σ2) ve maksimum kayma gerilmesi (τmax) hesabı.</li>
+      </ul>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-matlab">MATLAB App Designer</span>
-      <span class="tech-tag tag-matlab">GUI</span>
+      <span class="tech-tag">Algoritma</span>
     </div>
   </div>
 
   <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">TÜBİTAK 2209-A</span>
-      <h3 class="card-title">Özel Asansör Tasarımı (VİSA SÖR)</h3>
-      <div class="card-desc">
-        <ul>
-          <li>Takım liderliği ve proje yönetimi.</li>
-          <li>Mekanik boyutlandırma ve güvenlik sistemi optimizasyonu.</li>
-        </ul>
-      </div>
+    <span class="card-category">TÜBİTAK 2209-A Projesi</span>
+    <h3 class="card-title">Özel Asansör Tasarımı (VİSA SÖR)</h3>
+    <div class="card-desc">
+      <ul>
+        <li>Takım liderliği ve proje yaşam döngüsü yönetimi.</li>
+        <li>Mekanik sistem boyutlandırması ve güvenlik optimizasyonu.</li>
+      </ul>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-solid">SolidWorks</span>
@@ -201,166 +321,83 @@ h2.section-title {
   </div>
 
   <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Bitirme Tezi</span>
-      <h3 class="card-title">Francis Tipi Türbin Tasarımı</h3>
-      <div class="card-desc">
-        <ul>
-          <li>Keban Barajı verileriyle hidrodinamik boyutlandırma.</li>
-          <li>Çark ve salyangoz geometrisinin belirlenmesi.</li>
-        </ul>
-      </div>
+    <span class="card-category">Bitirme Tezi / Hidrodinamik</span>
+    <h3 class="card-title">Francis Tipi Türbin Tasarımı</h3>
+    <div class="card-desc">
+      <ul>
+        <li>Keban Barajı verileri referans alınarak hidrodinamik boyutlandırma.</li>
+        <li>Çark (runner) ve salyangoz (volute) geometrisinin CFD odaklı tasarımı.</li>
+      </ul>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-solid">SolidWorks</span>
-      <span class="tech-tag">Hidrodinamik</span>
-      <span class="tech-tag">CFD</span>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Teknik Çeviri</span>
-      <h3 class="card-title">CFD & Kavitasyon Teknik Çeviri</h3>
-      <div class="card-desc">
-          Vanalarda iki fazlı akış ve kavitasyon üzerine teknik literatür çevirisi.
-      </div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag">Akademik İngilizce</span>
       <span class="tech-tag">CFD Teorisi</span>
-    </div>
-  </div>
-  
-   <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Gönüllü Proje</span>
-      <h3 class="card-title">Müsilaj Sorunu Araştırması</h3>
-      <div class="card-desc">
-        Müsilaj oluşum mekanizmaları ve akışkanlar mekaniği temelli çözüm önerileri üzerine disiplinlerarası çalışma.
-      </div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag">Akışkanlar Mekaniği</span>
-      <span class="tech-tag">Çevre Müh.</span>
     </div>
   </div>
 
 </div>
 
-<h2 class="section-title">3D Tasarım & Render Galerisi</h2>
+<h2 class="section-title">3D CAD Tasarım & Render Çıktıları</h2>
 
 <div class="gallery-grid">
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak" onerror="this.src='https://via.placeholder.com/400x300';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak Tasarımı" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="card-body">
-      <h3 class="card-title">Konsept Uçak Tasarımı</h3>
-      <div class="card-desc">Özgün konsept tasarım ve gerçekçi render çalışması.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-inventor">Inventor Pro</span>
-      <span class="tech-tag">Render</span>
+    <div class="gallery-info">
+      <h3>Konsept Uçak Tasarımı</h3>
+      <p>Inventor Pro / Yüzey Modelleme & Render</p>
     </div>
   </div>
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16" onerror="this.src='https://via.placeholder.com/400x300';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16 Tüfeği" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="card-body">
-      <h3 class="card-title">M16 Piyade Tüfeği</h3>
-      <div class="card-desc">Detaylı parça ve montaj modellemesi.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-inventor">Inventor Pro</span>
-      <span class="tech-tag">Montaj</span>
+    <div class="gallery-info">
+      <h3>M16 Piyade Tüfeği</h3>
+      <p>Inventor Pro / Detaylı Parça & Montaj</p>
     </div>
   </div>
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman" onerror="this.src='https://via.placeholder.com/400x300';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet Motoru" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="card-body">
-      <h3 class="card-title">3D Superman Logosu</h3>
-      <div class="card-desc">Poligon modelleme teknikleri ile ikonik logo çalışması.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-3ds">3DS MAX</span>
-      <span class="tech-tag">Poligon Modelleme</span>
+    <div class="gallery-info">
+      <h3>Turbo-Jet Motor Montajı</h3>
+      <p>SolidWorks / Makine Elemanları Modelleme</p>
     </div>
   </div>
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="İHA Tasarımı" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="card-body">
-      <h3 class="card-title">Turbo-Jet Motoru</h3>
-      <div class="card-desc">Motor bileşenlerinin detaylı CAD modellemesi.</div>
+    <div class="gallery-info">
+      <h3>Alpagu-X İHA Konsepti</h3>
+      <p>Inventor / Havacılık Tasarımı</p>
     </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-solid">SolidWorks</span>
-      <span class="tech-tag">Makine Elemanları</span>
+  </div>
+  
+    <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="CFD Mesh" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+    <div class="gallery-info">
+      <h3>Manifold CFD Mesh Ağı</h3>
+      <p>ANSYS Meshing / Akışkanlar Dinamiği</p>
     </div>
   </div>
 
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/400x300';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman Logo" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="card-body">
-      <h3 class="card-title">Alpagu-X İHA</h3>
-      <div class="card-desc">İnsansız hava aracı konsept tasarımı.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-inventor">Inventor</span>
-      <span class="tech-tag">Havacılık</span>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="card-body">
-      <h3 class="card-title">Şahi Top Modeli</h3>
-      <div class="card-desc">Tarihi savunma sisteminin 3D rekonstrüksiyonu.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-inventor">Inventor</span>
-      <span class="tech-tag">Tarihi Modelleme</span>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/kilic.png" alt="Kılıç" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="card-body">
-      <h3 class="card-title">Witcher-3 Kılıcı</h3>
-      <div class="card-desc">Oyun referanslı detaylı yüzey modelleme.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-inventor">Inventor</span>
-      <span class="tech-tag">Yüzey Modelleme</span>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="card-body">
-      <h3 class="card-title">Manifold Mesh Ağı</h3>
-      <div class="card-desc">Karmaşık geometriler için CFD'ye uygun ağ yapısı.</div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag tag-ansys">Solidworks</span>
-      <span class="tech-tag">Photoshop</span>
+    <div class="gallery-info">
+      <h3>3D Superman Logosu</h3>
+      <p>3DS MAX / Poligon Modelleme</p>
     </div>
   </div>
 
