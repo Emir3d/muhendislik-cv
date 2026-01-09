@@ -69,7 +69,7 @@ author_profile: true
 .card-desc li { margin-bottom: 5px; }
 
 /* ==========================================
-   🚀 YENİ ÖZELLİK: YAZILIM ROZETLERİ (BADGES)
+   🚀 YAZILIM ROZETLERİ (BADGES)
    ========================================== */
 .card-footer {
   padding: 15px 25px;
@@ -143,7 +143,7 @@ h2.section-title {
 }
 </style>
 
-<h2 class="section-title">🔬 Mühendislik Analizleri & Ar-Ge</h2>
+<h2 class="section-title">Mühendislik Analizleri & Ar-Ge</h2>
 
 <div class="projects-grid">
 
@@ -223,7 +223,7 @@ h2.section-title {
       <span class="card-category">Teknik Çeviri</span>
       <h3 class="card-title">CFD & Kavitasyon Teknik Çeviri</h3>
       <div class="card-desc">
-         Vanalarda iki fazlı akış ve kavitasyon üzerine teknik literatür çevirisi.
+          Vanalarda iki fazlı akış ve kavitasyon üzerine teknik literatür çevirisi.
       </div>
     </div>
     <div class="card-footer">
@@ -248,7 +248,7 @@ h2.section-title {
 
 </div>
 
-<h2 class="section-title">🎨 3D Tasarım & Render Galerisi</h2>
+<h2 class="section-title">3D Tasarım & Render Galerisi</h2>
 
 <div class="gallery-grid">
 
