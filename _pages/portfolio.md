@@ -6,231 +6,140 @@ author_profile: true
 ---
 
 <style>
-/* 1. TEMEL AYARLAR & GİZLEMELER */
+/* 1. SOL MENÜ GİZLEME */
 .author__avatar { display: none !important; }
 
-:root {
-  --modern-accent: #2563eb; /* Modern Mavi */
-  --modern-bg-light: #f8fafc; /* Çok açık gri arka plan */
-  --modern-card-light: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz kart */
-  --modern-text-dark: #1e293b;
-  --modern-text-muted: #64748b;
-  --glass-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); /* Yumuşak derin gölge */
-}
-
-body {
-  background-color: var(--modern-bg-light); /* Sayfa arka planını biraz kıralım */
-}
-
 /* ==========================================
-   MODERN BAŞLIKLAR (Typography)
+   GENEL KART AYARLARI
    ========================================== */
-h2.section-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: -0.5px; /* Modern sıkı harfler */
-  margin: 4rem 0 2rem 0;
-  color: var(--modern-text-dark);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-/* Başlık yanındaki modern çizgi */
-h2.section-title::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--modern-accent);
-  border-radius: 50%; /* Daire */
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2); /* Etrafında hafif halka */
-}
-
-
-/* ==========================================
-   BÖLÜM 1: MODERN KARTLAR (Glassmorphism)
-   ========================================== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 30px;
-  margin-bottom: 5rem;
-}
-
-.project-card {
-  /* CAM EFEKTİ */
-  background: var(--modern-card-light);
-  backdrop-filter: blur(12px); /* Buzlu cam bulanıklığı */
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Çok ince beyaz çerçeve */
-  
-  border-radius: 16px; /* Daha yuvarlak köşeler */
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yaylı geçiş efekti */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Çok hafif başlangıç gölgesi */
-}
-
-/* Hover Efekti: Kart yukarı süzülür ve gölge derinleşir */
-.project-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: var(--glass-shadow);
-  border-color: rgba(37, 99, 235, 0.3); /* Kenarlık hafif mavi olur */
-}
-
-/* Kategori */
-.card-category {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--modern-accent);
-  margin-bottom: 10px;
-  display: block;
-}
-
-/* Başlık */
-.card-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: var(--modern-text-dark);
-  line-height: 1.3;
-}
-
-/* Açıklama */
-.card-desc {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--modern-text-muted);
-  flex-grow: 1;
-}
-.card-desc ul { padding-left: 20px; margin-bottom: 20px; }
-.card-desc li { margin-bottom: 10px; }
-
-
-/* ==========================================
-   MODERN HAP ROZETLER (Pill Badges)
-   ========================================== */
-.card-footer {
-  margin-top: auto; /* En alta it */
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tech-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 6px 14px; /* Daha geniş iç boşluk */
-  background-color: rgba(100, 116, 139, 0.1); /* Çok hafif gri */
-  color: var(--modern-text-dark);
-  border-radius: 50px; /* TAM YUVARLAK (Hap şeklinde) */
-  transition: all 0.3s ease;
-}
-
-/* Önemli yazılımlar için özel renkler (Pastel Tonlar) */
-.tag-ansys { background-color: rgba(245, 158, 11, 0.15); color: #b45309; } /* Turuncu */
-.tag-matlab { background-color: rgba(59, 130, 246, 0.15); color: #1d4ed8; } /* Mavi */
-.tag-solid { background-color: rgba(239, 68, 68, 0.15); color: #b91c1c; } /* Kırmızı */
-.tag-inventor { background-color: rgba(16, 185, 129, 0.15); color: #047857; } /* Yeşil */
-
-.tech-tag:hover {
-  transform: translateY(-2px); /* Rozetler de hafifçe kalkar */
-}
-
-
-/* ==========================================
-   BÖLÜM 2: MODERN GALERİ
-   ========================================== */
-.gallery-grid {
+.projects-grid, .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 25px;
+  margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
-.gallery-item {
-  border-radius: 16px;
+.project-card, .gallery-item {
+  background-color: #ffffff;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s ease;
-  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* İçeriği dikey diz */
 }
 
-.gallery-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--glass-shadow);
+.project-card:hover, .gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* KART İÇERİĞİ */
+.card-body {
+  padding: 25px;
+  flex-grow: 1; /* Alanı doldur */
+}
+
+.card-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 700;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+  line-height: 1.4;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+.card-desc ul { padding-left: 15px; margin-bottom: 0; }
+.card-desc li { margin-bottom: 5px; }
+
+/* ==========================================
+   🚀 YAZILIM ROZETLERİ (BADGES)
+   ========================================== */
+.card-footer {
+  padding: 15px 25px;
+  background-color: #f9fafb;
+  border-top: 1px solid rgba(128,128,128,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: #333;
+  background-color: #e5e7eb; /* Varsayılan Gri */
+}
+
+/* Özel Renkler */
+.tag-ansys { background-color: #fef08a; color: #854d0e; } /* Sarı */
+.tag-matlab { background-color: #dbeafe; color: #1e40af; } /* Mavi */
+.tag-solid { background-color: #fee2e2; color: #991b1b; } /* Kırmızı */
+.tag-inventor { background-color: #d1fae5; color: #065f46; } /* Yeşil */
+.tag-3ds { background-color: #f3e8ff; color: #6b21a8; } /* Mor */
+
+/* ==========================================
+   GÖRSEL GALERİ AYARLARI
+   ========================================== */
+h2.section-title {
+  border-bottom: 1px solid rgba(128,128,128,0.2);
+  padding-bottom: 10px;
+  margin: 3rem 0 1.5rem 0;
+  font-weight: 700;
 }
 
 .gallery-img-box {
-  height: 240px; /* Biraz daha yüksek */
+  width: 100%;
+  height: 200px;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  position: relative;
+  border-bottom: 1px solid rgba(128,128,128,0.1);
 }
-
 .gallery-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s ease;
 }
-
-/* Resim Hover: Hafif zoom ve parlaklık */
 .gallery-item:hover .gallery-img-box img {
-  transform: scale(1.08);
-  filter: brightness(1.05);
+  transform: scale(1.1);
 }
 
-/* Galeri Metin Alanı */
-.gallery-info {
-  padding: 25px;
-  background: #fff;
-}
-
-.gallery-info h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin: 0 0 8px 0;
-  color: var(--modern-text-dark);
-}
-
-.gallery-info p {
-  font-size: 0.9rem;
-  color: var(--modern-text-muted);
-  font-weight: 500;
-  margin: 0;
-}
-
-/* ==========================================
-   🌙 KOYU MOD (DARK MODE) - NEON GLASS
-   ========================================== */
+/* KOYU MOD */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --modern-bg-light: #0f172a; /* Koyu arka plan */
-    --modern-card-light: rgba(30, 41, 59, 0.7); /* Koyu yarı saydam kart */
-    --modern-text-dark: #f8fafc;
-    --modern-text-muted: #94a3b8;
-    --glass-shadow: 0 10px 30px -10px rgba(0,0,0,0.5); /* Daha koyu gölge */
-  }
-  
-  body { background-color: var(--modern-bg-light); }
-  
-  .project-card, .gallery-item {
-    border-color: rgba(255, 255, 255, 0.08); /* Çok ince açık çerçeve */
-  }
-  
-  .gallery-item, .gallery-info { background: var(--modern-card-light); }
-
-  /* Koyu modda rozetler daha parlak olsun */
-  .tech-tag { background-color: rgba(255,255,255,0.1); color: #e2e8f0; }
-  .tag-ansys { background-color: rgba(245, 158, 11, 0.2); color: #fbbf24; }
-  .tag-matlab { background-color: rgba(59, 130, 246, 0.2); color: #60a5fa; }
-  .tag-solid { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
+  .project-card, .gallery-item { background-color: #1f2937; border-color: #374151; }
+  .card-title { color: #f3f4f6; }
+  .card-desc { color: #d1d5db; }
+  .card-category { color: #9ca3af; }
+  .card-footer { background-color: #111827; border-color: #374151; }
+  .tech-tag { background-color: #374151; color: #e5e7eb; }
+  /* Koyu modda rozetler biraz daha pastel olsun */
+  .tag-ansys { background-color: #422006; color: #fde047; }
+  .tag-matlab { background-color: #172554; color: #93c5fd; }
+  .tag-solid { background-color: #450a0a; color: #fca5a5; }
+  .tag-inventor { background-color: #064e3b; color: #6ee7b7; }
+  .tag-3ds { background-color: #3b0764; color: #d8b4fe; }
 }
 </style>
 
@@ -239,14 +148,16 @@ h2.section-title::before {
 <div class="projects-grid">
 
   <div class="project-card">
-    <span class="card-category">Akademik Araştırma</span>
-    <h3 class="card-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
-    <div class="card-desc">
-      <ul>
-        <li>Euler-Timoshenko teorilerinin kıyaslanması.</li>
-        <li>Farklı fiber dizilim açılarının kritik burkulma yüküne etkisi.</li>
-        <li>FEM analizi ve analitik doğrulama.</li>
-      </ul>
+    <div class="card-body">
+      <span class="card-category">Akademik Araştırma</span>
+      <h3 class="card-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
+      <div class="card-desc">
+        <ul>
+          <li>Euler-Timoshenko teorilerinin kıyaslanması.</li>
+          <li>Farklı fiber dizilim açılarının (stacking) kritik burkulma yüküne etkisi.</li>
+          <li>FEM analizi ve analitik doğrulama.</li>
+        </ul>
+      </div>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-ansys">ANSYS ACP</span>
@@ -256,28 +167,32 @@ h2.section-title::before {
   </div>
 
   <div class="project-card">
-    <span class="card-category">Yazılım Geliştirme</span>
-    <h3 class="card-title">Mohr Çemberi Analiz Aracı</h3>
-    <div class="card-desc">
-      <ul>
-        <li>Mukavemet hesapları için otomatik Mohr çemberi çizen GUI tasarımı.</li>
-        <li>Asal gerilmeler ve maksimum kayma gerilmesi hesabı.</li>
-      </ul>
+    <div class="card-body">
+      <span class="card-category">Yazılım Geliştirme</span>
+      <h3 class="card-title">Mohr Çemberi Analiz Aracı</h3>
+      <div class="card-desc">
+        <ul>
+          <li>Mukavemet hesapları için otomatik Mohr çemberi çizen GUI tasarımı.</li>
+          <li>Asal gerilmeler ve maksimum kayma gerilmesi hesabı.</li>
+        </ul>
+      </div>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-matlab">MATLAB App Designer</span>
-      <span class="tech-tag">GUI / Algoritma</span>
+      <span class="tech-tag tag-matlab">GUI</span>
     </div>
   </div>
 
   <div class="project-card">
-    <span class="card-category">TÜBİTAK 2209-A</span>
-    <h3 class="card-title">Özel Asansör Tasarımı (VİSA SÖR)</h3>
-    <div class="card-desc">
-      <ul>
-        <li>Takım liderliği ve proje yönetimi.</li>
-        <li>Mekanik boyutlandırma ve güvenlik sistemi optimizasyonu.</li>
-      </ul>
+    <div class="card-body">
+      <span class="card-category">TÜBİTAK 2209-A</span>
+      <h3 class="card-title">Özel Asansör Tasarımı (VİSA SÖR)</h3>
+      <div class="card-desc">
+        <ul>
+          <li>Takım liderliği ve proje yönetimi.</li>
+          <li>Mekanik boyutlandırma ve güvenlik sistemi optimizasyonu.</li>
+        </ul>
+      </div>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-solid">SolidWorks</span>
@@ -286,17 +201,48 @@ h2.section-title::before {
   </div>
 
   <div class="project-card">
-    <span class="card-category">Bitirme Tezi</span>
-    <h3 class="card-title">Francis Tipi Türbin Tasarımı</h3>
-    <div class="card-desc">
-      <ul>
-        <li>Keban Barajı verileriyle hidrodinamik boyutlandırma.</li>
-        <li>Çark ve salyangoz geometrisinin belirlenmesi.</li>
-      </ul>
+    <div class="card-body">
+      <span class="card-category">Bitirme Tezi</span>
+      <h3 class="card-title">Francis Tipi Türbin Tasarımı</h3>
+      <div class="card-desc">
+        <ul>
+          <li>Keban Barajı verileriyle hidrodinamik boyutlandırma.</li>
+          <li>Çark ve salyangoz geometrisinin belirlenmesi.</li>
+        </ul>
+      </div>
     </div>
     <div class="card-footer">
       <span class="tech-tag tag-solid">SolidWorks</span>
-      <span class="tech-tag">Hidrodinamik / CFD</span>
+      <span class="tech-tag">Hidrodinamik</span>
+      <span class="tech-tag">CFD</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="card-body">
+      <span class="card-category">Teknik Çeviri</span>
+      <h3 class="card-title">CFD & Kavitasyon Teknik Çeviri</h3>
+      <div class="card-desc">
+          Vanalarda iki fazlı akış ve kavitasyon üzerine teknik literatür çevirisi.
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag">Akademik İngilizce</span>
+      <span class="tech-tag">CFD Teorisi</span>
+    </div>
+  </div>
+  
+   <div class="project-card">
+    <div class="card-body">
+      <span class="card-category">Gönüllü Proje</span>
+      <h3 class="card-title">Müsilaj Sorunu Araştırması</h3>
+      <div class="card-desc">
+        Müsilaj oluşum mekanizmaları ve akışkanlar mekaniği temelli çözüm önerileri üzerine disiplinlerarası çalışma.
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag">Akışkanlar Mekaniği</span>
+      <span class="tech-tag">Çevre Müh.</span>
     </div>
   </div>
 
@@ -310,9 +256,13 @@ h2.section-title::before {
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="gallery-info">
-      <h3>Konsept Uçak Tasarımı</h3>
-      <p>Inventor Pro / Render</p>
+    <div class="card-body">
+      <h3 class="card-title">Konsept Uçak Tasarımı</h3>
+      <div class="card-desc">Özgün konsept tasarım ve gerçekçi render çalışması.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-inventor">Inventor Pro</span>
+      <span class="tech-tag">Render</span>
     </div>
   </div>
 
@@ -320,39 +270,13 @@ h2.section-title::before {
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="gallery-info">
-      <h3>M16 Piyade Tüfeği</h3>
-      <p>Inventor Pro / Montaj</p>
+    <div class="card-body">
+      <h3 class="card-title">M16 Piyade Tüfeği</h3>
+      <div class="card-desc">Detaylı parça ve montaj modellemesi.</div>
     </div>
-  </div>
-
-  <div class="gallery-item">
-    <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="gallery-info">
-      <h3>Turbo-Jet Motoru</h3>
-      <p>SolidWorks / Makine Elemanları</p>
-    </div>
-  </div>
-
-  <div class="gallery-item">
-    <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="gallery-info">
-      <h3>Alpagu-X İHA</h3>
-      <p>Inventor / Havacılık</p>
-    </div>
-  </div>
-  
-    <div class="gallery-item">
-    <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="gallery-info">
-      <h3>Manifold Mesh Ağı</h3>
-      <p>ANSYS / CFD</p>
+    <div class="card-footer">
+      <span class="tech-tag tag-inventor">Inventor Pro</span>
+      <span class="tech-tag">Montaj</span>
     </div>
   </div>
 
@@ -360,9 +284,83 @@ h2.section-title::before {
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="gallery-info">
-      <h3>3D Superman Logosu</h3>
-      <p>3DS MAX / Poligon Modelleme</p>
+    <div class="card-body">
+      <h3 class="card-title">3D Superman Logosu</h3>
+      <div class="card-desc">Poligon modelleme teknikleri ile ikonik logo çalışması.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-3ds">3DS MAX</span>
+      <span class="tech-tag">Poligon Modelleme</span>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Turbo-Jet Motoru</h3>
+      <div class="card-desc">Motor bileşenlerinin detaylı CAD modellemesi.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-solid">SolidWorks</span>
+      <span class="tech-tag">Makine Elemanları</span>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Alpagu-X İHA</h3>
+      <div class="card-desc">İnsansız hava aracı konsept tasarımı.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-inventor">Inventor</span>
+      <span class="tech-tag">Havacılık</span>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Şahi Top Modeli</h3>
+      <div class="card-desc">Tarihi savunma sisteminin 3D rekonstrüksiyonu.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-inventor">Inventor</span>
+      <span class="tech-tag">Tarihi Modelleme</span>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/kilic.png" alt="Kılıç" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Witcher-3 Kılıcı</h3>
+      <div class="card-desc">Oyun referanslı detaylı yüzey modelleme.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-inventor">Inventor</span>
+      <span class="tech-tag">Yüzey Modelleme</span>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Manifold Mesh Ağı</h3>
+      <div class="card-desc">Karmaşık geometriler için CFD'ye uygun ağ yapısı.</div>
+    </div>
+    <div class="card-footer">
+      <span class="tech-tag tag-ansys">Solidworks</span>
+      <span class="tech-tag">Photoshop</span>
     </div>
   </div>
 
