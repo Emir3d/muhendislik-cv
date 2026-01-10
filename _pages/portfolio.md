@@ -6,6 +6,11 @@ author_profile: true
 ---
 
 <style>
+/* 1. KIRIK PROFİL RESMİNİ GİZLEME (İşaretlediğin Yer) */
+.author__avatar {
+  display: none !important;
+}
+
 /* ===============================
    GLOBAL: HIGH-END TECH THEME
    =============================== */
@@ -70,10 +75,10 @@ body {
   flex-direction: column;
 }
 
-/* Öne Çıkan Kart (Featured) */
+/* Öne Çıkan Kart (Featured) - SADECE GENİŞLİK KALDI, KENARLIK GİTTİ */
 .project-card.featured {
   grid-column: span 12; /* Tam genişlik */
-  border-left: 6px solid #3b82f6;
+  /* border-left: 6px solid #3b82f6;  <-- BU SATIRI SİLDİK */
 }
 
 /* 🔥 HOVER EFEKTİ: NEON PARLAMA 🔥 */
@@ -81,7 +86,7 @@ body {
   transform: translateY(-10px) scale(1.02);
   border-color: #3b82f6;
   /* KARTI KALDIRIP ALTINA MAVİ IŞIK VERİYORUZ */
-  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.4); 
+  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.4);
   z-index: 10;
 }
 
@@ -173,7 +178,7 @@ body {
   position: relative;
 }
 
-/* 🔥 MANIFOLD (EN ALTA, BÜYÜK VE ORTADA) 🔥 */
+/* 🔥 ŞAHİ TOP (EN ALTA, BÜYÜK VE ORTADA) 🔥 */
 .gallery-item.full-width {
   grid-column: span 12;
   margin-top: 20px;
@@ -187,7 +192,7 @@ body {
   position: relative;
 }
 
-/* Manifold görseli daha yüksek */
+/* Top görseli daha yüksek */
 .gallery-item.full-width .gallery-img-box { height: 450px; }
 
 .gallery-img-box img {
@@ -372,21 +377,21 @@ body {
   
   <div class="gallery-item">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/400x300';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
     <div class="gallery-info">
-      <h3>Şahi Top Modeli</h3>
-      <p>Inventor / Tarihi Modelleme</p>
+      <h3>Manifold CFD Mesh Ağı</h3>
+      <p>ANSYS Meshing</p>
     </div>
   </div>
 
   <div class="gallery-item full-width">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/800x400';">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/800x400';">
     </div>
     <div class="gallery-info">
-      <h3>Manifold CFD Mesh Ağı</h3>
-      <p>ANSYS Meshing / Akışkanlar Dinamiği</p>
+      <h3>Şahi Top Modeli</h3>
+      <p>Inventor / Tarihi Modelleme</p>
     </div>
   </div>
 
