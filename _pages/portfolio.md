@@ -43,7 +43,7 @@ author_profile: true
 }
 
 /* ===============================
-   PROJE LİSTESİ (Project Stack)
+   PROJE LİSTESİ (TIKLANABİLİR)
    =============================== */
 .projects-stack {
   display: flex;
@@ -61,7 +61,7 @@ author_profile: true
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer; /* Tıklanabilir el işareti */
   transition: all 0.2s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.02);
   position: relative;
@@ -108,7 +108,7 @@ author_profile: true
 .data-storage { display: none !important; }
 
 /* ===============================
-   GALERİ (Resimler)
+   GALERİ (SADECE GÖRÜNÜM)
    =============================== */
 .gallery-grid {
   display: grid;
@@ -116,22 +116,22 @@ author_profile: true
   gap: 20px;
 }
 
-.image-trigger {
+.gallery-item {
   background: #fff;
   border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
-  cursor: zoom-in;
+  /* cursor: zoom-in; SİLDİK - Tıklama yok */
   transition: 0.3s;
   position: relative;
   z-index: 1;
 }
 
 @media (prefers-color-scheme: dark) {
-  .image-trigger { background: #1e293b; border-color: #334155; }
+  .gallery-item { background: #1e293b; border-color: #334155; }
 }
 
-.image-trigger:hover {
+.gallery-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-hover-shadow);
 }
@@ -140,7 +140,6 @@ author_profile: true
   height: 220px;
   width: 100%;
   overflow: hidden;
-  pointer-events: none; /* Tıklama çakışmasını önler */
 }
 .gallery-img-box img {
   width: 100%;
@@ -148,7 +147,7 @@ author_profile: true
   object-fit: cover;
   transition: 0.5s;
 }
-.image-trigger:hover img { transform: scale(1.05); }
+.gallery-item:hover img { transform: scale(1.05); }
 
 /* Büyük Kart (Top) */
 .full-width { grid-column: 1 / -1; }
@@ -156,7 +155,7 @@ author_profile: true
 
 
 /* ===============================
-   MODAL (AÇILIR PENCERE)
+   MODAL (SADECE PROJELER İÇİN)
    =============================== */
 .modal-overlay {
   position: fixed;
@@ -183,7 +182,7 @@ author_profile: true
   padding: 40px;
   border-radius: 15px;
   position: relative;
-  display: none; /* Varsayılan gizli */
+  /* display: none; SİLDİK - Zaten overlay gizli */
 }
 @media (prefers-color-scheme: dark) {
   .modal-text-box { background: #1e293b; color: #fff; }
@@ -191,32 +190,7 @@ author_profile: true
   .modal-text-box #modal-desc-area { color: #cbd5e1 !important; }
 }
 
-/* İçerik Kutusu (Resim) */
-.modal-image-box {
-  max-width: 95%;
-  max-height: 95vh;
-  position: relative;
-  display: none; /* Varsayılan gizli */
-  flex-direction: column;
-  align-items: center;
-}
-
-.modal-image-box img {
-  max-width: 100%;
-  max-height: 85vh;
-  border-radius: 8px;
-  box-shadow: 0 0 50px rgba(0,0,0,0.5);
-  object-fit: contain;
-}
-.modal-caption {
-  color: #fff;
-  margin-top: 15px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-}
-
-/* Kapat Butonları */
+/* Kapat Butonu */
 .close-btn {
   position: absolute;
   top: 15px; right: 20px;
@@ -226,15 +200,6 @@ author_profile: true
   line-height: 1;
 }
 .close-btn:hover { color: #ef4444; }
-
-.close-btn-white {
-  position: absolute;
-  top: -40px; right: 0;
-  font-size: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-}
 
 /* Modal Etiketleri */
 #modal-tags-area { margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -327,43 +292,43 @@ author_profile: true
 
 <div class="gallery-grid">
 
-  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" data-img-title="Konsept Uçak Tasarımı">
+  <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
   </div>
 
-  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" data-img-title="Alpagu-X İHA Tasarımı">
+  <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
   </div>
 
-  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" data-img-title="M16 Piyade Tüfeği">
+  <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
 
-  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/jet.png" data-img-title="Turbo-Jet Motoru">
+  <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
   
-  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/superman.png" data-img-title="3D Superman Logosu">
+  <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
 
-  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" data-img-title="Manifold CFD Mesh Ağı">
+  <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
 
-  <div class="image-trigger full-width" data-img-src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" data-img-title="Şahi Top Modeli">
+  <div class="gallery-item full-width">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/800x400';">
     </div>
@@ -381,12 +346,6 @@ author_profile: true
     <div id="modal-tags-area"></div>
   </div>
 
-  <div id="image-box" class="modal-image-box">
-    <span class="close-btn-white">&times;</span>
-    <img id="modal-img" src="" alt="">
-    <div id="modal-caption" class="modal-caption"></div>
-  </div>
-
 </div>
 
 <script>
@@ -394,27 +353,17 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Elemanları Seç
   const modal = document.getElementById("main-modal");
-  const textBox = document.getElementById("text-box");
-  const imgBox = document.getElementById("image-box");
-  
   const modalTitle = document.getElementById("modal-title");
   const modalDesc = document.getElementById("modal-desc-area");
   const modalTags = document.getElementById("modal-tags-area");
-  
-  const modalImg = document.getElementById("modal-img");
-  const modalCaption = document.getElementById("modal-caption");
 
   // KAPATMA FONKSİYONU
   function closeModal() {
     modal.classList.remove("active");
-    textBox.style.display = "none";
-    imgBox.style.display = "none";
   }
 
-  // Kapatma butonlarını dinle
-  document.querySelectorAll(".close-btn, .close-btn-white").forEach(btn => {
-    btn.addEventListener("click", closeModal);
-  });
+  // Kapatma butonunu dinle
+  document.querySelector(".close-btn").addEventListener("click", closeModal);
 
   // Dışarıya tıklayınca kapat
   modal.addEventListener("click", function(e) {
@@ -422,8 +371,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-  // 1. PROJE KARTLARINI DİNLE
+  // PROJE KARTLARINI DİNLE
   const projects = document.querySelectorAll(".project-trigger");
+  
   projects.forEach(p => {
     p.addEventListener("click", function() {
       // Verileri gizli kutudan çek
@@ -444,26 +394,6 @@ document.addEventListener("DOMContentLoaded", function() {
       modalTags.innerHTML = tagHTML;
 
       // Göster
-      textBox.style.display = "block";
-      imgBox.style.display = "none";
-      modal.classList.add("active");
-    });
-  });
-
-
-  // 2. RESİMLERİ DİNLE
-  const images = document.querySelectorAll(".image-trigger");
-  images.forEach(img => {
-    img.addEventListener("click", function() {
-      const src = this.getAttribute("data-img-src");
-      const title = this.getAttribute("data-img-title");
-
-      modalImg.src = src;
-      modalCaption.innerText = title;
-
-      // Göster
-      textBox.style.display = "none";
-      imgBox.style.display = "flex";
       modal.classList.add("active");
     });
   });
