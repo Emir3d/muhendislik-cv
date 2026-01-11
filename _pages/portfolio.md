@@ -391,6 +391,7 @@ author_profile: true
         <li>Euler-Timoshenko teorilerinin karşılaştırılması.</li>
         <li>Analitik modelleme, sonlu elemanlar analizi ve MATLAB tabanlı sayısal çözümler.</li>
         <li>Ansys ACP modülü.</li>
+        <li>Kullanıcı dostu grafiksel Matlab arayüz.</li>
         <li>Literatür taraması ve makale yazım süreci devam etmektedir.</li>
       </ul>
     </div>
@@ -412,7 +413,7 @@ author_profile: true
       <ul>
         <li>Asal gerilmelerin (σ1, σ2) hesaplanması.</li>
         <li>Maksimum kayma gerilmesinin (τmax) tespiti.</li>
-        <li>Kullanıcı dostu grafiksel arayüz (GUI).</li>
+        <li>Matlab tasarımı ve grafiksel gösterim (GUI).</li>
       </ul>
     </div>
     <div class="modal-tags">
