@@ -6,17 +6,17 @@ author_profile: true
 ---
 
 <style>
-/* 1. PROFİL RESMİ GİZLEME */
+/* 1. Kırık Profil Resmini Gizle */
 .author__avatar { display: none !important; }
 
-/* 2. SAYFA GENİŞLİĞİ AYARI */
+/* 2. Genişlik Ayarı */
 .page__content { 
   width: 100% !important; 
   padding-right: 0 !important; 
   max-width: 100% !important;
 }
 
-/* 3. RENK DEĞİŞKENLERİ */
+/* 3. Renkler */
 :root {
   --border-color: #e2e8f0;
   --accent-color: #2563eb;
@@ -52,7 +52,8 @@ author_profile: true
   margin-bottom: 5rem;
 }
 
-.project-row {
+/* Tıklanabilir Proje Satırı */
+.project-trigger {
   background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -67,13 +68,13 @@ author_profile: true
   z-index: 1;
 }
 
-/* Koyu mod desteği */
+/* Koyu Mod Desteği */
 @media (prefers-color-scheme: dark) {
-  .project-row { background: #1e293b; border-color: #334155; }
+  .project-trigger { background: #1e293b; border-color: #334155; }
   .row-info h3 { color: #f1f5f9 !important; }
 }
 
-.project-row:hover {
+.project-trigger:hover {
   transform: translateX(10px);
   border-color: var(--accent-color);
   box-shadow: var(--card-hover-shadow);
@@ -98,16 +99,16 @@ author_profile: true
   color: #94a3b8;
   transition: 0.2s;
 }
-.project-row:hover .row-arrow {
+.project-trigger:hover .row-arrow {
   color: var(--accent-color);
   transform: translateX(5px);
 }
 
-/* Gizli Detaylar */
-.hidden-details { display: none; }
+/* Gizli Veri Deposu (CSS ile gizlenir) */
+.data-storage { display: none !important; }
 
 /* ===============================
-   GALERİ (Grid)
+   GALERİ (Resimler)
    =============================== */
 .gallery-grid {
   display: grid;
@@ -115,7 +116,7 @@ author_profile: true
   gap: 20px;
 }
 
-.gallery-item {
+.image-trigger {
   background: #fff;
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -127,10 +128,10 @@ author_profile: true
 }
 
 @media (prefers-color-scheme: dark) {
-  .gallery-item { background: #1e293b; border-color: #334155; }
+  .image-trigger { background: #1e293b; border-color: #334155; }
 }
 
-.gallery-item:hover {
+.image-trigger:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-hover-shadow);
 }
@@ -139,7 +140,7 @@ author_profile: true
   height: 220px;
   width: 100%;
   overflow: hidden;
-  pointer-events: none; /* Tıklamayı engellemesin diye */
+  pointer-events: none; /* Tıklama çakışmasını önler */
 }
 .gallery-img-box img {
   width: 100%;
@@ -147,114 +148,97 @@ author_profile: true
   object-fit: cover;
   transition: 0.5s;
 }
-.gallery-item:hover img { transform: scale(1.05); }
+.image-trigger:hover img { transform: scale(1.05); }
 
-/* Büyük Kart */
+/* Büyük Kart (Top) */
 .full-width { grid-column: 1 / -1; }
 .full-width .gallery-img-box { height: 400px; }
 
 
 /* ===============================
-   MODAL (AÇILIR PENCERE - TAMİR EDİLDİ)
+   MODAL (AÇILIR PENCERE)
    =============================== */
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 2147483647; /* Mümkün olan en yüksek sayı */
-  display: none; /* JS ile flex yapılacak */
+  z-index: 9999999; /* En üst katman */
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 20px;
   backdrop-filter: blur(5px);
 }
 
-/* Aktif Sınıfı */
-.modal-overlay.active { 
-  display: flex !important; 
-  animation: fadeIn 0.3s ease-out forwards;
-}
+/* JS ile 'active' sınıfı eklenince görünür olur */
+.modal-overlay.active { display: flex !important; animation: fadeIn 0.3s forwards; }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* METİN KUTUSU */
-.modal-text-content {
+/* İçerik Kutusu (Metin) */
+.modal-text-box {
   background: #fff;
   width: 100%;
   max-width: 700px;
   padding: 40px;
   border-radius: 15px;
   position: relative;
-  display: none;
+  display: none; /* Varsayılan gizli */
 }
 @media (prefers-color-scheme: dark) {
-  .modal-text-content { background: #1e293b; color: #fff; }
-  .modal-text-content h2 { color: #60a5fa !important; }
-  .modal-text-content #modalDesc { color: #cbd5e1 !important; }
+  .modal-text-box { background: #1e293b; color: #fff; }
+  .modal-text-box h2 { color: #60a5fa !important; }
+  .modal-text-box #modal-desc-area { color: #cbd5e1 !important; }
 }
-.modal-text-content.active { display: block; }
 
-/* RESİM KUTUSU */
-.modal-image-content {
-  width: auto;
-  height: auto;
+/* İçerik Kutusu (Resim) */
+.modal-image-box {
   max-width: 95%;
   max-height: 95vh;
   position: relative;
-  display: none;
+  display: none; /* Varsayılan gizli */
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-.modal-image-content.active { display: flex; }
 
-.modal-image-content img {
+.modal-image-box img {
   max-width: 100%;
   max-height: 85vh;
   border-radius: 8px;
   box-shadow: 0 0 50px rgba(0,0,0,0.5);
   object-fit: contain;
-  background: transparent;
 }
-
 .modal-caption {
   color: #fff;
   margin-top: 15px;
   font-size: 1.1rem;
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-  text-align: center;
 }
 
-/* KAPAT BUTONLARI */
+/* Kapat Butonları */
 .close-btn {
   position: absolute;
   top: 15px; right: 20px;
   font-size: 2rem;
   color: #64748b;
   cursor: pointer;
-  z-index: 10;
   line-height: 1;
 }
+.close-btn:hover { color: #ef4444; }
+
 .close-btn-white {
   position: absolute;
-  top: -50px; right: 0;
-  font-size: 3rem;
+  top: -40px; right: 0;
+  font-size: 2.5rem;
   color: #fff;
   cursor: pointer;
-  z-index: 10;
   font-weight: bold;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Etiketler */
-#modalTitle { color: var(--accent-color); margin-top: 0; }
-#modalDesc { line-height: 1.6; color: #334155; font-size: 1.05rem; }
-#modalTags { margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap; }
-.modal-tag {
+/* Modal Etiketleri */
+#modal-tags-area { margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap; }
+.modal-tag-item {
   background: #eff6ff;
   color: var(--accent-color);
   padding: 5px 12px;
@@ -264,23 +248,25 @@ author_profile: true
   font-weight: 600;
 }
 @media (prefers-color-scheme: dark) {
-  .modal-tag { background: #172554; color: #93c5fd; border-color: #1e40af; }
+  .modal-tag-item { background: #172554; color: #93c5fd; border-color: #1e40af; }
 }
 </style>
+
 
 <h2 class="section-title">Mühendislik Analizleri</h2>
 
 <div class="projects-stack">
 
-  <div class="project-row" onclick="window.openTextModal('p1')">
+  <div class="project-trigger">
     <div class="row-info">
       <span>Akademik Araştırma</span>
       <h3>Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
     </div>
     <div class="row-arrow">➔</div>
-    <div id="p1" class="hidden-details">
-      <div class="m-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</div>
-      <div class="m-desc">
+    
+    <div class="data-storage">
+      <div class="d-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</div>
+      <div class="d-desc">
         Bu çalışmada, hibrit kompozit kirişlerin burkulma davranışları incelenmiştir.
         <ul>
           <li>Euler-Timoshenko teorilerinin kıyaslanması yapıldı.</li>
@@ -288,92 +274,96 @@ author_profile: true
           <li>ANSYS ACP modülü kullanılarak Sonlu Elemanlar (FEM) doğrulaması gerçekleştirildi.</li>
         </ul>
       </div>
-      <div class="m-tags">ANSYS ACP, Static Structural, MATLAB</div>
+      <div class="d-tags">ANSYS ACP, Static Structural, MATLAB</div>
     </div>
   </div>
 
-  <div class="project-row" onclick="window.openTextModal('p2')">
+  <div class="project-trigger">
     <div class="row-info">
       <span>Yazılım Geliştirme</span>
       <h3>Mohr Çemberi Hesaplama Aracı</h3>
     </div>
     <div class="row-arrow">➔</div>
-    <div id="p2" class="hidden-details">
-      <div class="m-title">Mohr Çemberi Hesaplama Aracı</div>
-      <div class="m-desc">Mukavemet hesaplamaları için geliştirilen bu araç, kullanıcıdan alınan gerilme verileriyle otomatik Mohr çemberi çizer. Asal gerilmeleri ve maksimum kayma gerilmesini hesaplayarak grafiksel arayüzde sunar.</div>
-      <div class="m-tags">MATLAB GUI, Algoritma, Mukavemet</div>
+    
+    <div class="data-storage">
+      <div class="d-title">Mohr Çemberi Hesaplama Aracı</div>
+      <div class="d-desc">Mukavemet hesaplamaları için geliştirilen bu araç, kullanıcıdan alınan gerilme verileriyle otomatik Mohr çemberi çizer. Asal gerilmeleri ve maksimum kayma gerilmesini hesaplayarak grafiksel arayüzde sunar.</div>
+      <div class="d-tags">MATLAB GUI, Algoritma, Mukavemet</div>
     </div>
   </div>
 
-  <div class="project-row" onclick="window.openTextModal('p3')">
+  <div class="project-trigger">
     <div class="row-info">
       <span>TÜBİTAK 2209-A</span>
       <h3>VİSA SÖR Asansör Tasarımı</h3>
     </div>
     <div class="row-arrow">➔</div>
-    <div id="p3" class="hidden-details">
-      <div class="m-title">VİSA SÖR Asansör Tasarımı</div>
-      <div class="m-desc">Engelli bireylerin erişilebilirliğini artırmak için tasarlanan özel asansör sistemi. Proje kapsamında mekanik boyutlandırma, motor seçimi ve güvenlik freni optimizasyonu yapılmıştır.</div>
-      <div class="m-tags">SolidWorks, Mekanik Tasarım, Proje Yönetimi</div>
+    
+    <div class="data-storage">
+      <div class="d-title">VİSA SÖR Asansör Tasarımı</div>
+      <div class="d-desc">Engelli bireylerin erişilebilirliğini artırmak için tasarlanan özel asansör sistemi. Proje kapsamında mekanik boyutlandırma, motor seçimi ve güvenlik freni optimizasyonu yapılmıştır.</div>
+      <div class="d-tags">SolidWorks, Mekanik Tasarım, Proje Yönetimi</div>
     </div>
   </div>
 
-  <div class="project-row" onclick="window.openTextModal('p4')">
+  <div class="project-trigger">
     <div class="row-info">
       <span>Bitirme Tezi</span>
       <h3>Francis Tipi Türbin Tasarımı</h3>
     </div>
     <div class="row-arrow">➔</div>
-    <div id="p4" class="hidden-details">
-      <div class="m-title">Francis Tipi Türbin Tasarımı</div>
-      <div class="m-desc">Keban Barajı verileri referans alınarak yapılan hidrodinamik tasarım çalışması. Çark (runner) ve salyangoz (volute) geometrisinin CFD analizleri ile optimizasyonu.</div>
-      <div class="m-tags">SolidWorks, CFD, Hidrodinamik</div>
+    
+    <div class="data-storage">
+      <div class="d-title">Francis Tipi Türbin Tasarımı</div>
+      <div class="d-desc">Keban Barajı verileri referans alınarak yapılan hidrodinamik tasarım çalışması. Çark (runner) ve salyangoz (volute) geometrisinin CFD analizleri ile optimizasyonu.</div>
+      <div class="d-tags">SolidWorks, CFD, Hidrodinamik</div>
     </div>
   </div>
 
 </div>
 
+
 <h2 class="section-title">3D Tasarım & Render</h2>
 
 <div class="gallery-grid">
 
-  <div class="gallery-item" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/ucak.jpg', 'Konsept Uçak Tasarımı')">
+  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" data-img-title="Konsept Uçak Tasarımı">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
   </div>
 
-  <div class="gallery-item" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg', 'Alpagu-X İHA Tasarımı')">
+  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" data-img-title="Alpagu-X İHA Tasarımı">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
   </div>
 
-  <div class="gallery-item" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/m16.jpg', 'M16 Piyade Tüfeği Montajı')">
+  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" data-img-title="M16 Piyade Tüfeği">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
 
-  <div class="gallery-item" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/jet.png', 'Turbo-Jet Motoru')">
+  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/jet.png" data-img-title="Turbo-Jet Motoru">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
   
-  <div class="gallery-item" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/superman.png', '3D Superman Logosu')">
+  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/superman.png" data-img-title="3D Superman Logosu">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
 
-  <div class="gallery-item" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/manifold.jpg', 'Manifold CFD Mesh Ağı')">
+  <div class="image-trigger" data-img-src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" data-img-title="Manifold CFD Mesh Ağı">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
   </div>
 
-  <div class="gallery-item full-width" onclick="window.openImageModal('https://emir3d.github.io/muhendislik-cv/images/top.jpg', 'Şahi Top Modeli - Tarihi Modelleme')">
+  <div class="image-trigger full-width" data-img-src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" data-img-title="Şahi Top Modeli">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/800x400';">
     </div>
@@ -382,75 +372,101 @@ author_profile: true
 </div>
 
 
-<div id="universalModal" class="modal-overlay" onclick="window.closeModal(event)">
+<div id="main-modal" class="modal-overlay">
   
-  <div id="textModalBody" class="modal-text-content">
-    <span class="close-btn" onclick="window.closeModal(event)">×</span>
-    <h2 id="modalTitle">Başlık</h2>
-    <div id="modalDesc">Açıklama...</div>
-    <div id="modalTags"></div>
+  <div id="text-box" class="modal-text-box">
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-title">Başlık</h2>
+    <div id="modal-desc-area">Açıklama...</div>
+    <div id="modal-tags-area"></div>
   </div>
 
-  <div id="imageModalBody" class="modal-image-content">
-    <span class="close-btn-white" onclick="window.closeModal(event)">×</span>
-    <img id="modalImgTag" src="" alt="">
-    <div id="modalImgCaption" class="modal-caption"></div>
+  <div id="image-box" class="modal-image-box">
+    <span class="close-btn-white">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <div id="modal-caption" class="modal-caption"></div>
   </div>
 
 </div>
 
 <script>
-// Fonksiyonları window nesnesine ekleyerek global yapıyoruz
-window.openTextModal = function(id) {
-  var modal = document.getElementById('universalModal');
-  var textBody = document.getElementById('textModalBody');
-  var imgBody = document.getElementById('imageModalBody');
-
-  imgBody.classList.remove('active');
-  textBody.classList.add('active');
+document.addEventListener("DOMContentLoaded", function() {
   
-  var dataDiv = document.getElementById(id);
-  if(!dataDiv) return;
-
-  var title = dataDiv.querySelector('.m-title').innerHTML;
-  var desc = dataDiv.querySelector('.m-desc').innerHTML;
-  var tags = dataDiv.querySelector('.m-tags').innerText.split(',');
-
-  document.getElementById('modalTitle').innerHTML = title;
-  document.getElementById('modalDesc').innerHTML = desc;
+  // Elemanları Seç
+  const modal = document.getElementById("main-modal");
+  const textBox = document.getElementById("text-box");
+  const imgBox = document.getElementById("image-box");
   
-  var tagHTML = '';
-  tags.forEach(function(tag) {
-    if(tag.trim() !== '') {
-      tagHTML += '<span class="modal-tag">' + tag.trim() + '</span>';
-    }
-  });
-  document.getElementById('modalTags').innerHTML = tagHTML;
+  const modalTitle = document.getElementById("modal-title");
+  const modalDesc = document.getElementById("modal-desc-area");
+  const modalTags = document.getElementById("modal-tags-area");
+  
+  const modalImg = document.getElementById("modal-img");
+  const modalCaption = document.getElementById("modal-caption");
 
-  modal.classList.add('active');
-}
-
-window.openImageModal = function(imgSrc, imgTitle) {
-  var modal = document.getElementById('universalModal');
-  var textBody = document.getElementById('textModalBody');
-  var imgBody = document.getElementById('imageModalBody');
-
-  textBody.classList.remove('active');
-  imgBody.classList.add('active');
-
-  document.getElementById('modalImgTag').src = imgSrc;
-  document.getElementById('modalImgCaption').innerText = imgTitle;
-
-  modal.classList.add('active');
-}
-
-window.closeModal = function(event) {
-  if (
-      event.target.classList.contains('modal-overlay') || 
-      event.target.classList.contains('close-btn') ||
-      event.target.classList.contains('close-btn-white')
-     ) {
-    document.getElementById('universalModal').classList.remove('active');
+  // KAPATMA FONKSİYONU
+  function closeModal() {
+    modal.classList.remove("active");
+    textBox.style.display = "none";
+    imgBox.style.display = "none";
   }
-}
+
+  // Kapatma butonlarını dinle
+  document.querySelectorAll(".close-btn, .close-btn-white").forEach(btn => {
+    btn.addEventListener("click", closeModal);
+  });
+
+  // Dışarıya tıklayınca kapat
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) closeModal();
+  });
+
+
+  // 1. PROJE KARTLARINI DİNLE
+  const projects = document.querySelectorAll(".project-trigger");
+  projects.forEach(p => {
+    p.addEventListener("click", function() {
+      // Verileri gizli kutudan çek
+      const dataDiv = this.querySelector(".data-storage");
+      const title = dataDiv.querySelector(".d-title").innerHTML;
+      const desc = dataDiv.querySelector(".d-desc").innerHTML;
+      const tags = dataDiv.querySelector(".d-tags").innerText.split(",");
+
+      // Modala yaz
+      modalTitle.innerHTML = title;
+      modalDesc.innerHTML = desc;
+
+      // Etiketleri oluştur
+      let tagHTML = "";
+      tags.forEach(tag => {
+        if(tag.trim()) tagHTML += '<span class="modal-tag-item">' + tag.trim() + '</span>';
+      });
+      modalTags.innerHTML = tagHTML;
+
+      // Göster
+      textBox.style.display = "block";
+      imgBox.style.display = "none";
+      modal.classList.add("active");
+    });
+  });
+
+
+  // 2. RESİMLERİ DİNLE
+  const images = document.querySelectorAll(".image-trigger");
+  images.forEach(img => {
+    img.addEventListener("click", function() {
+      const src = this.getAttribute("data-img-src");
+      const title = this.getAttribute("data-img-title");
+
+      modalImg.src = src;
+      modalCaption.innerText = title;
+
+      // Göster
+      textBox.style.display = "none";
+      imgBox.style.display = "flex";
+      modal.classList.add("active");
+    });
+  });
+
+});
 </script>
