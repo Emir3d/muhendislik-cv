@@ -412,7 +412,7 @@ author_profile: true
       <ul>
         <li>Çark (runner) ve salyangoz (volute) geometrisinin belirlenmesi.</li>
         <li>CFD analizleri ile akış verimliliğinin artırılması.</li>
-        <li>Kavitasyon risk analizleri.</li>
+        <li>Türbin tasarımı.</li>
       </ul>
     </div>
     <div class="modal-tags">
