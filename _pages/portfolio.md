@@ -6,316 +6,291 @@ author_profile: true
 ---
 
 <style>
-/* 1. KIRIK PROFİL RESMİNİ GİZLEME (İşaretlediğin Yer) */
-.author__avatar {
-  display: none !important;
-}
+/* 1. PROFİL RESMİ GİZLEME */
+.author__avatar { display: none !important; }
 
 /* ===============================
-   GLOBAL: HIGH-END TECH THEME
+   RENK PALETİ (OTOMATİK KOYU MOD)
    =============================== */
-body {
-  background-color: #f8fafc !important; /* Çok hafif teknik gri zemin */
-  color: #1e293b;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+:root {
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-sub: #64748b;
+  --border-color: #e2e8f0;
+  --accent-color: #3b82f6; /* Mavi */
+  --highlight-shadow: rgba(59, 130, 246, 0.15);
 }
 
-/* Sayfa içeriği kapsayıcısı */
-.page__content {
-  padding-right: 0 !important;
-  width: 100% !important;
+/* 🌙 CİHAZ KOYU MOD İSE OTOMATİK DEVREYE GİRER */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f172a; /* Slate 900 (Koyu Lacivert) */
+    --card-bg: #1e293b;  /* Slate 800 */
+    --text-main: #f1f5f9;
+    --text-sub: #94a3b8;
+    --border-color: #334155;
+    --accent-color: #38bdf8; /* Açık Mavi (Neon) */
+    --highlight-shadow: rgba(56, 189, 248, 0.2);
+  }
 }
+
+/* GLOBAL AYARLAR */
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.page__content { width: 100% !important; padding-right: 0 !important; }
 
 /* ===============================
-   BAŞLIK TASARIMI (FUTURE HEADER)
+   BAŞLIKLAR
    =============================== */
 .section-title {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #0f172a;
-  margin: 4rem 0 2.5rem;
-  letter-spacing: -1px;
-  position: relative;
-  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 3rem 0 2rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-
 .section-title::after {
   content: "";
-  display: block;
-  width: 60px;
-  height: 6px;
-  background: linear-gradient(90deg, #3b82f6, #06b6d4); /* Mavi-Turkuaz Gradyan */
-  border-radius: 3px;
-  margin-top: 10px;
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.5); /* Neon Parlama */
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
 }
 
 /* ===============================
-   GRID SİSTEMİ
+   YENİ DÜZEN: "STACK" (ÜST ÜSTE) LİSTE
    =============================== */
-.projects-grid, .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Kartlar arası boşluk */
   margin-bottom: 5rem;
 }
 
-/* ===============================
-   KART TASARIMI: WHITE NEON
-   =============================== */
-.project-card {
-  grid-column: span 6; /* 2 Sütun */
-  background: #ffffff;
-  border-radius: 20px;
+/* Proje Kartı (Satır Halinde) */
+.project-row {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between; /* Yazı solda, etiket sağda */
+  align-items: center;
+  cursor: pointer; /* Tıklanabilir el işareti */
+  transition: all 0.2s ease;
   position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: flex;
-  flex-direction: column;
 }
 
-/* Öne Çıkan Kart (Featured) - SADECE GENİŞLİK KALDI, KENARLIK GİTTİ */
-.project-card.featured {
-  grid-column: span 12; /* Tam genişlik */
-  /* border-left: 6px solid #3b82f6;  <-- BU SATIRI SİLDİK */
+/* Hover Efekti */
+.project-row:hover {
+  transform: translateX(10px); /* Hafif sağa kayar */
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 20px var(--highlight-shadow);
 }
 
-/* 🔥 HOVER EFEKTİ: NEON PARLAMA 🔥 */
-.project-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: #3b82f6;
-  /* KARTI KALDIRIP ALTINA MAVİ IŞIK VERİYORUZ */
-  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.4);
-  z-index: 10;
-}
-
-/* Kartın içine hafif mavi bir sis efekti */
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(135deg, rgba(59,130,246,0.05) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-.project-card:hover::before { opacity: 1; }
-
-/* ===============================
-   KART İÇERİĞİ
-   =============================== */
-.card-body {
-  padding: 30px;
-  flex-grow: 1;
-  z-index: 2; /* Efektin üstünde kalsın */
-}
-
-.card-category {
-  color: #06b6d4; /* Turkuaz */
-  font-weight: 800;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.card-title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin: 5px 0 15px 0;
-  color: #1e293b;
-  line-height: 1.3;
-}
-
-.card-desc {
-  font-size: 1rem;
-  color: #64748b;
-  line-height: 1.6;
-}
-.card-desc ul { padding-left: 18px; margin: 0; }
-.card-desc li { margin-bottom: 6px; }
-
-/* ===============================
-   ETİKETLER (NEON HAPLAR)
-   =============================== */
-.card-footer {
-  padding: 0 30px 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  z-index: 2;
-}
-
-.tech-tag {
-  font-size: 0.75rem;
-  padding: 6px 14px;
-  border-radius: 50px; /* Tam yuvarlak */
+/* Sol Taraf: Bilgiler */
+.row-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
   font-weight: 700;
-  background: rgba(241, 245, 249, 1);
-  color: #475569;
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  color: var(--text-main);
+}
+.row-info span {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Hover olunca etiketler de parlasın */
-.project-card:hover .tech-tag {
-  background: rgba(59, 130, 246, 0.1);
-  color: #2563eb;
-  border-color: rgba(59, 130, 246, 0.3);
+/* Sağ Taraf: Ok İşareti */
+.row-arrow {
+  font-size: 1.2rem;
+  color: var(--text-sub);
+  opacity: 0.5;
+  transition: 0.2s;
 }
+.project-row:hover .row-arrow {
+  opacity: 1;
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+/* Gizli Detaylar (Modal İçin) */
+.hidden-details { display: none; }
+
 
 /* ===============================
-   GALERİ TASARIMI
+   GALERİ (GRID)
    =============================== */
-.gallery-item {
-  grid-column: span 6;
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
-  transition: all 0.4s ease;
-  position: relative;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-/* 🔥 ŞAHİ TOP (EN ALTA, BÜYÜK VE ORTADA) 🔥 */
-.gallery-item.full-width {
-  grid-column: span 12;
-  margin-top: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Varsayılan olarak gölgeli */
+.gallery-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--highlight-shadow);
 }
 
 .gallery-img-box {
-  height: 260px;
+  height: 200px;
   width: 100%;
   overflow: hidden;
-  position: relative;
 }
-
-/* Top görseli daha yüksek */
-.gallery-item.full-width .gallery-img-box { height: 450px; }
-
 .gallery-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.5s;
+}
+.gallery-item:hover img { transform: scale(1.1); }
+
+/* Özel Büyük Kartlar (Top ve Manifold) */
+.full-width { grid-column: 1 / -1; }
+.full-width .gallery-img-box { height: 350px; }
+
+
+/* ===============================
+   MODAL (AÇILIR PENCERE) - SİHİR BURADA ✨
+   =============================== */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Arka planı karart */
+  backdrop-filter: blur(5px); /* Arka planı bulanıklaştır */
+  z-index: 9999;
+  display: none; /* Varsayılan gizli */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Hover Efekti */
-.gallery-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px -10px rgba(6, 182, 212, 0.3); /* Turkuaz Neon Gölge */
-  border-color: #06b6d4;
-}
-
-.gallery-item:hover .gallery-img-box img {
-  transform: scale(1.08);
-}
-
-.gallery-info {
-  padding: 25px;
-  background: #fff;
-  border-top: 1px solid #f1f5f9;
+.modal-content {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 20px;
   position: relative;
-  z-index: 5;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 50px var(--highlight-shadow);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
 }
 
-.gallery-info h3 {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #0f172a;
-}
-.gallery-info p {
-  margin: 5px 0 0;
-  font-size: 0.85rem;
-  color: #06b6d4;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+/* Modal Açılınca Efekt */
+.modal-overlay.active { display: flex; opacity: 1; }
+.modal-overlay.active .modal-content { transform: scale(1); }
 
-/* MOBİL AYARLARI */
-@media(max-width: 900px){
-  .project-card, .gallery-item { grid-column: span 12 !important; }
+/* Kapat Butonu */
+.close-btn {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 2rem;
+  color: var(--text-sub);
+  cursor: pointer;
+}
+.close-btn:hover { color: var(--accent-color); }
+
+/* Modal İçindeki Yazılar */
+#modalTitle { color: var(--accent-color); margin-top: 0; }
+#modalDesc { line-height: 1.6; font-size: 1rem; color: var(--text-main); }
+#modalTags { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.modal-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-color);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--accent-color);
 }
 </style>
 
 <h2 class="section-title">Mühendislik Analizleri</h2>
 
-<div class="projects-grid">
+<div class="projects-stack">
 
-  <div class="project-card featured">
-    <div class="card-body">
-      <span class="card-category">Akademik Araştırma</span>
-      <h3 class="card-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
-      <div class="card-desc">
+  <div class="project-row" onclick="openModal('p1')">
+    <div class="row-info">
+      <span>Akademik Araştırma</span>
+      <h3>Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
+    </div>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p1" class="hidden-details">
+      <div class="m-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</div>
+      <div class="m-desc">
         <ul>
           <li>Euler-Timoshenko teorilerinin kıyaslanması.</li>
           <li>Farklı fiber dizilim açılarının (stacking) kritik burkulma yüküne etkisi.</li>
-          <li>FEM analizi ve analitik doğrulama.</li>
+          <li>ANSYS ACP modülü ile Sonlu Elemanlar (FEM) doğrulaması ve analitik sonuçlarla karşılaştırma.</li>
         </ul>
       </div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag">ANSYS ACP</span>
-      <span class="tech-tag">Static Structural</span>
-      <span class="tech-tag">MATLAB</span>
+      <div class="m-tags">ANSYS ACP, Static Structural, MATLAB</div>
     </div>
   </div>
 
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Yazılım Geliştirme</span>
-      <h3 class="card-title">Mohr Çemberi Aracı</h3>
-      <div class="card-desc">
-        Mukavemet hesapları için otomatik Mohr çemberi çizen MATLAB GUI tasarımı ve gerilme analizi.
-      </div>
+  <div class="project-row" onclick="openModal('p2')">
+    <div class="row-info">
+      <span>Yazılım Geliştirme</span>
+      <h3>Mohr Çemberi Hesaplama Aracı</h3>
     </div>
-    <div class="card-footer">
-      <span class="tech-tag">MATLAB App Designer</span>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">TÜBİTAK 2209-A</span>
-      <h3 class="card-title">VİSA SÖR Asansör</h3>
-      <div class="card-desc">
-        Özel asansör tasarımı, mekanik boyutlandırma ve güvenlik sistemi optimizasyonu.
-      </div>
-    </div>
-    <div class="card-footer">
-      <span class="tech-tag">SolidWorks</span>
-      <span class="tech-tag">Mekanik Analiz</span>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p2" class="hidden-details">
+      <div class="m-title">Mohr Çemberi Hesaplama Aracı</div>
+      <div class="m-desc">Mukavemet hesaplamaları için geliştirilen bu araç, kullanıcıdan alınan gerilme verileriyle (sigma x, sigma y, tau) otomatik olarak Mohr çemberini çizer, asal gerilmeleri ve maksimum kayma gerilmesini hesaplar. MATLAB App Designer kullanılarak oluşturulmuştur.</div>
+      <div class="m-tags">MATLAB GUI, Algoritma, Mukavemet</div>
     </div>
   </div>
 
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Bitirme Tezi</span>
-      <h3 class="card-title">Francis Türbin Tasarımı</h3>
-      <div class="card-desc">
-        Keban Barajı verileriyle hidrodinamik boyutlandırma. Çark ve salyangoz geometrisinin CFD tasarımı.
-      </div>
+  <div class="project-row" onclick="openModal('p3')">
+    <div class="row-info">
+      <span>TÜBİTAK 2209-A</span>
+      <h3>VİSA SÖR Asansör Tasarımı</h3>
     </div>
-    <div class="card-footer">
-      <span class="tech-tag">SolidWorks</span>
-      <span class="tech-tag">CFD</span>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p3" class="hidden-details">
+      <div class="m-title">VİSA SÖR Asansör Tasarımı</div>
+      <div class="m-desc">Engelli bireylerin erişilebilirliğini artırmak amacıyla tasarlanan özel asansör sistemi. Proje kapsamında mekanik boyutlandırma, motor seçimi ve güvenlik freni optimizasyonu yapılmıştır.</div>
+      <div class="m-tags">SolidWorks, Mekanik Tasarım, Proje Yönetimi</div>
     </div>
   </div>
-  
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Gönüllü Proje</span>
-      <h3 class="card-title">Müsilaj Sorunu Araştırması</h3>
-      <div class="card-desc">
-        Müsilaj oluşum mekanizmaları ve akışkanlar mekaniği temelli çözüm önerileri.
-      </div>
+
+  <div class="project-row" onclick="openModal('p4')">
+    <div class="row-info">
+      <span>Bitirme Tezi</span>
+      <h3>Francis Tipi Türbin Tasarımı</h3>
     </div>
-    <div class="card-footer">
-      <span class="tech-tag">Akışkanlar Mekaniği</span>
-      <span class="tech-tag">Araştırma</span>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p4" class="hidden-details">
+      <div class="m-title">Francis Tipi Türbin Tasarımı</div>
+      <div class="m-desc">Keban Barajı'nın hidrolik verileri referans alınarak yapılan hidrodinamik tasarım çalışması. Çark (runner), salyangoz (volute) ve dağıtıcı kanatların tasarımı CFD analizleri göz önünde bulundurularak yapılmıştır.</div>
+      <div class="m-tags">SolidWorks, CFD Teorisi, Hidrodinamik</div>
     </div>
   </div>
 
@@ -325,23 +300,15 @@ body {
 
 <div class="gallery-grid">
 
-  <div class="gallery-item">
+  <div class="gallery-item" onclick="alert('Görsel odaklama özelliği yakında!')">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
-    <div class="gallery-info">
-      <h3>Konsept Uçak Tasarımı</h3>
-      <p>Inventor Pro / Render</p>
-    </div>
   </div>
 
-  <div class="gallery-item">
+  <div class="gallery-item" onclick="alert('Görsel odaklama özelliği yakında!')">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/600x400';">
-    </div>
-    <div class="gallery-info">
-      <h3>Alpagu-X İHA</h3>
-      <p>Havacılık Tasarımı</p>
     </div>
   </div>
 
@@ -349,19 +316,11 @@ body {
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="gallery-info">
-      <h3>M16 Piyade Tüfeği</h3>
-      <p>Montaj Modelleme</p>
-    </div>
   </div>
 
   <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="gallery-info">
-      <h3>Turbo-Jet Motoru</h3>
-      <p>SolidWorks</p>
     </div>
   </div>
   
@@ -369,19 +328,11 @@ body {
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman" onerror="this.src='https://via.placeholder.com/400x300';">
     </div>
-    <div class="gallery-info">
-      <h3>3D Superman Logosu</h3>
-      <p>3DS MAX</p>
-    </div>
   </div>
-  
+
   <div class="gallery-item">
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
-    </div>
-    <div class="gallery-info">
-      <h3>Manifold CFD Mesh Ağı</h3>
-      <p>ANSYS Meshing</p>
     </div>
   </div>
 
@@ -389,10 +340,50 @@ body {
     <div class="gallery-img-box">
       <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/800x400';">
     </div>
-    <div class="gallery-info">
-      <h3>Şahi Top Modeli</h3>
-      <p>Inventor / Tarihi Modelleme</p>
-    </div>
   </div>
 
 </div>
+
+
+<div id="projectModal" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal(event)">×</span>
+    <h2 id="modalTitle">Proje Başlığı</h2>
+    <div id="modalDesc">Proje açıklaması buraya gelecek...</div>
+    <div id="modalTags"></div>
+  </div>
+</div>
+
+<script>
+// Modal Açma Fonksiyonu
+function openModal(id) {
+  var dataDiv = document.getElementById(id);
+  
+  // İçerikleri çek
+  var title = dataDiv.querySelector('.m-title').innerHTML;
+  var desc = dataDiv.querySelector('.m-desc').innerHTML;
+  var tags = dataDiv.querySelector('.m-tags').innerText.split(',');
+
+  // Modala yaz
+  document.getElementById('modalTitle').innerHTML = title;
+  document.getElementById('modalDesc').innerHTML = desc;
+  
+  // Etiketleri oluştur
+  var tagHTML = '';
+  tags.forEach(function(tag) {
+    tagHTML += '<span class="modal-tag">' + tag.trim() + '</span>';
+  });
+  document.getElementById('modalTags').innerHTML = tagHTML;
+
+  // Modalı Göster
+  document.getElementById('projectModal').classList.add('active');
+}
+
+// Modal Kapatma Fonksiyonu
+function closeModal(event) {
+  // Sadece siyah alana veya çarpıya basınca kapat (İçeriğe basınca kapanmasın)
+  if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('close-btn')) {
+    document.getElementById('projectModal').classList.remove('active');
+  }
+}
+</script>
