@@ -1,0 +1,39 @@
+---
+title: "ANSYS Workbench'te Etkili Mesh Stratejileri"
+date: 2024-02-12
+tags: [ANSYS, FEM, Mesh, Analiz]
+excerpt: "Sonlu elemanlar analizinde (FEA) doğru sonuçlar elde etmek için mesh kalitesi kritik öneme sahiptir. Bu yazıda, Skewness ve Orthogonal Quality değerlerini optimize etmenin yollarını inceliyoruz."
+---
+
+Sonlu elemanlar analizinde (FEA) çözümün doğruluğu, doğrudan oluşturulan ağ (mesh) yapısının kalitesine bağlıdır. Kötü bir mesh, yakınsamayan (non-converging) çözümlere veya yanıltıcı sonuçlara yol açabilir.
+
+## 1. Mesh Kalitesini Belirleyen Kriterler
+
+ANSYS Mechanical tarafında en sık kontrol etmemiz gereken iki temel metrik şunlardır:
+
+* **Skewness (Çarpıklık):** Elemanın ideal şeklinden ne kadar saptığını gösterir. 0 değeri mükemmel (eşkenar), 1 değeri ise bozuk (dejenere) anlamına gelir. Genel kural olarak **0.95** üzerindeki elemanlardan kaçınılmalıdır.
+* **Orthogonal Quality:** 0 ile 1 arasında değişir. Burada 1 mükemmel, 0 kötüdür. **0.15**'in altındaki değerler çözümde hataya neden olabilir.
+
+## 2. Kaliteyi Artırma Yöntemleri
+
+### A. Geometri Temizliği (Geometry Cleanup)
+CAD modelinden gelen gereksiz detaylar (küçük delikler, yüzey bozuklukları, marka yazıları) mesh kalitesini düşürür. SpaceClaim veya DesignModeler kullanarak:
+* **Small Faces:** Çok küçük yüzeyleri birleştirin.
+* **Edges:** Gereksiz kenar çizgilerini silin.
+
+### B. Mesh Yöntemleri (Method Controls)
+Otomatik mesh her zaman en iyisini yapmaz. Manuel kontrol şarttır:
+* **Hex Dominant:** Mümkünse altıgen (Hex) elemanları tercih edin. Hem daha az eleman sayısı hem de daha yüksek doğruluk sağlar.
+* **Sweep:** Süpürülebilir (sweepable) geometrilerde bu yöntemi zorlayın.
+* **MultiZone:** Karmaşık geometrileri parçalara bölerek daha düzenli mesh atılmasını sağlar.
+
+## 3. Yakınsama Testi (Mesh Independence)
+
+Analizin güvenilirliği için mutlaka **Mesh Bağımsızlık Testi** yapılmalıdır. Mesh boyutu küçültüldüğünde (eleman sayısı arttığında) sonuçlar (stres, deformasyon) değişmiyorsa, doğru mesh boyutuna ulaşılmış demektir.
+
+```python
+# Örnek: Python Script ile Mesh Boyutu Kontrolü (Pseudo-Code)
+def check_mesh_quality(element_list):
+    for element in element_list:
+        if element.skewness > 0.9:
+            print(f"Uyarı: Eleman {element.id} kalitesi düşük!")
