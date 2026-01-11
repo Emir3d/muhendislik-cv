@@ -39,7 +39,6 @@ author_profile: true
   margin-bottom: 5rem;
 }
 
-/* Kartın kendisi artık bir "Link" */
 .project-card-link {
   text-decoration: none !important;
   color: inherit !important;
@@ -58,7 +57,6 @@ author_profile: true
   position: relative;
 }
 
-/* Koyu Mod Uyumu */
 @media (prefers-color-scheme: dark) {
   .project-row { background: #1e293b; border-color: #334155; }
   .row-title { color: #f1f5f9 !important; }
@@ -99,7 +97,7 @@ author_profile: true
 }
 
 /* ===============================
-   CSS POPUP PENCERESİ (:TARGET)
+   MODAL PENCERE TASARIMI
    =============================== */
 .modal-overlay {
   display: none; 
@@ -122,6 +120,8 @@ author_profile: true
   background: #fff;
   width: 100%;
   max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
   padding: 40px;
   border-radius: 15px;
   position: relative;
@@ -147,6 +147,7 @@ author_profile: true
   color: #94a3b8;
   text-decoration: none !important;
   line-height: 1;
+  z-index: 10;
 }
 .close-link:hover { color: #ef4444; }
 
@@ -154,6 +155,17 @@ author_profile: true
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   cursor: default;
+}
+
+/* MODAL İÇİ GÖRSEL AYARLARI */
+.modal-banner {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
 }
 
 .modal-title {
@@ -192,7 +204,7 @@ author_profile: true
 }
 
 /* ===============================
-   GALERİ (SADECE GÖRSEL)
+   GALERİ
    =============================== */
 .gallery-grid {
   display: grid;
@@ -367,6 +379,9 @@ author_profile: true
   <a href="#_" class="modal-backdrop-close"></a>
   <div class="modal-content">
     <a href="#_" class="close-link">&times;</a>
+    
+    <img src="https://emir3d.github.io/muhendislik-cv/images/matlab.jpg" class="modal-banner" onerror="this.style.display='none'"> 
+    
     <h3 class="modal-title">Tabakalı ve hibrit kompozit kirişler için burkulma analizi</h3>
     <div class="modal-desc">
       <p>Devam Eden Araştırma Çalışması</p>
@@ -374,8 +389,7 @@ author_profile: true
         <li>Euler-Timoshenko teorilerinin karşılaştırılması.</li>
         <li>Analitik modelleme, sonlu elemanlar analizi ve MATLAB tabanlı sayısal çözümler.</li>
         <li>Ansys ACP modülü.</li>
-         <li>Kullanıcı dostu grafiksel Matlab arayüz tasarımı.</li>
-        <li>Makale yazım süreci devam etmektedir.</li>
+        <li>Literatür taraması ve makale yazım süreci devam etmektedir.</li>
       </ul>
     </div>
     <div class="modal-tags">
@@ -385,7 +399,6 @@ author_profile: true
     </div>
   </div>
 </div>
-
 
 <div id="proje-2" class="modal-overlay">
   <a href="#_" class="modal-backdrop-close"></a>
@@ -397,7 +410,7 @@ author_profile: true
       <ul>
         <li>Asal gerilmelerin (σ1, σ2) hesaplanması.</li>
         <li>Maksimum kayma gerilmesinin (τmax) tespiti.</li>
-        <li>Matlab tabanlı sayısal çözüm ve grafik (GUI).</li>
+        <li>Kullanıcı dostu grafiksel arayüz (GUI).</li>
       </ul>
     </div>
     <div class="modal-tags">
