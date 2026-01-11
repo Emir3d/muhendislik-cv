@@ -392,7 +392,7 @@ author_profile: true
         <li>Analitik modelleme, sonlu elemanlar analizi ve MATLAB tabanlı sayısal çözümler.</li>
         <li>Ansys ACP modülü.</li>
         <li>Kullanıcı dostu grafiksel Matlab arayüz.</li>
-        <li>Literatür taraması ve makale yazım süreci devam etmektedir.</li>
+        <li>Makale yazım süreci devam etmektedir.</li>
       </ul>
     </div>
     <div class="modal-tags">
