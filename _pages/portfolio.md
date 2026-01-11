@@ -6,248 +6,461 @@ author_profile: true
 ---
 
 <style>
-/* SOL MENÜ GİZLE */
+/* 1. PROFİL RESMİ GİZLEME */
 .author__avatar { display: none !important; }
 
-/* GENEL GRID */
-.projects-grid, .gallery-grid {
+/* 2. SAYFA GENİŞLİĞİ AYARI */
+.page__content { 
+  width: 100% !important; 
+  padding-right: 0 !important; 
+  max-width: 100% !important;
+}
+
+/* 3. RENK DEĞİŞKENLERİ (Arka plana dokunmuyoruz) */
+:root {
+  --border-color: #e2e8f0;
+  --accent-color: #2563eb; /* Mavi */
+  --card-hover-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   BAŞLIKLAR
+   =============================== */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 3rem 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: inherit; /* Temanın rengini kullansın */
+}
+.section-title::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background: #e5e7eb;
+}
+
+/* ===============================
+   PROJE LİSTESİ (Project Stack)
+   =============================== */
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 5rem;
+}
+
+.project-row {
+  background: #ffffff; /* Kart içi beyaz */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  position: relative;
+  z-index: 1;
+}
+
+/* Koyu mod desteği için kart rengi */
+@media (prefers-color-scheme: dark) {
+  .project-row { background: #1e293b; border-color: #334155; }
+  .row-info h3 { color: #f1f5f9 !important; }
+}
+
+.project-row:hover {
+  transform: translateX(10px);
+  border-color: var(--accent-color);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.row-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.row-info span {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.row-arrow {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  transition: 0.2s;
+}
+.project-row:hover .row-arrow {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+/* Gizli Detaylar (Sadece veri tutmak için) */
+.hidden-details { display: none; }
+
+/* ===============================
+   GALERİ (Grid)
+   =============================== */
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 28px;
-  margin: 2.5rem 0 4rem;
+  gap: 20px;
 }
 
-/* KART */
-.project-card, .gallery-item {
+.gallery-item {
   background: #fff;
-  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
+  cursor: zoom-in;
+  transition: 0.3s;
   position: relative;
-  cursor: pointer;
-  transition: transform .3s ease, box-shadow .3s ease;
+  z-index: 1;
 }
 
-.project-card:hover,
+@media (prefers-color-scheme: dark) {
+  .gallery-item { background: #1e293b; border-color: #334155; }
+}
+
 .gallery-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
 }
 
-/* GÖRSEL ALANI */
 .gallery-img-box {
   height: 220px;
+  width: 100%;
   overflow: hidden;
-  position: relative;
 }
-
 .gallery-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .6s ease;
+  transition: 0.5s;
 }
+.gallery-item:hover img { transform: scale(1.05); }
 
-.gallery-item:hover img {
-  transform: scale(1.18);
-}
+/* Büyük Kart */
+.full-width { grid-column: 1 / -1; }
+.full-width .gallery-img-box { height: 400px; }
 
-/* OVERLAY */
-.gallery-img-box::after {
-  content: "DETAYI GÖR";
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background: rgba(0,0,0,.7);
-  color: #fff;
-  font-size: .7rem;
-  padding: 6px 14px;
-  border-radius: 999px;
-  opacity: 0;
-  transition: opacity .3s ease;
-}
 
-.gallery-item:hover .gallery-img-box::after {
-  opacity: 1;
-}
-
-/* KART İÇERİĞİ */
-.card-body {
-  padding: 24px;
-}
-
-.card-category {
-  font-size: .75rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: #6b7280;
-  text-transform: uppercase;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.card-desc {
-  font-size: .95rem;
-  color: #4b5563;
-  line-height: 1.6;
-}
-
-/* ETİKETLER */
-.card-footer {
-  padding: 14px 24px;
-  background: #f9fafb;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tech-tag {
-  font-size: .7rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: #e5e7eb;
-}
-
-/* BAŞLIK */
-.section-title {
-  margin-top: 4rem;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: .6rem;
-}
-
-/* MODAL */
+/* ===============================
+   MODAL (AÇILIR PENCERE)
+   =============================== */
 .modal-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.65);
-  display: none;
-  align-items: center;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999999; /* EN ÜSTTE OLSUN */
+  display: none; /* JS ile flex yapılacak */
   justify-content: center;
-  z-index: 9999;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
-.modal-box {
+.modal-overlay.active { display: flex !important; opacity: 1; }
+
+/* METİN KUTUSU */
+.modal-text-content {
   background: #fff;
-  max-width: 650px;
-  width: 92%;
-  padding: 36px;
-  border-radius: 18px;
-  animation: zoom .3s ease;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 15px;
   position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  display: none;
 }
-
-.modal-close {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-@keyframes zoom {
-  from { transform: scale(.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* DARK MODE */
 @media (prefers-color-scheme: dark) {
-  .project-card, .gallery-item, .modal-box {
-    background: #1f2937;
-    color: #e5e7eb;
-    border-color: #374151;
-  }
-  .card-desc { color: #d1d5db; }
-  .card-footer { background: #111827; }
-  .tech-tag { background: #374151; }
+  .modal-text-content { background: #1e293b; color: #fff; }
+  .modal-text-content h2 { color: #60a5fa !important; }
+  .modal-text-content #modalDesc { color: #cbd5e1 !important; }
+}
+.modal-overlay.active .modal-text-content.active { display: block; transform: scale(1); }
+
+/* RESİM KUTUSU */
+.modal-image-content {
+  max-width: 95%;
+  max-height: 95vh;
+  position: relative;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-overlay.active .modal-image-content.active { display: flex; }
+
+.modal-image-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  object-fit: contain;
+  background: #000;
+}
+
+.modal-caption {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* KAPAT BUTONLARI */
+.close-btn {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 2rem;
+  color: #64748b;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+}
+.close-btn-white {
+  position: absolute;
+  top: -40px; right: 0;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  font-weight: bold;
+}
+
+/* Etiketler */
+#modalTitle { color: var(--accent-color); margin-top: 0; }
+#modalDesc { line-height: 1.6; color: #334155; font-size: 1.05rem; }
+#modalTags { margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap; }
+.modal-tag {
+  background: #eff6ff;
+  color: var(--accent-color);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  border: 1px solid #bfdbfe;
+  font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  .modal-tag { background: #172554; color: #93c5fd; border-color: #1e40af; }
 }
 </style>
 
-<h2 class="section-title">Mühendislik Analizleri & Ar-Ge</h2>
 
-<div class="projects-grid">
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Akademik Araştırma</span>
-      <h3 class="card-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
-      <div class="card-desc">
-        Euler–Timoshenko karşılaştırması, stacking sequence etkisi ve FEM doğrulaması.
-      </div>
+<h2 class="section-title">Mühendislik Analizleri</h2>
+
+<div class="projects-stack">
+
+  <div class="project-row" onclick="openTextModal('p1')">
+    <div class="row-info">
+      <span>Akademik Araştırma</span>
+      <h3>Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
     </div>
-    <div class="card-footer">
-      <span class="tech-tag">ANSYS</span>
-      <span class="tech-tag">ACP</span>
-      <span class="tech-tag">MATLAB</span>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p1" class="hidden-details">
+      <div class="m-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</div>
+      <div class="m-desc">
+        Bu çalışmada, hibrit kompozit kirişlerin burkulma davranışları incelenmiştir.
+        <ul>
+          <li>Euler-Timoshenko teorilerinin kıyaslanması yapıldı.</li>
+          <li>Farklı fiber dizilim açılarının (stacking sequence) kritik burkulma yüküne etkisi araştırıldı.</li>
+          <li>ANSYS ACP modülü kullanılarak Sonlu Elemanlar (FEM) doğrulaması gerçekleştirildi.</li>
+        </ul>
+      </div>
+      <div class="m-tags">ANSYS ACP, Static Structural, MATLAB</div>
     </div>
   </div>
 
-  <div class="project-card">
-    <div class="card-body">
-      <span class="card-category">Yazılım</span>
-      <h3 class="card-title">Mohr Çemberi Analiz Aracı</h3>
-      <div class="card-desc">
-        Mukavemet hesapları için interaktif MATLAB GUI uygulaması.
-      </div>
+  <div class="project-row" onclick="openTextModal('p2')">
+    <div class="row-info">
+      <span>Yazılım Geliştirme</span>
+      <h3>Mohr Çemberi Hesaplama Aracı</h3>
     </div>
-    <div class="card-footer">
-      <span class="tech-tag">MATLAB</span>
-      <span class="tech-tag">GUI</span>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p2" class="hidden-details">
+      <div class="m-title">Mohr Çemberi Hesaplama Aracı</div>
+      <div class="m-desc">Mukavemet hesaplamaları için geliştirilen bu araç, kullanıcıdan alınan gerilme verileriyle otomatik Mohr çemberi çizer. Asal gerilmeleri ve maksimum kayma gerilmesini hesaplayarak grafiksel arayüzde sunar.</div>
+      <div class="m-tags">MATLAB GUI, Algoritma, Mukavemet</div>
     </div>
   </div>
+
+  <div class="project-row" onclick="openTextModal('p3')">
+    <div class="row-info">
+      <span>TÜBİTAK 2209-A</span>
+      <h3>VİSA SÖR Asansör Tasarımı</h3>
+    </div>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p3" class="hidden-details">
+      <div class="m-title">VİSA SÖR Asansör Tasarımı</div>
+      <div class="m-desc">Engelli bireylerin erişilebilirliğini artırmak için tasarlanan özel asansör sistemi. Proje kapsamında mekanik boyutlandırma, motor seçimi ve güvenlik freni optimizasyonu yapılmıştır.</div>
+      <div class="m-tags">SolidWorks, Mekanik Tasarım, Proje Yönetimi</div>
+    </div>
+  </div>
+
+  <div class="project-row" onclick="openTextModal('p4')">
+    <div class="row-info">
+      <span>Bitirme Tezi</span>
+      <h3>Francis Tipi Türbin Tasarımı</h3>
+    </div>
+    <div class="row-arrow">➔</div>
+    
+    <div id="p4" class="hidden-details">
+      <div class="m-title">Francis Tipi Türbin Tasarımı</div>
+      <div class="m-desc">Keban Barajı verileri referans alınarak yapılan hidrodinamik tasarım çalışması. Çark (runner) ve salyangoz (volute) geometrisinin CFD analizleri ile optimizasyonu.</div>
+      <div class="m-tags">SolidWorks, CFD, Hidrodinamik</div>
+    </div>
+  </div>
+
 </div>
 
-<h2 class="section-title">3D Tasarım & Render Galerisi</h2>
+
+<h2 class="section-title">3D Tasarım & Render</h2>
 
 <div class="gallery-grid">
-  <div class="gallery-item">
+
+  <div class="gallery-item" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/ucak.jpg', 'Konsept Uçak Tasarımı')">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg">
-    </div>
-    <div class="card-body">
-      <h3 class="card-title">Konsept Uçak Tasarımı</h3>
-      <div class="card-desc">Özgün konsept ve gerçekçi render.</div>
+      <img src="https://emir3d.github.io/muhendislik-cv/images/ucak.jpg" alt="Uçak" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
   </div>
 
-  <div class="gallery-item">
+  <div class="gallery-item" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg', 'Alpagu-X İHA Tasarımı')">
     <div class="gallery-img-box">
-      <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png">
-    </div>
-    <div class="card-body">
-      <h3 class="card-title">Turbo-Jet Motoru</h3>
-      <div class="card-desc">Detaylı CAD modelleme.</div>
+      <img src="https://emir3d.github.io/muhendislik-cv/images/alpagu.jpg" alt="Alpagu" onerror="this.src='https://via.placeholder.com/600x400';">
     </div>
   </div>
+
+  <div class="gallery-item" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/m16.jpg', 'M16 Piyade Tüfeği Montajı')">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/m16.jpg" alt="M16" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+  </div>
+
+  <div class="gallery-item" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/jet.png', 'Turbo-Jet Motoru')">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/jet.png" alt="Jet" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+  </div>
+  
+  <div class="gallery-item" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/superman.png', '3D Superman Logosu')">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/superman.png" alt="Superman" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+  </div>
+
+  <div class="gallery-item" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/manifold.jpg', 'Manifold CFD Mesh Ağı')">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/manifold.jpg" alt="Manifold" onerror="this.src='https://via.placeholder.com/400x300';">
+    </div>
+  </div>
+
+  <div class="gallery-item full-width" onclick="openImageModal('https://emir3d.github.io/muhendislik-cv/images/top.jpg', 'Şahi Top Modeli - Tarihi Modelleme')">
+    <div class="gallery-img-box">
+      <img src="https://emir3d.github.io/muhendislik-cv/images/top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/800x400';">
+    </div>
+  </div>
+
 </div>
 
-<!-- MODAL -->
-<div id="projectModal" class="modal-overlay">
-  <div class="modal-box">
-    <span class="modal-close">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
+
+<div id="universalModal" class="modal-overlay" onclick="closeModal(event)">
+  
+  <div id="textModalBody" class="modal-text-content">
+    <span class="close-btn" onclick="closeModal(event)">×</span>
+    <h2 id="modalTitle">Başlık</h2>
+    <div id="modalDesc">Açıklama...</div>
+    <div id="modalTags"></div>
   </div>
+
+  <div id="imageModalBody" class="modal-image-content">
+    <span class="close-btn-white" onclick="closeModal(event)">×</span>
+    <img id="modalImgTag" src="" alt="">
+    <div id="modalImgCaption" class="modal-caption"></div>
+  </div>
+
 </div>
 
 <script>
-const modal = document.getElementById("projectModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
+// METİN MODALINI AÇMA
+function openTextModal(id) {
+  var modal = document.getElementById('universalModal');
+  var textBody = document.getElementById('textModalBody');
+  var imgBody = document.getElementById('imageModalBody');
 
-document.querySelectorAll(".project-card, .gallery-item").forEach(card => {
-  card.addEventListener("click", () => {
-    modalTitle.innerText = card.querySelector(".card-title").innerText;
-    modalDesc.innerText =
-      card.querySelector(".card-desc")?.innerText ||
-      "Bu proje için detaylar yakında eklenecektir.";
-    modal.style.display = "flex";
+  // Önce diğerini gizle
+  imgBody.classList.remove('active');
+  textBody.classList.add('active');
+  
+  // Veriyi çek
+  var dataDiv = document.getElementById(id);
+  if(!dataDiv) return; // Hata önleyici
+
+  var title = dataDiv.querySelector('.m-title').innerHTML;
+  var desc = dataDiv.querySelector('.m-desc').innerHTML;
+  var tags = dataDiv.querySelector('.m-tags').innerText.split(',');
+
+  // Veriyi yaz
+  document.getElementById('modalTitle').innerHTML = title;
+  document.getElementById('modalDesc').innerHTML = desc;
+  
+  // Etiketleri döşe
+  var tagHTML = '';
+  tags.forEach(function(tag) {
+    if(tag.trim() !== '') {
+      tagHTML += '<span class="modal-tag">' + tag.trim() + '</span>';
+    }
   });
-});
+  document.getElementById('modalTags').innerHTML = tagHTML;
 
-document.querySelector(".modal-close").onclick = () => modal.style.display = "none";
-modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+  // Göster
+  modal.classList.add('active');
+}
+
+// RESİM MODALINI AÇMA (ZOOM)
+function openImageModal(imgSrc, imgTitle) {
+  var modal = document.getElementById('universalModal');
+  var textBody = document.getElementById('textModalBody');
+  var imgBody = document.getElementById('imageModalBody');
+
+  // Önce diğerini gizle
+  textBody.classList.remove('active');
+  imgBody.classList.add('active');
+
+  // Resmi yükle
+  document.getElementById('modalImgTag').src = imgSrc;
+  document.getElementById('modalImgCaption').innerText = imgTitle;
+
+  // Göster
+  modal.classList.add('active');
+}
+
+// KAPATMA FONKSİYONU
+function closeModal(event) {
+  // Sadece siyah boşluğa veya çarpıya basınca kapat
+  if (
+      event.target.classList.contains('modal-overlay') || 
+      event.target.classList.contains('close-btn') ||
+      event.target.classList.contains('close-btn-white')
+     ) {
+    document.getElementById('universalModal').classList.remove('active');
+    
+    // Video/Resim oynatımını durdurmak için src'yi temizleyebiliriz (opsiyonel)
+    // document.getElementById('modalImgTag').src = ""; 
+  }
+}
 </script>
