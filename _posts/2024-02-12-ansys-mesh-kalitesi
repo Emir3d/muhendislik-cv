@@ -2,7 +2,26 @@
 title: "ANSYS Workbench'te Etkili Mesh Stratejileri"
 date: 2024-02-12
 tags: [ANSYS, FEM, Mesh, Analiz]
-excerpt: "Sonlu elemanlar analizinde (FEA) doğru sonuçlar elde etmek için mesh kalitesi kritik öneme sahiptir. Bu yazıda, Skewness ve Orthogonal Quality değerlerini optimize etmenin yollarını inceliyoruz."
+excerpt: "Sonlu elemanlar analizinde (FEA) doğru sonuçlar elde etmek için mesh kalitesi kritik öneme sahiptir."
+
+# 1. BOZUK OTOMATİK PROFİLİ KAPAT
+author_profile: false
+
+# 2. ÖZEL SOL MENÜ OLUŞTUR (Yazı Görseli Buraya)
+sidebar:
+  - title: "" # Başlığı boş bırakıyoruz çünkü görselde yazacak
+    # Buraya senin isminin yazdığı özel bir görsel linki koydum:
+    image: "https://placehold.co/400x120/1e293b/FFF?text=EMIR+INAN&font=roboto"
+    image_alt: "Emir İnan Logo"
+    text: |
+      **Mechanical Engineer (M.Sc.)**
+      
+      Simulation & Design
+      
+      📍 Türkiye
+      🎓 Atatürk Üniversitesi
+      
+      [LinkedIn](https://linkedin.com/in/senin-profilin) | [GitHub](https://github.com/Emir3d)
 ---
 
 Sonlu elemanlar analizinde (FEA) çözümün doğruluğu, doğrudan oluşturulan ağ (mesh) yapısının kalitesine bağlıdır. Kötü bir mesh, yakınsamayan (non-converging) çözümlere veya yanıltıcı sonuçlara yol açabilir.
