@@ -119,7 +119,7 @@ author_profile: true
 .modal-content {
   background: #fff;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px; /* Kutu genişliğini biraz artırdık */
   max-height: 90vh;
   overflow-y: auto;
   padding: 40px;
@@ -157,15 +157,17 @@ author_profile: true
   cursor: default;
 }
 
-/* MODAL İÇİ GÖRSEL AYARLARI */
+/* ✅ MODAL İÇİ GÖRSEL AYARLARI (DÜZELTİLDİ) ✅ */
 .modal-banner {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;         /* Sabit yükseklik yerine otomatik */
+  max-height: 600px;    /* Çok uzarsa diye güvenlik sınırı */
+  object-fit: contain;  /* Resmi kesme, tamamını göster */
   border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   display: block;
+  background-color: #f8fafc; /* Resim yüklenirken veya şeffafsa arka plan */
 }
 
 .modal-title {
@@ -178,7 +180,7 @@ author_profile: true
 }
 
 .modal-desc {
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 1.05rem;
   color: #334155;
 }
