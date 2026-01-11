@@ -41,7 +41,7 @@ author_profile: true
 
 /* Kartın kendisi artık bir "Link" */
 .project-card-link {
-  text-decoration: none !important; /* Altçizgiyi kaldır */
+  text-decoration: none !important;
   color: inherit !important;
   display: block;
 }
@@ -101,13 +101,12 @@ author_profile: true
 /* ===============================
    CSS POPUP PENCERESİ (:TARGET)
    =============================== */
-/* Varsayılan olarak gizli */
 .modal-overlay {
   display: none; 
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.85); /* Koyu arka plan */
+  background: rgba(0, 0, 0, 0.85);
   z-index: 99999;
   justify-content: center;
   align-items: center;
@@ -115,7 +114,6 @@ author_profile: true
   backdrop-filter: blur(5px);
 }
 
-/* SİHİRLİ KOD: ID adresi eşleşince görünür yap */
 .modal-overlay:target {
   display: flex;
 }
@@ -142,7 +140,6 @@ author_profile: true
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Kapat Butonları */
 .close-link {
   position: absolute;
   top: 15px; right: 20px;
@@ -153,14 +150,12 @@ author_profile: true
 }
 .close-link:hover { color: #ef4444; }
 
-/* Arka plana tıklayınca kapatmak için tam ekran link */
 .modal-backdrop-close {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   cursor: default;
 }
 
-/* Modal İçi Yazılar */
 .modal-title {
   margin-top: 0;
   color: var(--tech-blue);
@@ -197,7 +192,7 @@ author_profile: true
 }
 
 /* ===============================
-   GALERİ (TIKLAMA YOK, SADECE GÖRSEL)
+   GALERİ (SADECE GÖRSEL)
    =============================== */
 .gallery-grid {
   display: grid;
@@ -237,10 +232,8 @@ author_profile: true
 
 .gallery-card:hover img { transform: scale(1.05); }
 
-/* Büyük Kart */
 .full-width { grid-column: 1 / -1; }
 .full-width .img-box { height: 400px; }
-
 </style>
 
 
@@ -252,7 +245,7 @@ author_profile: true
     <div class="project-row">
       <div class="row-info">
         <span class="row-category">Akademik Araştırma</span>
-        <h3 class="row-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
+        <h3 class="row-title">Tabakalı ve hibrit kompozit kirişler için burkulma analizi</h3>
       </div>
       <div class="row-arrow">➔</div>
     </div>
@@ -272,7 +265,7 @@ author_profile: true
     <div class="project-row">
       <div class="row-info">
         <span class="row-category">TÜBİTAK 2209-A</span>
-        <h3 class="row-title">VİSA SÖR Asansör Tasarımı</h3>
+        <h3 class="row-title">Asansör Tasarımı (VİSA SÖR)</h3>
       </div>
       <div class="row-arrow">➔</div>
     </div>
@@ -282,7 +275,37 @@ author_profile: true
     <div class="project-row">
       <div class="row-info">
         <span class="row-category">Bitirme Tezi</span>
-        <h3 class="row-title">Francis Tipi Türbin Tasarımı</h3>
+        <h3 class="row-title">Francis Tipi Türbinlerin Tasarımı</h3>
+      </div>
+      <div class="row-arrow">➔</div>
+    </div>
+  </a>
+
+  <a href="#proje-5" class="project-card-link">
+    <div class="project-row">
+      <div class="row-info">
+        <span class="row-category">Gönüllü Çalışma</span>
+        <h3 class="row-title">CFD Teknik Kitap Çevirisi Projesi</h3>
+      </div>
+      <div class="row-arrow">➔</div>
+    </div>
+  </a>
+
+  <a href="#proje-6" class="project-card-link">
+    <div class="project-row">
+      <div class="row-info">
+        <span class="row-category">Gönüllü Araştırma</span>
+        <h3 class="row-title">Gönüllü Müsilaj Projesi</h3>
+      </div>
+      <div class="row-arrow">➔</div>
+    </div>
+  </a>
+
+  <a href="#proje-7" class="project-card-link">
+    <div class="project-row">
+      <div class="row-info">
+        <span class="row-category">Sertifika / Eğitim</span>
+        <h3 class="row-title">Akbank Python ve Yapay Zeka Bootcamp</h3>
       </div>
       <div class="row-arrow">➔</div>
     </div>
@@ -341,21 +364,23 @@ author_profile: true
 
 
 <div id="proje-1" class="modal-overlay">
-  <a href="#_" class="modal-backdrop-close"></a> <div class="modal-content">
+  <a href="#_" class="modal-backdrop-close"></a>
+  <div class="modal-content">
     <a href="#_" class="close-link">&times;</a>
-    <h3 class="modal-title">Hibrit Kompozit Kirişlerde Burkulma Analizi</h3>
+    <h3 class="modal-title">Tabakalı ve hibrit kompozit kirişler için burkulma analizi</h3>
     <div class="modal-desc">
-      <p>Bu çalışmada, hibrit kompozit kirişlerin burkulma davranışları detaylı olarak incelenmiştir.</p>
+      <p>Devam Eden Araştırma Çalışması</p>
       <ul>
-        <li>Euler-Timoshenko teorilerinin kıyaslanması yapıldı.</li>
-        <li>Farklı fiber dizilim açılarının (stacking sequence) kritik burkulma yüküne etkisi araştırıldı.</li>
-        <li>ANSYS ACP modülü kullanılarak Sonlu Elemanlar (FEM) doğrulaması gerçekleştirildi ve analitik sonuçlarla karşılaştırıldı.</li>
+        <li>Euler-Timoshenko teorilerinin karşılaştırılması.</li>
+        <li>Analitik modelleme, sonlu elemanlar analizi ve MATLAB tabanlı sayısal çözümler.</li>
+        <li>Ansys ACP modülü.</li>
+        <li>Literatür taraması ve makale yazım süreci devam etmektedir.</li>
       </ul>
     </div>
     <div class="modal-tags">
       <span class="tag-badge">ANSYS ACP</span>
-      <span class="tag-badge">Static Structural</span>
       <span class="tag-badge">MATLAB</span>
+      <span class="tag-badge">FEM</span>
     </div>
   </div>
 </div>
@@ -375,7 +400,6 @@ author_profile: true
     </div>
     <div class="modal-tags">
       <span class="tag-badge">MATLAB GUI</span>
-      <span class="tag-badge">Algoritma</span>
       <span class="tag-badge">Mukavemet</span>
     </div>
   </div>
@@ -385,19 +409,19 @@ author_profile: true
   <a href="#_" class="modal-backdrop-close"></a>
   <div class="modal-content">
     <a href="#_" class="close-link">&times;</a>
-    <h3 class="modal-title">VİSA SÖR Asansör Tasarımı</h3>
+    <h3 class="modal-title">Asansör Tasarımı (VİSA SÖR)</h3>
     <div class="modal-desc">
-      <p>Engelli bireylerin erişilebilirliğini artırmak amacıyla tasarlanan özel asansör sistemi.</p>
+      <p>TÜBİTAK 2209-A – Üniversite Öğrencileri Araştırma Projeleri Desteği</p>
       <ul>
-        <li>Mekanik boyutlandırma ve motor seçimi.</li>
-        <li>Güvenlik freni mekanizmasının optimizasyonu.</li>
-        <li>TÜBİTAK 2209-A kapsamında desteklenmiştir.</li>
+        <li>Dubleks ve tripleks yapılar için asansör sistem tasarımı.</li>
+        <li>Projede takım lideri olarak görev alındı.</li>
+        <li>Mekanik tasarım, boyutlandırma ve analiz çalışmalarının yürütülmesi.</li>
+        <li>Tasarım sürecinde mühendislik hesapları ve sistem optimizasyonu.</li>
       </ul>
     </div>
     <div class="modal-tags">
       <span class="tag-badge">SolidWorks</span>
       <span class="tag-badge">Mekanik Tasarım</span>
-      <span class="tag-badge">Proje Yönetimi</span>
     </div>
   </div>
 </div>
@@ -406,19 +430,83 @@ author_profile: true
   <a href="#_" class="modal-backdrop-close"></a>
   <div class="modal-content">
     <a href="#_" class="close-link">&times;</a>
-    <h3 class="modal-title">Francis Tipi Türbin Tasarımı</h3>
+    <h3 class="modal-title">Francis Tipi Türbinlerin Tasarımı</h3>
     <div class="modal-desc">
-      <p>Keban Barajı'nın hidrolik verileri referans alınarak yapılan kapsamlı hidrodinamik tasarım çalışması.</p>
+      <p>Bitirme Tezi</p>
       <ul>
-        <li>Çark (runner) ve salyangoz (volute) geometrisinin belirlenmesi.</li>
-        <li>CFD analizleri ile akış verimliliğinin artırılması.</li>
-        <li>Türbin tasarımı.</li>
+        <li>Keban Barajı için Francis tipi hidroelektrik türbin tasarımı.</li>
+        <li>Türbin geometrisinin belirlenmesi ve boyutlandırma hesapları.</li>
+        <li>Enerji dönüşüm prensipleri ve hidrodinamik tasarım kriterlerinin uygulanması.</li>
       </ul>
     </div>
     <div class="modal-tags">
       <span class="tag-badge">SolidWorks</span>
       <span class="tag-badge">CFD</span>
       <span class="tag-badge">Hidrodinamik</span>
+    </div>
+  </div>
+</div>
+
+<div id="proje-5" class="modal-overlay">
+  <a href="#_" class="modal-backdrop-close"></a>
+  <div class="modal-content">
+    <a href="#_" class="close-link">&times;</a>
+    <h3 class="modal-title">CFD Teknik Kitap Çevirisi Projesi</h3>
+    <div class="modal-desc">
+      <p>Danışman: Dr. Nuray Kayakol</p>
+      <ul>
+        <li>CFD teori denklemleri ve modelleme yöntemleri üzerine teknik doküman çevirisi.</li>
+        <li>Vanalarda iki fazlı akış ve kavitasyon konularını içeren akademik içeriklerin Türkçeye kazandırılması.</li>
+        <li>4 ay süren proje kapsamında çeviri grubunun aktif üyesi.</li>
+        <li>Teknik terminolojiye ve akademik yazım diline hâkimiyet kazanımı.</li>
+      </ul>
+    </div>
+    <div class="modal-tags">
+      <span class="tag-badge">CFD</span>
+      <span class="tag-badge">Teknik Çeviri</span>
+      <span class="tag-badge">Akademik</span>
+    </div>
+  </div>
+</div>
+
+<div id="proje-6" class="modal-overlay">
+  <a href="#_" class="modal-backdrop-close"></a>
+  <div class="modal-content">
+    <a href="#_" class="close-link">&times;</a>
+    <h3 class="modal-title">Gönüllü Müsilaj Projesi</h3>
+    <div class="modal-desc">
+      <p>Danışman: Dr. Nuray Kayakol – CFDEXPLAINED</p>
+      <ul>
+        <li>Müsilaj oluşumunun nedenleri ve çözüm yöntemleri üzerine araştırma.</li>
+        <li>Akışkanlar mekaniği ve CFD temelli yaklaşımlarla problem analizi.</li>
+        <li>Çevresel mühendislik problemlerine disiplinlerarası bakış açısı kazanımı.</li>
+      </ul>
+    </div>
+    <div class="modal-tags">
+      <span class="tag-badge">CFD</span>
+      <span class="tag-badge">Araştırma</span>
+      <span class="tag-badge">Akışkanlar Mekaniği</span>
+    </div>
+  </div>
+</div>
+
+<div id="proje-7" class="modal-overlay">
+  <a href="#_" class="modal-backdrop-close"></a>
+  <div class="modal-content">
+    <a href="#_" class="close-link">&times;</a>
+    <h3 class="modal-title">Akbank Python ve Yapay Zeka Bootcamp</h3>
+    <div class="modal-desc">
+      <p>Global AI Hub Sponsorluğu</p>
+      <ul>
+        <li>Python programlama ve yapay zekâ temelleri eğitimi.</li>
+        <li>Sürücüsüz Metro Simülasyonu (Rota Optimizasyonu) projesinin gerçekleştirilmesi.</li>
+        <li>Algoritmik düşünme ve optimizasyon problemleri üzerine uygulamalar.</li>
+      </ul>
+    </div>
+    <div class="modal-tags">
+      <span class="tag-badge">Python</span>
+      <span class="tag-badge">Yapay Zeka</span>
+      <span class="tag-badge">Algoritma</span>
     </div>
   </div>
 </div>
