@@ -153,7 +153,7 @@ layout: archive
 
 <div class="notes-header">
   <h2>Teknik Dokümantasyon & Ar-Ge Günlüğü</h2>
-  <p>Mühendislik problemlerine dair araştırmalarım, çözdüğüm algoritmalar ve teorik notlarımın derlemesi.</p>
+  <p>Teorik notların derlemesi</p>
 </div>
 
 <div class="notes-grid">
