@@ -8,13 +8,16 @@ layout: archive
 
 <style>
 /* =========================================
-   MÜHENDİSLİK NOTLARI - ÖZEL TASARIM
+   MÜHENDİSLİK NOTLARI - DÜZELTİLMİŞ TASARIM
    ========================================= */
+
+/* 1. SOL MENÜDEKİ KIRIK RESMİ GİZLE (İşaretlediğin Yer) */
+.author__avatar { display: none !important; }
 
 /* Sayfa Genişliği */
 .page__content { width: 100% !important; max-width: 100% !important; padding-right: 0 !important; }
 
-/* 1. ÜST BİLGİ ALANI (Search & Intro) */
+/* 2. ÜST BİLGİ ALANI */
 .notes-header {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -36,10 +39,10 @@ layout: archive
   margin: 10px auto 0;
 }
 
-/* 2. NOT KARTLARI (Grid Yapısı) */
+/* 3. NOT KARTLARI (Grid Yapısı) */
 .notes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
 }
 
@@ -53,10 +56,10 @@ layout: archive
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100%; /* Kartlar eşit boyda olsun */
+  height: 100%;
 }
 
-/* Kart Linki (Tıklanabilir Alan) */
+/* Kart Linki */
 .note-link {
   text-decoration: none !important;
   color: inherit !important;
@@ -70,7 +73,7 @@ layout: archive
 .note-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  border-color: #3b82f6; /* Mavi Çerçeve */
+  border-color: #3b82f6;
 }
 
 /* Kart İçeriği */
@@ -99,10 +102,10 @@ layout: archive
   font-size: 0.95rem;
   color: #475569;
   line-height: 1.6;
-  flex-grow: 1; /* Metni uzat */
+  flex-grow: 1;
 }
 
-/* Etiketler (Alt Kısım) */
+/* Etiketler */
 .note-footer {
   padding: 15px 25px;
   background: #f8fafc;
@@ -160,7 +163,7 @@ layout: archive
         <span class="badge-new">YENİ</span>
       {% endif %}
 
-      <a href="{{ post.url }}" class="note-link">
+      <a href="{{ post.url | relative_url }}" class="note-link">
         <div class="note-meta">
           <span class="note-date">{{ post.date | date: "%d.%m.%Y" }}</span>
         </div>
