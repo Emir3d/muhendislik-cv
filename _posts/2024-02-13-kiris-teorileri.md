@@ -66,7 +66,7 @@ Uzunluk (L) ve Kalınlık (h) oranı, hangi teorinin kullanılması gerektiğini
 * **Timoshenko:** *"Kaymayı düzeltir."* Kayma deformasyonunu bir katsayı ile hesaba katar. Orta kalınlıktaki kirişlerde güvenilirdir.
 
 * **HSDT (Higher Order Shear Deformation Theory):** *"Kaymayı gerçekten modeller."* Kayma gerilmesini kesit boyunca parabolik (doğal) dağılımıyla yakalar. Kalın ve özellikle **hibrit kompozit** yapılar için en doğru sonuçları verir.
-* **Kaynak:Reddy, 2004 
+* **Kaynak**: Reddy, 2004 
 
 <br>
 <div style="background:#f8fafc; border-left:5px solid #2563eb; padding:20px; font-size:1.2rem; color:#1e293b; border-radius:4px;">
