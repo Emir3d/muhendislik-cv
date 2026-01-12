@@ -10,16 +10,82 @@ sidebar:
 ---
 
 <style>
-  /* İç sayfa düzeni */
+  /* 1. SAYFA DÜZENİ */
   .author__avatar, .sidebar { display: none !important; }
   .page__content { width: 100% !important; padding-right: 0 !important; }
   
-  /* Özel Tablo Tasarımı */
-  table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95rem; box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); }
-  th { background-color: #2563eb; color: #ffffff; text-align: left; padding: 12px 15px; }
-  td { padding: 12px 15px; border-bottom: 1px solid #dddddd; }
-  tr:nth-of-type(even) { background-color: #f3f4f6; }
-  tr:last-of-type { border-bottom: 2px solid #2563eb; }
+  /* 2. TABLO TASARIMI (Responsive & Modern) */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    overflow: hidden; /* Köşeleri yuvarlatır */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  /* AYDINLIK MOD (Varsayılan) */
+  th {
+    background-color: #f1f5f9; /* Çok açık gri */
+    color: #0f172a; /* Koyu lacivert yazı */
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+  }
+  
+  /* Satır Arası Renklendirme (Zebra) */
+  tr:nth-child(even) { background-color: #f8fafc; }
+  tr:hover { background-color: #e2e8f0; transition: 0.2s; }
+
+  /* 3. KOYU MOD (DARK MODE UYUMU) */
+  @media (prefers-color-scheme: dark) {
+    table { box-shadow: none; border: 1px solid #334155; }
+    
+    th {
+      background-color: #1e293b; /* Koyu arka plan */
+      color: #f1f5f9; /* Beyaz yazı */
+      border-bottom: 2px solid #334155;
+    }
+    
+    td {
+      border-bottom: 1px solid #334155;
+      color: #cbd5e1; /* Açık gri yazı */
+    }
+    
+    tr:nth-child(even) { background-color: #0f172a; } /* Daha koyu satır */
+    tr:hover { background-color: #334155; }
+  }
+
+  /* 4. SLOGAN KUTUSU */
+  .slogan-box {
+    padding: 20px;
+    border-left: 5px solid #3b82f6;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-top: 40px;
+    border-radius: 4px;
+  }
+  
+  /* Slogan Kutusu Koyu Mod */
+  @media (prefers-color-scheme: dark) {
+    .slogan-box {
+      background-color: #1e293b;
+      color: #e2e8f0;
+      border-left-color: #60a5fa;
+    }
+  }
 </style>
 
 Mühendislik analizlerinde kullanılan kiriş teorileri, problemin fiziğini ne kadar doğru modelledikleriyle ayrışır. Aşağıda temel varsayımlar ve seçim kriterleri karşılaştırılmıştır.
@@ -66,9 +132,9 @@ Uzunluk (L) ve Kalınlık (h) oranı, hangi teorinin kullanılması gerektiğini
 * **Timoshenko:** *"Kaymayı düzeltir."* Kayma deformasyonunu bir katsayı ile hesaba katar. Orta kalınlıktaki kirişlerde güvenilirdir.
 
 * **HSDT (Higher Order Shear Deformation Theory):** *"Kaymayı gerçekten modeller."* Kayma gerilmesini kesit boyunca parabolik (doğal) dağılımıyla yakalar. Kalın ve özellikle **hibrit kompozit** yapılar için en doğru sonuçları verir.
-* **Kaynak**: Reddy, 2004 
 
-<br>
-<div style="background:#f8fafc; border-left:5px solid #2563eb; padding:20px; font-size:1.2rem; color:#1e293b; border-radius:4px;">
-<strong><em>“Euler görmez, Timoshenko tahmin eder, HSDT gerçekten görür.”</em></strong>
+* **Kaynak:** Reddy,2004 
+
+<div class="slogan-box">
+  <strong><em>“Euler görmez, Timoshenko tahmin eder, HSDT gerçekten görür.”</em></strong>
 </div>
