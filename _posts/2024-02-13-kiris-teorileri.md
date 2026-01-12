@@ -88,7 +88,7 @@ sidebar:
   }
 </style>
 
-Mühendislik analizlerinde kullanılan kiriş teorileri, problemin fiziğini ne kadar doğru modelledikleriyle ayrışır. Aşağıda temel varsayımlar ve seçim kriterleri karşılaştırılmıştır.
+Kiriş teorileri arasındaki temel fark, yapının fiziksel davranışını ne ölçüde doğru temsil edebildikleridir. Bu bölümde, yaygın olarak kullanılan yaklaşımların varsayımları ve mühendislik açısından seçim kriterleri karşılaştırmalı olarak ele alınmıştır.
 
 ## Temel Varsayımlar
 
