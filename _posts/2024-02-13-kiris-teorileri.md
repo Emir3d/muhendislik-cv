@@ -70,4 +70,5 @@ Uzunluk (L) ve Kalınlık (h) oranı, hangi teorinin kullanılması gerektiğini
 <br>
 <div style="background:#f8fafc; border-left:5px solid #2563eb; padding:20px; font-size:1.2rem; color:#1e293b; border-radius:4px;">
 <strong><em>“Euler görmez, Timoshenko tahmin eder, HSDT gerçekten görür.”</em></strong>
+<strong><em>“Kaynak: Reddy, 2004.”</em></strong>
 </div>
