@@ -471,7 +471,7 @@ author_profile: true
     <a href="#_" class="close-link">&times;</a>
     <h3 class="modal-title">CFD Teknik Kitap Çevirisi Projesi</h3>
     <div class="modal-desc">
-      <p>Danışman: Dr. Nuray Kayakol</p>
+  
       <ul>
         <li>CFD teori denklemleri ve modelleme yöntemleri üzerine teknik doküman çevirisi.</li>
         <li>Vanalarda iki fazlı akış ve kavitasyon konularını içeren akademik içeriklerin Türkçeye kazandırılması.</li>
@@ -493,7 +493,7 @@ author_profile: true
     <a href="#_" class="close-link">&times;</a>
     <h3 class="modal-title">Gönüllü Müsilaj Projesi</h3>
     <div class="modal-desc">
-      <p>Danışman: Dr. Nuray Kayakol – CFDEXPLAINED</p>
+      
       <ul>
         <li>Müsilaj oluşumunun nedenleri ve çözüm yöntemleri üzerine araştırma.</li>
         <li>Akışkanlar mekaniği ve CFD temelli yaklaşımlarla problem analizi.</li>
