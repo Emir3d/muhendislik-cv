@@ -10,6 +10,37 @@ header:
 
 <style>
 /* =========================================
+   DİL SEÇİCİ (LANGUAGE SWITCHER)
+   ========================================= */
+.lang-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lang-btn {
+  padding: 6px 16px;
+  border: 1px solid #3b82f6;
+  border-radius: 50px;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  color: #3b82f6 !important;
+}
+
+.lang-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* =========================================
    1. GENEL DÜZEN AYARLARI
    ========================================= */
 
@@ -122,6 +153,11 @@ hr.spacer {
   letter-spacing: 1px;
 }
 </style>
+
+<div class="lang-switcher">
+  <a href="/" class="lang-btn active">TR</a>
+  <a href="/en/" class="lang-btn">EN</a>
+</div>
 
 <div class="manifesto">
 “Mühendislik, yalnızca bir bileşeni tasarlamak değil; o bileşenin fiziksel dünyadaki davranışını öngörebilme, sınırlarını anlayabilme ve bu davranışı güvenilir biçimde doğrulayabilme disiplinidir.”
