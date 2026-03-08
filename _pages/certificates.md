@@ -6,6 +6,37 @@ author_profile: true
 ---
 
 <style>
+/* =========================================
+   DİL SEÇİCİ (LANGUAGE SWITCHER)
+   ========================================= */
+.lang-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lang-btn {
+  padding: 6px 16px;
+  border: 1px solid #3b82f6;
+  border-radius: 50px;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  color: #3b82f6 !important;
+}
+
+.lang-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
 /* 1. SOL MENÜ GİZLEME */
 .author__avatar { display: none !important; }
 
@@ -72,8 +103,7 @@ h3.cert-category {
   font-weight: 400;
 }
 
-/* 🔥 DÜZELTİLEN KISIM: HOVER EFEKTİ 🔥 */
-/* Arka plan rengini DEĞİŞTİRMİYORUZ. Sadece kayma ve çizgi. */
+
 .cert-item:hover {
   background-color: transparent !important; /* Arka plan değişmesin */
   padding-left: 18px; /* Sağa kaydır */
@@ -102,6 +132,11 @@ h3.cert-category {
   .cert-item:hover .cert-name { color: #60a5fa !important; }
 }
 </style>
+
+<div class="lang-switcher">
+  <a href="/muhendislik-cv/certificates/" class="lang-btn active">TR</a>
+  <a href="/muhendislik-cv/en/certificates/" class="lang-btn">EN</a>
+</div>
 
 Mühendislik kariyerim boyunca edindiğim teknik yetkinlikler ve tamamladığım eğitim programları.
 
