@@ -1,0 +1,235 @@
+---
+permalink: /en/
+title: "An Analytical and Holistic Approach to Engineering"
+excerpt: "Engineering approach based on analysis, modeling, and validation"
+author_profile: false
+header:
+  overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
+  overlay_filter: 0.65
+---
+
+<style>
+/* =========================================
+   DİL SEÇENEĞİ BUTONU (LANGUAGE SWITCHER)
+   ========================================= */
+.lang-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lang-btn {
+  padding: 6px 16px;
+  border: 1px solid #3b82f6;
+  border-radius: 50px;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  color: #3b82f6 !important;
+}
+
+.lang-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* =========================================
+   1. GENEL DÜZEN AYARLARI
+   ========================================= */
+.manifesto {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 2rem 0;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+hr.spacer {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* =========================================
+   2. SÜREÇ KUTULARI (Blue Cards)
+   ========================================= */
+.process-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.process-box {
+  flex: 1;
+  min-width: 220px;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #334155;
+  transition: transform 0.3s ease;
+}
+
+.process-box:hover {
+  transform: translateY(-5px);
+}
+
+.p-circle {
+  background-color: #3b82f6;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.step-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  color: #fff;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* =========================================
+   3. ALINTI KUTULARI (Dark Quote Cards)
+   ========================================= */
+.quote-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.quote-item {
+  flex: 1;
+  min-width: 250px;
+  background-color: #172033;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.q-author {
+  display: block;
+  margin-top: 15px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+</style>
+
+<div class="lang-switcher">
+  <a href="/" class="lang-btn">TR</a>
+  <a href="/en/" class="lang-btn active">EN</a>
+</div>
+
+<div class="manifesto">
+“Engineering is not merely designing a component; it is the discipline of predicting its behavior in the physical world, understanding its limits, and validating this behavior reliably.”
+</div>
+
+On this platform, I present a holistic approach that treats engineering not just as a geometry-focused activity, but centers around **analysis, modeling, validation, and manufacturability.**
+
+My primary goal is to evaluate engineering problems independently of intuitive solutions, relying instead on physical principles and numerically verifiable methods.
+
+<hr class="spacer">
+
+## Analysis-Driven Engineering Approach
+
+Modern engineering problems cannot be sustainably solved through empirical methods or a one-dimensional design philosophy alone. Therefore, I handle design processes within an analytical framework supported by **structural analysis, numerical modeling, and optimization.**
+
+<div class="process-wrapper">
+  <div class="process-box">
+    <div class="p-circle">1</div>
+    <span class="step-title">Problem Definition</span>
+    <div class="step-desc">Accurately determining the physical boundary conditions and the real-world state of the problem.</div>
+  </div>
+  
+  <div class="process-box">
+    <div class="p-circle">2</div>
+    <span class="step-title">Mathematical Model</span>
+    <div class="step-desc">Geometry cleanup, generating the appropriate mesh structure, and numerical setup.</div>
+  </div>
+  
+  <div class="process-box">
+    <div class="p-circle">3</div>
+    <span class="step-title">Analysis & Validation</span>
+    <div class="step-desc">Solution convergence, mesh independence tests, and parametric studies.</div>
+  </div>
+  
+  <div class="process-box">
+    <div class="p-circle">4</div>
+    <span class="step-title">Engineering Insight</span>
+    <div class="step-desc">Interpreting the results and making manufacturable design decisions.</div>
+  </div>
+</div>
+
+This approach makes it possible to predict system behavior during the design phase, correctly define critical boundary conditions, and base engineering decisions on quantitative data.
+
+<hr class="spacer">
+
+## Virtual Verification & Computational Thinking
+
+While physical testing is indispensable in engineering, properly established numerical models significantly increase design reliability while providing major advantages in time and cost.
+
+In this context, by centering **Virtual Verification** processes, I aim to ensure that the design remains consistent with physical behavior.
+
+<hr class="spacer">
+
+## The Relationship Between Design, Behavior, and Manufacturability
+
+The success of an engineering solution is determined not only by its theoretical accuracy but also by its compatibility with production processes. For this reason, I evaluate design, analysis, and manufacturing not as disconnected steps, but as integral parts of a single engineering workflow.
+
+<hr class="spacer">
+
+## Engineering Vision
+
+I view engineering as a discipline of thought that strives to understand physical reality, consciously utilizes computational tools, and makes every solution open to questioning.
+
+<div class="quote-grid">
+  <div class="quote-item">
+    “Engineering is the art of directing the great sources of power in nature for the use and convenience of man.”
+    <span class="q-author">— Thomas Tredgold</span>
+  </div>
+
+  <div class="quote-item">
+    “Mechanics is the paradise of the mathematical sciences, because by means of it one comes to the fruits of mathematics."
+    <span class="q-author">— Leonardo da Vinci</span>
+  </div>
+
+  <div class="quote-item">
+    “Science can amuse and fascinate us all, but it is engineering that changes the world.”
+    <span class="q-author">— Isaac Asimov</span>
+  </div>
+</div>
