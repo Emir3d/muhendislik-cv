@@ -6,6 +6,37 @@ author_profile: true
 ---
 
 <style>
+/* =========================================
+   DİL SEÇİCİ (LANGUAGE SWITCHER)
+   ========================================= */
+.lang-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lang-btn {
+  padding: 6px 16px;
+  border: 1px solid #3b82f6;
+  border-radius: 50px;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  color: #3b82f6 !important;
+}
+
+.lang-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
 /* 1. Kırık Profil Resmini Gizle */
 .author__avatar { display: none !important; }
 
@@ -250,6 +281,10 @@ author_profile: true
 .full-width .img-box { height: 400px; }
 </style>
 
+<div class="lang-switcher">
+  <a href="/muhendislik-cv/portfolio/" class="lang-btn active">TR</a>
+  <a href="/muhendislik-cv/en/portfolio/" class="lang-btn">EN</a>
+</div>
 
 <h2 class="section-title">Mühendislik Analizleri</h2>
 
@@ -471,7 +506,6 @@ author_profile: true
     <a href="#_" class="close-link">&times;</a>
     <h3 class="modal-title">CFD Teknik Kitap Çevirisi Projesi</h3>
     <div class="modal-desc">
-  
       <ul>
         <li>CFD teori denklemleri ve modelleme yöntemleri üzerine teknik doküman çevirisi.</li>
         <li>Vanalarda iki fazlı akış ve kavitasyon konularını içeren akademik içeriklerin Türkçeye kazandırılması.</li>
@@ -493,7 +527,6 @@ author_profile: true
     <a href="#_" class="close-link">&times;</a>
     <h3 class="modal-title">Gönüllü Müsilaj Projesi</h3>
     <div class="modal-desc">
-      
       <ul>
         <li>Müsilaj oluşumunun nedenleri ve çözüm yöntemleri üzerine araştırma.</li>
         <li>Akışkanlar mekaniği ve CFD temelli yaklaşımlarla problem analizi.</li>
