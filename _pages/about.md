@@ -155,8 +155,8 @@ hr.spacer {
 </style>
 
 <div class="lang-switcher">
-  <a href="/" class="lang-btn active">TR</a>
-  <a href="/en/" class="lang-btn">EN</a>
+  <a href="{{ '/' | relative_url }}" class="lang-btn active">TR</a>
+  <a href="{{ '/en/' | relative_url }}" class="lang-btn">EN</a>
 </div>
 
 <div class="manifesto">
