@@ -1,7 +1,7 @@
 ---
 permalink: /en/
-title: "An Analytical and Holistic Approach to Engineering"
-excerpt: "Engineering approach based on analysis, modeling, and validation"
+title: "An Analytical and Holistic Perspective on Engineering"
+excerpt: "An engineering approach based on analysis, modeling, and validation"
 author_profile: false
 header:
   overlay_image: https://emir3d.github.io/muhendislik-cv/images/header_bg.png
@@ -10,7 +10,7 @@ header:
 
 <style>
 /* =========================================
-   DİL SEÇENEĞİ BUTONU (LANGUAGE SWITCHER)
+   1. DİL SEÇİCİ (LANGUAGE SWITCHER)
    ========================================= */
 .lang-switcher {
   display: flex;
@@ -41,8 +41,10 @@ header:
 }
 
 /* =========================================
-   1. GENEL DÜZEN AYARLARI
+   2. GENEL DÜZEN AYARLARI
    ========================================= */
+
+/* Manifesto Yazısı (Ortalanmış, İtalik) */
 .manifesto {
   text-align: center;
   font-size: 1.2rem;
@@ -52,6 +54,7 @@ header:
   line-height: 1.6;
 }
 
+/* Ayraç Çizgisi */
 hr.spacer {
   margin: 3rem 0;
   border: 0;
@@ -59,7 +62,7 @@ hr.spacer {
 }
 
 /* =========================================
-   2. SÜREÇ KUTULARI (Blue Cards)
+   3. SÜREÇ KUTULARI (Blue Cards Tasarımı)
    ========================================= */
 .process-wrapper {
   display: flex;
@@ -71,22 +74,23 @@ hr.spacer {
 .process-box {
   flex: 1;
   min-width: 220px;
-  background-color: #1e293b;
-  color: #ffffff;
+  background-color: #1e293b; /* Koyu Lacivert Arka Plan */
+  color: #ffffff; /* Beyaz Yazı */
   padding: 2rem 1.5rem;
-  border-radius: 12px;
-  text-align: center;
+  border-radius: 12px; /* Yuvarlak Köşeler */
+  text-align: center; /* Ortalanmış Yazı */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   border: 1px solid #334155;
   transition: transform 0.3s ease;
 }
 
 .process-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Hoverda hafif kalksın */
 }
 
+/* Mavi Numara Dairesi */
 .p-circle {
-  background-color: #3b82f6;
+  background-color: #3b82f6; /* Parlak Mavi */
   color: white;
   width: 40px;
   height: 40px;
@@ -96,7 +100,7 @@ hr.spacer {
   justify-content: center;
   font-weight: bold;
   font-size: 1.1rem;
-  margin: 0 auto 15px;
+  margin: 0 auto 15px; /* Ortala ve alt boşluk ver */
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
@@ -110,12 +114,12 @@ hr.spacer {
 
 .step-desc {
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: #cbd5e1; /* Hafif gri metin */
   line-height: 1.5;
 }
 
 /* =========================================
-   3. ALINTI KUTULARI (Dark Quote Cards)
+   4. ALINTI KUTULARI (Dark Quote Cards)
    ========================================= */
 .quote-grid {
   display: flex;
@@ -126,12 +130,12 @@ hr.spacer {
 .quote-item {
   flex: 1;
   min-width: 250px;
-  background-color: #172033;
+  background-color: #172033; /* Çok Koyu Lacivert */
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid #334155;
   color: #e2e8f0;
-  font-family: "Georgia", serif;
+  font-family: "Georgia", serif; /* Tırnaklı font (Daha şık) */
   font-style: italic;
   font-size: 1rem;
   line-height: 1.6;
@@ -140,10 +144,10 @@ hr.spacer {
 .q-author {
   display: block;
   margin-top: 15px;
-  font-family: sans-serif;
+  font-family: sans-serif; /* İsim düz font olsun */
   font-style: normal;
   font-weight: 700;
-  color: #38bdf8;
+  color: #38bdf8; /* Açık Mavi İsim Rengi */
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 1px;
@@ -185,7 +189,7 @@ Modern engineering problems cannot be sustainably solved through empirical metho
   <div class="process-box">
     <div class="p-circle">3</div>
     <span class="step-title">Analysis & Validation</span>
-    <div class="step-desc">Solution convergence, mesh independence tests, and parametric studies.</div>
+    <div class="step-desc">Solution convergence, mesh independence, and parametric studies.</div>
   </div>
   
   <div class="process-box">
